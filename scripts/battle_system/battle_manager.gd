@@ -155,7 +155,7 @@ func begin_turn():
 				battle_lost = true
 			# restart from top of function to iterate thru all party members
 			# and get the next active one
-			# this is messy and terrible. hopefully it fucking works though!!
+			# this is messy and terrible. hopefully it works though!!
 			# we'll check if the entire party is downed for players and enemies
 			# in damage_actors so this SHOULD be ok
 			begin_turn()
@@ -472,7 +472,7 @@ func perform_bolster(target_actor, pawn_target, attack):
 	
 	# BolsterGlow is for the target that RECEIVES the bolster
 	# AidGlow is for the AIDING pawn thats GIVING the bolster
-	# shit naming scheme. do not care. too bad!
+	# dumb naming scheme. do not care. too bad!
 	pawn_target.get_node("BolsterGlow").modulate.a = 1
 	
 	battle_tween = get_tree().create_tween()
@@ -714,8 +714,8 @@ func goto_next_battle(battle : Battle_Sequence):
 	pawn_selected = false
 	# weird workaround where PRESUMABLY beginning the turn without going thru swap_turn
 	# to reset attack status and whatnot causes the player's next party character they control
-	# to fucking attack themselves. what??? how???
-	# fucking whatever man. this works fine enough. this makes it so its the enemys turn so that
+	# to attack themselves. what??? how???
+	# whatever. this works fine enough. this makes it so its the enemys turn so that
 	# when swap_turn is called it actually properly swaps to the player's turn
 	player_turn = false
 	enemy_turn = true
