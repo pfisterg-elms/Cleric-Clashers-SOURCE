@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=15 format=3 uid="uid://dcuviau7d6und"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_f54p8"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_kwrfw"]
+[ext_resource type="Texture2D" uid="uid://bbwmed2i25wa0" path="res://sprites/heroes/hero_trio_idle.png" id="2_4dcja"]
+[ext_resource type="Texture2D" uid="uid://dwee34m4ejxmg" path="res://sprites/enemies/warlord/warlord_dialog.png" id="3_s6j1m"]
+[ext_resource type="Texture2D" uid="uid://bn1xfq1w78d5h" path="res://sprites/heroes/hero_trio.png" id="4_sdyeq"]
+[ext_resource type="AudioStream" uid="uid://rpsne6x7el28" path="res://sounds/music/Sprawl2_Light.mp3" id="5_13yg5"]
+
+[sub_resource type="Resource" id="Resource_6mfer"]
+script = ExtResource("1_kwrfw")
+narrator_title = ""
+dialogue_contents = "Felled brigands decorate the streets, smoldering in ruin from the raiders' efforts. It is silent now in the central square of Creitus, aside from distant flames scorching the buildings and the howl of vicious winds skimming across from the valleyside."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_x1kf5"]
+script = ExtResource("1_kwrfw")
+narrator_title = ""
+dialogue_contents = "The three step forward as one, an indomitable force despite the best efforts of the brigands. Surely the battle was won, right? But something's missing. One last fight to slay this hydra once and for all."
+left_sprite = ExtResource("2_4dcja")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_87brb"]
+script = ExtResource("1_kwrfw")
+narrator_title = ""
+dialogue_contents = "...Thus, he presents himself clear for all to see. A hulking figure of pure muscle and tone, of pure hatred and rage.
+
+This was the Warlord of the raiders himself. A man of legend, iron will, and an indomitable spirit for battle and carnage."
+left_sprite = ExtResource("2_4dcja")
+right_sprite = ExtResource("3_s6j1m")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_3pfhv"]
+script = ExtResource("1_kwrfw")
+narrator_title = "Brigand Warlord"
+dialogue_contents = "YOU. YOU'RE THE ONES KILLIN' OFF ALL MY MEN, AREN'T YE?
+
+WELL, YE AIN'T GOIN' ANY FARTHER! THIS ENDS HERE WITH YER BLOOD STAININ' THIS CITY! I AIN'T HAVIN' IT ANY OTHER WAY. YE STEP FORWARD, AND YE DIE."
+left_sprite = ExtResource("2_4dcja")
+right_sprite = ExtResource("3_s6j1m")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_ww4la"]
+script = ExtResource("1_kwrfw")
+narrator_title = ""
+dialogue_contents = "There is nothing but raw anger oozing from his breath, a lingering, unbearable stench of cruelty and viciousness unforeseen by the three until now. There is as much fierceness and determination in his posture as of the trio's."
+left_sprite = ExtResource("2_4dcja")
+right_sprite = ExtResource("3_s6j1m")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_ms4xl"]
+script = ExtResource("1_kwrfw")
+narrator_title = "Brigand Warlord"
+dialogue_contents = "WELL? GO ON, THEN. MAKE YER FIRST MOVE. THIS ONLY ENDS WITH ONE OF US STANDING, AND I AIN'T GONNA BE THE ONE TO FALL TO A BUNCH'A MISFITS AN' FREAKS!"
+left_sprite = ExtResource("2_4dcja")
+right_sprite = ExtResource("3_s6j1m")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_rdrop"]
+script = ExtResource("1_kwrfw")
+narrator_title = ""
+dialogue_contents = "The trio lock their gazes with one another, confirming their decision with each other, then stepping forward. Approaching the warlord as he leaves a sinister grin plastered upon his face."
+left_sprite = ExtResource("2_4dcja")
+right_sprite = ExtResource("3_s6j1m")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_hd17s"]
+script = ExtResource("1_kwrfw")
+narrator_title = "Brigand Warlord"
+dialogue_contents = "...HAH! 'COURSE YE DECIDED TO FIGHT. I WOULDN'T' HAVE IT ANY OTHER WAY!
+
+FINE! MAY THE BEST MAN SEEK THIS SCORCHIN' SPRAWL AS THEIR CLAIM! TO ARMS, YE' FOOLS!"
+left_sprite = ExtResource("4_sdyeq")
+right_sprite = ExtResource("3_s6j1m")
+sprite_focus = "Right"
+
+[resource]
+script = ExtResource("1_f54p8")
+dialogue_statements = Array[ExtResource("1_kwrfw")]([SubResource("Resource_6mfer"), SubResource("Resource_x1kf5"), SubResource("Resource_87brb"), SubResource("Resource_3pfhv"), SubResource("Resource_ww4la"), SubResource("Resource_ms4xl"), SubResource("Resource_rdrop"), SubResource("Resource_hd17s")])
+scene_background = "Dialog_TownSquare"
+scene_music = ExtResource("5_13yg5")
+smooth_fade = false

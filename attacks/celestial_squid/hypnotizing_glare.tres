@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://bf74ikyadkxt6"]
+
+[ext_resource type="AudioStream" uid="uid://dspjb71o65ia3" path="res://sounds/weapons/psychic_damage.mp3" id="1_0yl08"]
+[ext_resource type="PackedScene" uid="uid://bimu0tjfjast6" path="res://scenes/inflictions/stunned.tscn" id="1_urgya"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_w84ys"]
+[ext_resource type="AudioStream" uid="uid://drthy7ptomtpl" path="res://sounds/weapons/hypnotize.mp3" id="4_gs5kj"]
+
+[resource]
+script = ExtResource("1_w84ys")
+attack_name = "Hypnotizing Glare"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 3
+base_damage = 2
+damage_type = "Psychic"
+swing_sound = ExtResource("4_gs5kj")
+hit_sound = ExtResource("1_0yl08")
+infliction = ExtResource("1_urgya")
+inflict_challenge = 10

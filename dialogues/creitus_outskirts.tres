@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=13 format=3 uid="uid://dup3fbxd66sb4"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_123ih"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_rd5jb"]
+[ext_resource type="Texture2D" uid="uid://coa502opjef0s" path="res://sprites/heroes/cleric/cleric.png" id="2_3tceo"]
+[ext_resource type="Texture2D" uid="uid://ure11o8rq5kq" path="res://sprites/heroes/knight/knight_dialog.png" id="3_pap0c"]
+[ext_resource type="Texture2D" uid="uid://bn1xfq1w78d5h" path="res://sprites/heroes/hero_trio.png" id="4_e2vv3"]
+[ext_resource type="Texture2D" uid="uid://b281yda66v71g" path="res://sprites/enemies/blade_musk_duo.png" id="5_k3aan"]
+[ext_resource type="AudioStream" uid="uid://bart76p4yu7xc" path="res://sounds/music/WorldMap.mp3" id="6_31tsb"]
+
+[sub_resource type="Resource" id="Resource_2tjrq"]
+script = ExtResource("1_123ih")
+narrator_title = ""
+dialogue_contents = "The three emerge from the tomb, navigating through the edge of the forest to the outskirts of Creitus. The sun had begun to set by the time they reached the city, and the damage was already done.
+
+The brigands were already here. Creitus is burning."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_tfx1e"]
+script = ExtResource("1_123ih")
+narrator_title = "Claira"
+dialogue_contents = "By Vandora's grace... Are we too late? But the city cannot fall, or all will be lost. We have to do something!"
+left_sprite = ExtResource("2_3tceo")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_o67yu"]
+script = ExtResource("1_123ih")
+narrator_title = "Henrick"
+dialogue_contents = "Indeed we must. Come forward, do not let a single raider remain standing. We will take back this city or we will die trying. For the sake of all who have fallen before us."
+left_sprite = ExtResource("2_3tceo")
+right_sprite = ExtResource("3_pap0c")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_a1o0y"]
+script = ExtResource("1_123ih")
+narrator_title = ""
+dialogue_contents = "A simple, brief statement, but one that drives the three closer to the smoldering ruins of the city streets ahead.
+
+Dozens of brigands stand in their way, but they have already slain dozens of foes before this moment. So what is yet  another battlefield in the long-term of a war?"
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_nuujl"]
+script = ExtResource("1_123ih")
+narrator_title = ""
+dialogue_contents = "The brigands at the outskirts have yet to notice their arrival. They have them by surprise.
+
+The three will be the ones to strike first, and strike true. It is time for these brigands to fall, once and for all."
+left_sprite = ExtResource("4_e2vv3")
+right_sprite = ExtResource("5_k3aan")
+sprite_focus = "Left"
+
+[resource]
+script = ExtResource("1_rd5jb")
+dialogue_statements = Array[ExtResource("1_123ih")]([SubResource("Resource_2tjrq"), SubResource("Resource_tfx1e"), SubResource("Resource_o67yu"), SubResource("Resource_a1o0y"), SubResource("Resource_nuujl")])
+scene_background = "Dialog_TownOutskirts"
+scene_music = ExtResource("6_31tsb")
+smooth_fade = false

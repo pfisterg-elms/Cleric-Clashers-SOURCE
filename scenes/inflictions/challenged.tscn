@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bficxfxwwhr1g"]
+
+[ext_resource type="Script" path="res://scripts/inflictions/challenged.gd" id="1_cxki3"]
+
+[node name="Challenged" type="Node"]
+script = ExtResource("1_cxki3")
+effect_name = "CHALLENGED"
+turn_count = 2

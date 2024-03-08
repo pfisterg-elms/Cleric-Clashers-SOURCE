@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5yf0mjynfls"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_lbhty"]
+[ext_resource type="Resource" uid="uid://cv612gmrcbinu" path="res://attacks/undead/undead_defender/axe_clash.tres" id="2_8lk4i"]
+[ext_resource type="Resource" uid="uid://cum5puds02pex" path="res://spritegroups/defender_spritegroup.tres" id="2_xswis"]
+[ext_resource type="Resource" uid="uid://bxppraajbya85" path="res://attacks/undead/undead_defender/axe_prod.tres" id="3_norcg"]
+[ext_resource type="Resource" uid="uid://diknuwsy5fthl" path="res://attacks/undead/undead_defender/shield_bludgeon.tres" id="4_vu811"]
+
+[node name="Undead_Defender" type="Node"]
+script = ExtResource("1_lbhty")
+actor_name = "Undead Defender"
+sprite_group = ExtResource("2_xswis")
+max_health = 22
+initiative_bonus = -3
+armor_class = 12
+infliction_save = -1
+resistances = Array[String](["Piercing", "Bludgeoning"])
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("2_8lk4i"), ExtResource("3_norcg"), ExtResource("4_vu811")])

@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=15 format=3 uid="uid://cfbjaunlv3ydq"]
+
+[ext_resource type="Texture2D" uid="uid://dxl8dpa8r6woi" path="res://sprites/heroes/cleric_knight_duo.png" id="1_24t7q"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_hac6x"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="2_imgik"]
+[ext_resource type="Texture2D" uid="uid://coa502opjef0s" path="res://sprites/heroes/cleric/cleric.png" id="3_bdwko"]
+[ext_resource type="Texture2D" uid="uid://ure11o8rq5kq" path="res://sprites/heroes/knight/knight_dialog.png" id="4_5fb7l"]
+[ext_resource type="Texture2D" uid="uid://dkqp1a3mags6j" path="res://sprites/enemies/blund_musk_duo.png" id="5_ljjn8"]
+[ext_resource type="Texture2D" uid="uid://du6fvqmsx41nv" path="res://sprites/heroes/duo_prep.png" id="6_ef75p"]
+[ext_resource type="AudioStream" uid="uid://c5wd11demj6gd" path="res://sounds/music/Sprawl2_Heavy.mp3" id="7_fl5fu"]
+
+[sub_resource type="Resource" id="Resource_jchg4"]
+script = ExtResource("2_imgik")
+narrator_title = ""
+dialogue_contents = "Pushing further beyond the hall of the quarters, the entrance is just within view. Foreign banter echoes through the finely-crafted steel doors of the temple's entryway.
+
+The Knight holds his hand out, signalling for a pause."
+left_sprite = ExtResource("1_24t7q")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_1ums5"]
+script = ExtResource("2_imgik")
+narrator_title = "The Knight"
+dialogue_contents = "Tread lightly. More approach. To exit now would spell our doom. Let them come to us. Only then shall we draw our weapons."
+left_sprite = ExtResource("3_bdwko")
+right_sprite = ExtResource("4_5fb7l")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_mgxqe"]
+script = ExtResource("2_imgik")
+narrator_title = "The Cleric"
+dialogue_contents = "There must be dozens of them left. Are you certain we can take them on?"
+left_sprite = ExtResource("3_bdwko")
+right_sprite = ExtResource("4_5fb7l")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_d6k21"]
+script = ExtResource("2_imgik")
+narrator_title = "The Knight"
+dialogue_contents = "There is no certainty in battle. Warriors must spin their fate as they proceed. Only when the dust settles can destiny be determined.
+
+The blood to be spilled will decide who will reign victorious in this siege."
+left_sprite = ExtResource("3_bdwko")
+right_sprite = ExtResource("4_5fb7l")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_k0l41"]
+script = ExtResource("2_imgik")
+narrator_title = ""
+dialogue_contents = "The doors tumble down, a vicious battle cry rippling down the crumbling halls.
+
+Another push by the raiders to claim the temple as their own."
+left_sprite = ExtResource("1_24t7q")
+right_sprite = ExtResource("5_ljjn8")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_vvr76"]
+script = ExtResource("2_imgik")
+narrator_title = "The Knight"
+dialogue_contents = "...And so let the blood be spilled.
+
+March forth against the dark; for we are the light in this uncertain abyss."
+left_sprite = ExtResource("6_ef75p")
+right_sprite = ExtResource("5_ljjn8")
+sprite_focus = "Left"
+
+[resource]
+script = ExtResource("1_hac6x")
+dialogue_statements = Array[ExtResource("2_imgik")]([SubResource("Resource_jchg4"), SubResource("Resource_1ums5"), SubResource("Resource_mgxqe"), SubResource("Resource_d6k21"), SubResource("Resource_k0l41"), SubResource("Resource_vvr76")])
+scene_background = "Dialog_OuterHalls"
+scene_music = ExtResource("7_fl5fu")
+smooth_fade = false

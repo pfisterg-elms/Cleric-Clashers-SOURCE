@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://diknuwsy5fthl"]
+
+[ext_resource type="AudioStream" uid="uid://ddhtdned2gcgk" path="res://sounds/weapons/blade/hilt_bash.mp3" id="1_1p7s2"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_05g8x"]
+[ext_resource type="AudioStream" uid="uid://w52sx28fp1be" path="res://sounds/weapons/blunt_swing.mp3" id="3_ajfri"]
+
+[resource]
+script = ExtResource("1_05g8x")
+attack_name = "Shield Bludgeon"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 5
+base_damage = 4
+damage_type = "Bludgeoning"
+swing_sound = ExtResource("3_ajfri")
+hit_sound = ExtResource("1_1p7s2")
+inflict_challenge = 0

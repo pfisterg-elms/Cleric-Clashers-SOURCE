@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://bwqtuuce3murj"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_06mpa"]
+[ext_resource type="AudioStream" uid="uid://86as5fd38qm5" path="res://sounds/weapons/blade/blade_hit.ogg" id="1_lpau2"]
+[ext_resource type="AudioStream" uid="uid://c4ijr0ryqaxk2" path="res://sounds/weapons/blade/blade_swing.ogg" id="3_l1jiv"]
+
+[resource]
+script = ExtResource("1_06mpa")
+attack_name = "Skewer"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 4
+base_damage = 6
+damage_type = "Piercing"
+swing_sound = ExtResource("3_l1jiv")
+hit_sound = ExtResource("1_lpau2")
+inflict_challenge = 0

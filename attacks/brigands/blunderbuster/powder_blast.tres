@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://yn4jx0d5sn5i"]
+
+[ext_resource type="AudioStream" uid="uid://5y78noc6ps4x" path="res://sounds/weapons/rifle/rifle_hit.mp3" id="1_4xvr7"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_lty54"]
+[ext_resource type="AudioStream" uid="uid://k24slod8qusi" path="res://sounds/weapons/rifle/rifle_fire.mp3" id="3_qkn3t"]
+
+[resource]
+script = ExtResource("1_lty54")
+attack_name = "Powder Blast"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 0
+base_damage = 4
+damage_type = "Bludgeoning"
+swing_sound = ExtResource("3_qkn3t")
+hit_sound = ExtResource("1_4xvr7")
+inflict_challenge = 0

@@ -1,0 +1,22 @@
+[gd_scene load_steps=8 format=3 uid="uid://ciixtqonce67f"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_ber12"]
+[ext_resource type="Resource" uid="uid://l8045ks0sjcr" path="res://spritegroups/henrick_spritegroup.tres" id="2_lv0jl"]
+[ext_resource type="Resource" uid="uid://b5n6c4ejri7y5" path="res://attacks/heroes/henrick/riposte.tres" id="3_tokid"]
+[ext_resource type="Resource" uid="uid://gxqnj3tvv8lf" path="res://attacks/heroes/henrick/deep_slash.tres" id="4_ku18g"]
+[ext_resource type="Resource" uid="uid://c8fd6nbxr8p60" path="res://attacks/heroes/henrick/warrior_taunt.tres" id="5_keh04"]
+[ext_resource type="Resource" uid="uid://dvprspvcpwipp" path="res://attacks/heroes/henrick/hilt_stagger.tres" id="5_t6g2a"]
+[ext_resource type="Resource" uid="uid://8msw8s2cq616" path="res://attacks/heroes/henrick/flourish.tres" id="6_d6kr3"]
+
+[node name="Henrick" type="Node"]
+script = ExtResource("1_ber12")
+actor_name = "Henrick"
+actor_identifier = "playerHenrick"
+sprite_group = ExtResource("2_lv0jl")
+max_health = 56
+initiative_bonus = 4
+armor_class = 12
+infliction_save = 3
+resistances = Array[String](["Piercing"])
+weaknesses = Array[String](["Psychic"])
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("3_tokid"), ExtResource("4_ku18g"), ExtResource("5_t6g2a"), ExtResource("6_d6kr3"), ExtResource("5_keh04")])

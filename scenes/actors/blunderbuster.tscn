@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl2lncybq5ns3"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_r5bc8"]
+[ext_resource type="Resource" uid="uid://d0r3db6vukovq" path="res://spritegroups/blunderbuster_spritegroup.tres" id="2_svcsh"]
+[ext_resource type="Resource" uid="uid://yn4jx0d5sn5i" path="res://attacks/brigands/blunderbuster/powder_blast.tres" id="3_0fk8g"]
+[ext_resource type="Resource" uid="uid://bf8ww40bv10b7" path="res://attacks/brigands/blunderbuster/precision_shot.tres" id="4_co6hp"]
+
+[node name="Blunderbuster" type="Node"]
+script = ExtResource("1_r5bc8")
+actor_name = "Brigand Blunderbuster"
+sprite_group = ExtResource("2_svcsh")
+max_health = 16
+initiative_bonus = 1
+armor_class = 9
+infliction_save = 2
+weaknesses = Array[String](["Bludgeoning"])
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("3_0fk8g"), ExtResource("4_co6hp")])

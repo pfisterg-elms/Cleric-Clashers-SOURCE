@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://44k5xejb17fa"]
+
+[ext_resource type="AudioStream" uid="uid://bvy5sd7lgboe2" path="res://sounds/weapons/poison_burn.mp3" id="1_bn801"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_fgpbl"]
+[ext_resource type="PackedScene" uid="uid://ddtbm5c1bh6i6" path="res://scenes/inflictions/poisoned_arbalest.tscn" id="2_1sucm"]
+[ext_resource type="AudioStream" uid="uid://w52sx28fp1be" path="res://sounds/weapons/blunt_swing.mp3" id="4_2id4f"]
+
+[resource]
+script = ExtResource("1_fgpbl")
+attack_name = "Necrotic Grenade"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 4
+base_damage = 3
+damage_type = "Poison"
+swing_sound = ExtResource("4_2id4f")
+hit_sound = ExtResource("1_bn801")
+infliction = ExtResource("2_1sucm")
+inflict_challenge = 12

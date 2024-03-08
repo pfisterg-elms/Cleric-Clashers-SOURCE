@@ -1,0 +1,158 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=24 format=3 uid="uid://bugkgisjbcpcl"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_sbqje"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_w0eih"]
+[ext_resource type="AudioStream" uid="uid://1ld17simphwa" path="res://sounds/music/CampTheme.mp3" id="4_2s6g5"]
+
+[sub_resource type="Resource" id="Resource_t1f86"]
+script = ExtResource("1_w0eih")
+narrator_title = ""
+dialogue_contents = "Darkness befalls the forest just beyond the temple, whose smouldering remains fade into the dead of the night."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_5j87j"]
+script = ExtResource("1_w0eih")
+narrator_title = ""
+dialogue_contents = "It has been an hour since the final brigands were felled, alongside its vicious leader. The crackle of the fire and the howls of the forest fauna are the only things breaking the silence.
+
+That is, until the cleric speaks up, in but a hushed tone, but a voice all the same."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_sbg0t"]
+script = ExtResource("1_w0eih")
+narrator_title = "The Cleric"
+dialogue_contents = "...Your name. I've yet caught your name. We both travel the same weary road, so... perhaps introductions are in order."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_d1mdv"]
+script = ExtResource("1_w0eih")
+narrator_title = ""
+dialogue_contents = "The knight looks up, the glimmer of his eyes visible through his helm for but a moment. He remains silent, as if looking through the cleric's very soul, before choosing his response."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_ggav5"]
+script = ExtResource("1_w0eih")
+narrator_title = "Henrick"
+dialogue_contents = "...You may call me Henrick; Sir Henrick. Indeed, we share this long, cumbersome journey ahead of ourselves. But for now, we may find solace in this cold night.
+
+...But you. Who are you, priestly one?"
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_iykcx"]
+script = ExtResource("1_w0eih")
+narrator_title = "Claira"
+dialogue_contents = "Claira; my name is Claira. But I wouldn't ordain myself as a priest, no. I was but a simple apprentice to the other clergymen. Following in their shadow for the time."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_df8m0"]
+script = ExtResource("1_w0eih")
+narrator_title = "Henrick"
+dialogue_contents = "I see.
+
+Yet you remained a vigilant figure in combat. I could not have asked for a finer compatriot upon the battlefield. You did well. Your skills were crucial to our survival."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_fp77u"]
+script = ExtResource("1_w0eih")
+narrator_title = "Claira"
+dialogue_contents = "Tsk. Had I not fled to the altar chamber I may have yet aided the others before they perished against the raiders. It was simply circumstance that forced my hand into the fray."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_udbi0"]
+script = ExtResource("1_w0eih")
+narrator_title = "Henrick"
+dialogue_contents = "You are but a single cleric, and I, a single warrior. You were wise to shelter in place. What is a flickering flame against a storm, aye?
+
+Together we may yet thrive. But upon our lonesome, we would be smothered in the whispers of the night."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_rfpwx"]
+script = ExtResource("1_w0eih")
+narrator_title = "Claira"
+dialogue_contents = "Suppose it is so, then.
+
+...I'd not seen you at the temple until now, though. Yet you bear the brand of a Vandoran soldier. What was your stake there until now?"
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_g3c2f"]
+script = ExtResource("1_w0eih")
+narrator_title = "Henrick"
+dialogue_contents = "Hmph. No stake. One of your clergyman once stood firm as a militia man. When he retired to the comfort of priesthood we followed in his wake, but remained as soldiers. The others and myself had no interest in chaining ourselves to the whims of a god."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_s0ch5"]
+script = ExtResource("1_w0eih")
+narrator_title = ""
+dialogue_contents = "Detestment lingers in his voice as he speaks ill of Vandora, and of the priests and clergymen of the temple who served in her domain. He turns briefly toward the edge of the forest surrounding their camp.
+
+He clears his throat, and gazes back toward Claira."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_vwptw"]
+script = ExtResource("1_w0eih")
+narrator_title = "Henrick"
+dialogue_contents = "...But I judge you not, cleric, for the path you've paved for yourself. I see that it has brought great fortune upon you."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_efk25"]
+script = ExtResource("1_w0eih")
+narrator_title = ""
+dialogue_contents = "Claira frowns briefly, seeing through Henrick's false words. But she bears no resentment for his view. Vandora's acolytes have had a turbulent history across the continent. Only recently has reform cleaved the church of its corruptive snares.
+
+But clearly, it has come too late to change this knight's mind."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_x117u"]
+script = ExtResource("1_w0eih")
+narrator_title = ""
+dialogue_contents = "The two fall silent once again. The fire begins to dwindle, threatening to plunge the campsite into darkness.
+
+The flame is prodded with a jut of Claira's mace; the flame soon renewed, embers dancing in the midnight mist."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_4vgym"]
+script = ExtResource("1_w0eih")
+narrator_title = "Claira"
+dialogue_contents = "...So, shall we travel northbound upon the first glance of the morning sun? That is where I saw the remaining brigands head.
+
+Toward Creitus, I presume. They spoke of it with an air of allure, greed. Malice."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_drfxy"]
+script = ExtResource("1_w0eih")
+narrator_title = ""
+dialogue_contents = "Henrick simply nods, understanding the implications of an assault upon the sprawling valley city. The temple would be but a sampling platter of their intended slaughter."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_cd8e0"]
+script = ExtResource("1_w0eih")
+narrator_title = "Henrick"
+dialogue_contents = "Northbound. Yes, we will march north. I am familiar with the terrain of these woods. If we leave by the notice of the morning sun then we may yet make it in time.
+
+By our watch, the city will not succumb."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_iboun"]
+script = ExtResource("1_w0eih")
+narrator_title = ""
+dialogue_contents = "There is determination in Henrick's voice. Unfaltering confidence in the duo's ability. Silence befalls the two once more, but it is simply because there is nothing more to speak of.
+
+The flame again falters; but this time, neither Claira nor Henrick tend to its dying embers."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_r0xfd"]
+script = ExtResource("1_w0eih")
+narrator_title = ""
+dialogue_contents = "Only the moon guides the pair to slumber as the fire dies. Upon the dawn of the next day, their destination is set.
+
+A strenuous, exhaustive hike across the rural stretch of the valley to Creitus. A burdening journey is ahead of them yet.
+
+But the battles of this night have proven that they are ready to face what is next to come."
+sprite_focus = "Left"
+
+[resource]
+script = ExtResource("1_sbqje")
+dialogue_statements = Array[ExtResource("1_w0eih")]([SubResource("Resource_t1f86"), SubResource("Resource_5j87j"), SubResource("Resource_sbg0t"), SubResource("Resource_d1mdv"), SubResource("Resource_ggav5"), SubResource("Resource_iykcx"), SubResource("Resource_df8m0"), SubResource("Resource_fp77u"), SubResource("Resource_udbi0"), SubResource("Resource_rfpwx"), SubResource("Resource_g3c2f"), SubResource("Resource_s0ch5"), SubResource("Resource_vwptw"), SubResource("Resource_efk25"), SubResource("Resource_x117u"), SubResource("Resource_4vgym"), SubResource("Resource_drfxy"), SubResource("Resource_cd8e0"), SubResource("Resource_iboun"), SubResource("Resource_r0xfd")])
+scene_background = "Dialog_TempleCamp"
+scene_music = ExtResource("4_2s6g5")
+smooth_fade = false

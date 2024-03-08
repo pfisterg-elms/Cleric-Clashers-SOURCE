@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://bxppraajbya85"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_815fa"]
+[ext_resource type="AudioStream" uid="uid://86as5fd38qm5" path="res://sounds/weapons/blade/blade_hit.ogg" id="1_ohwsn"]
+[ext_resource type="AudioStream" uid="uid://w52sx28fp1be" path="res://sounds/weapons/blunt_swing.mp3" id="3_bvk6g"]
+
+[resource]
+script = ExtResource("1_815fa")
+attack_name = "Axe Prod"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 3
+base_damage = 3
+damage_type = "Piercing"
+swing_sound = ExtResource("3_bvk6g")
+hit_sound = ExtResource("1_ohwsn")
+inflict_challenge = 0

@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://dt8dph06otgy4"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_dvwqd"]
+[ext_resource type="Resource" uid="uid://mo2wjtatejt1" path="res://spritegroups/webber_spritegroup.tres" id="2_eyom5"]
+[ext_resource type="Resource" uid="uid://bir1nrieia5ge" path="res://attacks/spiders/webber/burning_bite.tres" id="2_wewoa"]
+[ext_resource type="Resource" uid="uid://byds77wn2pntb" path="res://attacks/spiders/leg_lash.tres" id="3_03l38"]
+[ext_resource type="Resource" uid="uid://dfwvub3qseo8g" path="res://attacks/spiders/mandible_gnash.tres" id="4_3j802"]
+
+[node name="Webber" type="Node"]
+script = ExtResource("1_dvwqd")
+actor_name = "Fire Webber"
+sprite_group = ExtResource("2_eyom5")
+max_health = 14
+initiative_bonus = 1
+armor_class = 9
+infliction_save = 2
+resistances = Array[String](["Fire"])
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("2_wewoa"), ExtResource("3_03l38"), ExtResource("4_3j802")])

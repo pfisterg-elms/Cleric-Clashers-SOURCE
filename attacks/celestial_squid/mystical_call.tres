@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://cppr4rgq10fwb"]
+
+[ext_resource type="AudioStream" uid="uid://dspjb71o65ia3" path="res://sounds/weapons/psychic_damage.mp3" id="1_esmmx"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_myxuo"]
+[ext_resource type="AudioStream" uid="uid://0fh6s6iwtym2" path="res://sounds/weapons/squid_hoot.mp3" id="3_t405p"]
+
+[resource]
+script = ExtResource("1_myxuo")
+attack_name = "Mystical Call"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 4
+base_damage = 4
+damage_type = "Psychic"
+swing_sound = ExtResource("3_t405p")
+hit_sound = ExtResource("1_esmmx")
+inflict_challenge = 0

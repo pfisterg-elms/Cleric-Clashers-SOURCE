@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://bir1nrieia5ge"]
+
+[ext_resource type="AudioStream" uid="uid://b1ky6d3u051vf" path="res://sounds/weapons/fire_burn.mp3" id="1_26k73"]
+[ext_resource type="PackedScene" uid="uid://ddwifx0gb3oui" path="res://scenes/inflictions/burning_webber.tscn" id="1_xc2q4"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="2_y8n7s"]
+
+[resource]
+script = ExtResource("2_y8n7s")
+attack_name = "Burning Bite"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 3
+base_damage = 2
+damage_type = "Fire"
+swing_sound = ExtResource("1_26k73")
+hit_sound = ExtResource("1_26k73")
+infliction = ExtResource("1_xc2q4")
+inflict_challenge = 7

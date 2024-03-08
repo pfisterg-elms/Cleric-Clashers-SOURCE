@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Actor_SpriteGroup" load_steps=4 format=3 uid="uid://bu52yucb2b0t4"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_sprite_group.gd" id="1_c4jek"]
+[ext_resource type="Texture2D" uid="uid://qdjuwslsoq2n" path="res://sprites/enemies/celestial_squid/squid_attack.png" id="1_sguo6"]
+[ext_resource type="Texture2D" uid="uid://bp2fg0qaeic2j" path="res://sprites/enemies/celestial_squid/squid_idle.png" id="2_paipq"]
+
+[resource]
+script = ExtResource("1_c4jek")
+idle_sprite = ExtResource("2_paipq")
+attack_sprite = ExtResource("1_sguo6")
+bolster_sprite = ExtResource("1_sguo6")
+hurt_sprite = ExtResource("2_paipq")

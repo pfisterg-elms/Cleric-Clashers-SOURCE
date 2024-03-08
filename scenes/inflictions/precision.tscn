@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlcck7u8byxpp"]
+
+[ext_resource type="Script" path="res://scripts/inflictions/precision.gd" id="1_vjjmu"]
+
+[node name="Precision" type="Node"]
+script = ExtResource("1_vjjmu")
+effect_name = "PRECISION"
+turn_count = 2

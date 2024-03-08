@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://clhmyrj6p8l7m"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_ff37t"]
+[ext_resource type="Resource" uid="uid://dp0xmmhywiv45" path="res://spritegroups/arbalest_spritegroup.tres" id="2_e4tlb"]
+[ext_resource type="Resource" uid="uid://c8yr7taeacj2x" path="res://attacks/undead/undead_arbalest/acidic_arrow.tres" id="3_sfya2"]
+[ext_resource type="Resource" uid="uid://mc17t0kjmwau" path="res://attacks/undead/undead_arbalest/power_shot.tres" id="4_mjcqo"]
+[ext_resource type="Resource" uid="uid://suol4edfon55" path="res://attacks/undead/undead_arbalest/quick_draw.tres" id="5_l0nlj"]
+
+[node name="Undead_Arbalest" type="Node"]
+script = ExtResource("1_ff37t")
+actor_name = "Undead Arbalest"
+sprite_group = ExtResource("2_e4tlb")
+max_health = 16
+initiative_bonus = 1
+armor_class = 11
+infliction_save = 3
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("3_sfya2"), ExtResource("4_mjcqo"), ExtResource("5_l0nlj")])

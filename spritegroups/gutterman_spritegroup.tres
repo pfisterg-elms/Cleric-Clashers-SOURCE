@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Actor_SpriteGroup" load_steps=4 format=3 uid="uid://bqqcicmpqmcnh"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_sprite_group.gd" id="1_76fi7"]
+[ext_resource type="Texture2D" uid="uid://7fkn0ge8y4vi" path="res://sprites/enemies/gutterman/gutterman_attack.png" id="1_ltsdl"]
+[ext_resource type="Texture2D" uid="uid://dyqsfovmi8aje" path="res://sprites/enemies/gutterman/gutterman_idleBEEG.png" id="3_piqrq"]
+
+[resource]
+script = ExtResource("1_76fi7")
+idle_sprite = ExtResource("3_piqrq")
+attack_sprite = ExtResource("1_ltsdl")
+bolster_sprite = ExtResource("1_ltsdl")
+hurt_sprite = ExtResource("3_piqrq")

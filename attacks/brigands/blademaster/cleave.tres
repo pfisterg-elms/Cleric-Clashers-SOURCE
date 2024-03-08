@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://mvs286gquhwd"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_h2ovx"]
+[ext_resource type="AudioStream" uid="uid://86as5fd38qm5" path="res://sounds/weapons/blade/blade_hit.ogg" id="1_ptxak"]
+[ext_resource type="AudioStream" uid="uid://c4ijr0ryqaxk2" path="res://sounds/weapons/blade/blade_swing.ogg" id="3_p68to"]
+
+[resource]
+script = ExtResource("1_h2ovx")
+attack_name = "Cleave"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 4
+base_damage = 4
+damage_type = "Slashing"
+swing_sound = ExtResource("3_p68to")
+hit_sound = ExtResource("1_ptxak")
+inflict_challenge = 0

@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=17 format=3 uid="uid://bdx1p0wvc7p3s"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_8vhsg"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_u48mk"]
+[ext_resource type="Texture2D" uid="uid://coa502opjef0s" path="res://sprites/heroes/cleric/cleric.png" id="2_3c8kq"]
+[ext_resource type="Texture2D" uid="uid://ure11o8rq5kq" path="res://sprites/heroes/knight/knight_dialog.png" id="3_cmugv"]
+[ext_resource type="Texture2D" uid="uid://dxl8dpa8r6woi" path="res://sprites/heroes/cleric_knight_duo.png" id="4_ueu4e"]
+[ext_resource type="Texture2D" uid="uid://183rl8hf04us" path="res://sprites/enemies/blademaster/bm_duo_battle.png" id="5_gviyh"]
+[ext_resource type="Texture2D" uid="uid://du6fvqmsx41nv" path="res://sprites/heroes/duo_prep.png" id="6_gy2pp"]
+[ext_resource type="AudioStream" uid="uid://bart76p4yu7xc" path="res://sounds/music/WorldMap.mp3" id="7_xrm5u"]
+
+[sub_resource type="Resource" id="Resource_exdvd"]
+script = ExtResource("1_8vhsg")
+narrator_title = ""
+dialogue_contents = "The temple falls silent. Its corridors, desolate. The battle has waned for but a moment."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_0vrn7"]
+script = ExtResource("1_8vhsg")
+narrator_title = ""
+dialogue_contents = "The cleric is first to enter the atrium. Footsteps emerge from an adjacent stairwell, to which the cleric prepares to do battle once more. The brigands are relentless, yet unending."
+left_sprite = ExtResource("2_3c8kq")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_un861"]
+script = ExtResource("1_8vhsg")
+narrator_title = ""
+dialogue_contents = "But no brigands emerge, instead a lone knight. The cleric drops her mace, the symbol of his battlewear a recognizable emblem of the temple. 
+
+Yet she furls a brow; she knows not this crusading soldier. With a tilt of his own head, he knows not this priestly character either. He is first to break the silence."
+left_sprite = ExtResource("2_3c8kq")
+right_sprite = ExtResource("3_cmugv")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_kcwma"]
+script = ExtResource("1_8vhsg")
+narrator_title = "The Knight"
+dialogue_contents = "The sanctuary is no longer safe. We must leave, lest we fall like the others."
+left_sprite = ExtResource("2_3c8kq")
+right_sprite = ExtResource("3_cmugv")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_7bn6i"]
+script = ExtResource("1_8vhsg")
+narrator_title = "The Cleric"
+dialogue_contents = "But an army lies in our wake still. What are two against an entire warband?"
+left_sprite = ExtResource("2_3c8kq")
+right_sprite = ExtResource("3_cmugv")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_bgwos"]
+script = ExtResource("1_8vhsg")
+narrator_title = "The Knight"
+dialogue_contents = "You serve the goddess, I see it in you. Together, we may yet cut open wide an opportunity for exodus. Follow me, and stay close."
+left_sprite = ExtResource("2_3c8kq")
+right_sprite = ExtResource("3_cmugv")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_hll3n"]
+script = ExtResource("1_8vhsg")
+narrator_title = ""
+dialogue_contents = "The conversation is cut short. The doors swing apart at the opposite end of the atrium hall. Yet again, the brigands have sought out blood."
+left_sprite = ExtResource("4_ueu4e")
+right_sprite = ExtResource("5_gviyh")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_c6jp2"]
+script = ExtResource("1_8vhsg")
+narrator_title = "The Knight"
+dialogue_contents = "Lend me your strength, cleric, and I will lead us to victory.
+
+We will yet survive this day's turmoil. Now, to battle!"
+left_sprite = ExtResource("6_gy2pp")
+right_sprite = ExtResource("5_gviyh")
+sprite_focus = "Left"
+
+[resource]
+script = ExtResource("1_u48mk")
+dialogue_statements = Array[ExtResource("1_8vhsg")]([SubResource("Resource_exdvd"), SubResource("Resource_0vrn7"), SubResource("Resource_un861"), SubResource("Resource_kcwma"), SubResource("Resource_7bn6i"), SubResource("Resource_bgwos"), SubResource("Resource_hll3n"), SubResource("Resource_c6jp2")])
+scene_background = "Dialog_TempleAtrium"
+scene_music = ExtResource("7_xrm5u")
+smooth_fade = false

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Actor_SpriteGroup" load_steps=4 format=3 uid="uid://2vq5hrdw4gsv"]
+
+[ext_resource type="Texture2D" uid="uid://bna0lvogjb7vr" path="res://sprites/enemies/spitter/spitter_attack.png" id="1_cvab3"]
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_sprite_group.gd" id="1_q5aj1"]
+[ext_resource type="Texture2D" uid="uid://byd0ivypm21tf" path="res://sprites/enemies/spitter/spitter_idle.png" id="2_fk6jm"]
+
+[resource]
+script = ExtResource("1_q5aj1")
+idle_sprite = ExtResource("2_fk6jm")
+attack_sprite = ExtResource("1_cvab3")
+bolster_sprite = ExtResource("1_cvab3")
+hurt_sprite = ExtResource("2_fk6jm")

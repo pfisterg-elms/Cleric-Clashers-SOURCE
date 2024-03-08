@@ -1,0 +1,1402 @@
+[gd_scene load_steps=56 format=3 uid="uid://unwhfeiv8cge"]
+
+[ext_resource type="PackedScene" uid="uid://c8kggjpb501of" path="res://scenes/area_site.tscn" id="1_oxg4n"]
+[ext_resource type="Texture2D" uid="uid://bvs67j3mrl1ik" path="res://sprites/battle_maps/temple_inner.png" id="1_yhsiw"]
+[ext_resource type="Texture2D" uid="uid://bkbwq4lgxapd0" path="res://sprites/battle_maps/temple_outside.png" id="2_exfgl"]
+[ext_resource type="Resource" uid="uid://bca8ylcln8m1o" path="res://dialogues/temple/Altar_Chamber.tres" id="2_hc4xj"]
+[ext_resource type="Script" path="res://scripts/battle_system/battle_sequence.gd" id="2_is1ha"]
+[ext_resource type="Texture2D" uid="uid://c5put8nqo4lmj" path="res://sprites/battle_maps/forest_path.png" id="3_2n3bs"]
+[ext_resource type="AudioStream" uid="uid://c5ybrtudlywjb" path="res://sounds/music/TempleBattle.mp3" id="3_ls1of"]
+[ext_resource type="PackedScene" uid="uid://dqlket8d1vq8t" path="res://scenes/actors/claira.tscn" id="3_pfqgb"]
+[ext_resource type="Texture2D" uid="uid://dirdq1fnwtw2k" path="res://sprites/battle_maps/forest_graveyard.png" id="4_2asri"]
+[ext_resource type="PackedScene" uid="uid://c7rtyu5rhia4c" path="res://scenes/actors/blademaster.tscn" id="4_m28qa"]
+[ext_resource type="Texture2D" uid="uid://dxki7srr472i" path="res://sprites/battle_maps/passage_entrance.png" id="5_wu15y"]
+[ext_resource type="Texture2D" uid="uid://7wojx3gxd0pv" path="res://sprites/battle_maps/creitus.png" id="6_dwlu3"]
+[ext_resource type="Resource" uid="uid://c4ql8x3mmxt3w" path="res://dialogues/temple/Temple_Halls.tres" id="7_8v7ud"]
+[ext_resource type="Texture2D" uid="uid://c8x6rn7hxwpya" path="res://sprites/battle_maps/creitus2.png" id="7_hx0bb"]
+[ext_resource type="PackedScene" uid="uid://d0x1100d0jt1u" path="res://scenes/actors/musketeer.tscn" id="7_w7s3r"]
+[ext_resource type="AudioStream" uid="uid://bw5pvfskotoel" path="res://sounds/music/TownInChaos.mp3" id="9_5omvr"]
+[ext_resource type="Texture2D" uid="uid://b0xuy146wd6m0" path="res://sprites/player_token.png" id="10_cebda"]
+[ext_resource type="PackedScene" uid="uid://ciixtqonce67f" path="res://scenes/actors/henrick.tscn" id="10_e7h3l"]
+[ext_resource type="Resource" uid="uid://gdmk6kb07w6p" path="res://dialogues/temple/Temple_Halls2.tres" id="11_082pc"]
+[ext_resource type="AudioStream" uid="uid://t6umrlvodync" path="res://sounds/music/Sprawl_Light.mp3" id="12_5qfyg"]
+[ext_resource type="PackedScene" uid="uid://dl2lncybq5ns3" path="res://scenes/actors/blunderbuster.tscn" id="12_13eh4"]
+[ext_resource type="PackedScene" uid="uid://j1v233ceyx42" path="res://scenes/actors/gutterman_boss.tscn" id="12_bkibs"]
+[ext_resource type="Resource" uid="uid://bdx1p0wvc7p3s" path="res://dialogues/temple/Temple_Atrium.tres" id="13_mqdwg"]
+[ext_resource type="AudioStream" uid="uid://cll7i43r34qua" path="res://sounds/music/Sprawl_Heavy.mp3" id="13_xjbuv"]
+[ext_resource type="Resource" uid="uid://dtwjaydmhs8m" path="res://dialogues/temple/Temple_Quarters.tres" id="15_7jp21"]
+[ext_resource type="Resource" uid="uid://c1tw5aax4mnwg" path="res://dialogues/temple/Temple_Outskirts.tres" id="16_htm4s"]
+[ext_resource type="AudioStream" uid="uid://rpsne6x7el28" path="res://sounds/music/Sprawl2_Light.mp3" id="16_v5wgq"]
+[ext_resource type="Resource" uid="uid://cfbjaunlv3ydq" path="res://dialogues/temple/Temple_OuterHalls.tres" id="17_pqjfs"]
+[ext_resource type="AudioStream" uid="uid://c5wd11demj6gd" path="res://sounds/music/Sprawl2_Heavy.mp3" id="18_wp5s5"]
+[ext_resource type="Resource" uid="uid://xxuo6rscsy1c" path="res://dialogues/temple/Temple_Entrance.tres" id="19_y5nak"]
+[ext_resource type="Resource" uid="uid://bugkgisjbcpcl" path="res://dialogues/Temple_Camp.tres" id="24_ikjvg"]
+[ext_resource type="PackedScene" uid="uid://exspncrq85om" path="res://scenes/actors/spitter.tscn" id="28_4xwej"]
+[ext_resource type="AudioStream" uid="uid://bvtqmt0vxd0s3" path="res://sounds/music/Sluice2_Light.mp3" id="28_s1mb7"]
+[ext_resource type="PackedScene" uid="uid://dt8dph06otgy4" path="res://scenes/actors/webber.tscn" id="29_vabe8"]
+[ext_resource type="Resource" uid="uid://d2ujw6ymwpkai" path="res://dialogues/forest/forest1.tres" id="30_c1w5j"]
+[ext_resource type="AudioStream" uid="uid://ceerhtdnh84oy" path="res://sounds/music/Sluice_Heavy.mp3" id="30_pvhvu"]
+[ext_resource type="PackedScene" uid="uid://cswwfcnsyeiqx" path="res://scenes/actors/vikki.tscn" id="31_4wynb"]
+[ext_resource type="PackedScene" uid="uid://b4tnb320wo1y2" path="res://scenes/actors/gargoyle.tscn" id="32_i08jo"]
+[ext_resource type="PackedScene" uid="uid://cyl5cn3xdm4hq" path="res://scenes/actors/undead_commoner.tscn" id="32_ms7hc"]
+[ext_resource type="AudioStream" uid="uid://xp60facjxqe8" path="res://sounds/music/Sluice_Light.mp3" id="33_18nav"]
+[ext_resource type="PackedScene" uid="uid://cxedkehveb83i" path="res://scenes/actors/celestial_squid.tscn" id="33_v740n"]
+[ext_resource type="Resource" uid="uid://cjb5yqpjv8ymn" path="res://dialogues/forest/forest2.tres" id="34_7ysm7"]
+[ext_resource type="Resource" uid="uid://c8xnd6e2j4b8a" path="res://dialogues/forest/forest3.tres" id="35_gdyw0"]
+[ext_resource type="AudioStream" uid="uid://67k1kg3d0lch" path="res://sounds/music/DarkMitochondria.mp3" id="36_x1bu2"]
+[ext_resource type="PackedScene" uid="uid://c5yf0mjynfls" path="res://scenes/actors/undead_defender.tscn" id="37_h0tag"]
+[ext_resource type="PackedScene" uid="uid://clhmyrj6p8l7m" path="res://scenes/actors/undead_arbalest.tscn" id="38_10e3s"]
+[ext_resource type="Resource" uid="uid://omnnmpl7hk0t" path="res://dialogues/forest/forest4.tres" id="39_lcymf"]
+[ext_resource type="Resource" uid="uid://bfin2bs2f4a1o" path="res://dialogues/forest/forest5.tres" id="41_m5vcf"]
+[ext_resource type="PackedScene" uid="uid://ja6rmsne6cx5" path="res://scenes/actors/gutterman.tscn" id="42_3ruho"]
+[ext_resource type="Resource" uid="uid://dl7shtlv24fad" path="res://dialogues/grave_entry.tres" id="43_tv81i"]
+[ext_resource type="PackedScene" uid="uid://b6oiihf3pvm5n" path="res://scenes/actors/warlord.tscn" id="44_4tc6n"]
+[ext_resource type="Resource" uid="uid://dcuviau7d6und" path="res://dialogues/town_square.tres" id="45_5u3f2"]
+[ext_resource type="Resource" uid="uid://dh5r4qm67iw65" path="res://dialogues/grave_boss.tres" id="47_o5ybc"]
+[ext_resource type="Resource" uid="uid://dup3fbxd66sb4" path="res://dialogues/creitus_outskirts.tres" id="49_cp6rk"]
+[ext_resource type="Resource" uid="uid://pba6hs4urwvk" path="res://dialogues/epilogue.tres" id="54_lh1le"]
+
+[node name="WorldMap" type="Node2D"]
+
+[node name="RectBG" type="ColorRect" parent="."]
+offset_left = -2640.0
+offset_top = -7573.0
+offset_right = 49238.0
+offset_bottom = 6992.0
+mouse_filter = 2
+color = Color(0.67451, 0.67451, 0.67451, 1)
+metadata/_edit_lock_ = true
+
+[node name="WorldMap1" type="Sprite2D" parent="."]
+position = Vector2(1738, 91)
+texture = ExtResource("1_yhsiw")
+metadata/_edit_lock_ = true
+
+[node name="WorldMap2" type="Sprite2D" parent="."]
+position = Vector2(6288, -328)
+texture = ExtResource("2_exfgl")
+metadata/_edit_lock_ = true
+
+[node name="ForestPath" type="Sprite2D" parent="."]
+position = Vector2(9963, -2026)
+texture = ExtResource("3_2n3bs")
+metadata/_edit_lock_ = true
+
+[node name="ForestGraveyard" type="Sprite2D" parent="."]
+position = Vector2(17313, -2044)
+texture = ExtResource("4_2asri")
+metadata/_edit_lock_ = true
+
+[node name="PassageEntrance" type="Sprite2D" parent="."]
+position = Vector2(23788, -2079)
+texture = ExtResource("5_wu15y")
+metadata/_edit_lock_ = true
+
+[node name="CreitusBG2" type="Sprite2D" parent="."]
+position = Vector2(34564.5, -3981.5)
+texture = ExtResource("6_dwlu3")
+metadata/_edit_lock_ = true
+
+[node name="CreitusBG1" type="Sprite2D" parent="."]
+position = Vector2(30452.5, -2143.5)
+texture = ExtResource("7_hx0bb")
+metadata/_edit_lock_ = true
+
+[node name="Temple1" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 28.0
+offset_top = -13.0
+offset_right = 92.0
+offset_bottom = 51.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+starting_site = true
+unlocked = true
+site_name = "Temple - Altar Chamber"
+description = "A lone cleric seeks refuge in the altar chamber of the crumbling temple, currently under siege by vicious raiding parties.
+
+Her goddess heeds her prayers as danger rears its ugly head."
+previous_site = NodePath("../Epilogue")
+next_site = NodePath("../Temple2")
+area_dialogue = ExtResource("2_hc4xj")
+area_battle = NodePath("AltarBattle")
+
+[node name="AltarBattle" type="Node" parent="Temple1" node_paths=PackedStringArray("player_actors", "enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "A pair of BLADEMASTERS intrude upon the altar room! They shall have no quarter in this sacred place!"
+player_actors = [NodePath("Claira")]
+enemy_actors = [NodePath("Blademaster"), NodePath("Blademaster2")]
+battle_music = ExtResource("3_ls1of")
+background_name = "Battle_AltarBG"
+
+[node name="Claira" parent="Temple1/AltarBattle" instance=ExtResource("3_pfqgb")]
+
+[node name="Blademaster" parent="Temple1/AltarBattle" instance=ExtResource("4_m28qa")]
+actor_identifier = "blade1"
+weaknesses = Array[String](["Piercing"])
+
+[node name="Blademaster2" parent="Temple1/AltarBattle" instance=ExtResource("4_m28qa")]
+actor_identifier = "blade2"
+
+[node name="Temple2" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 384.0
+offset_top = 248.0
+offset_right = 448.0
+offset_bottom = 312.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Temple - Inner Halls"
+description = "The safety of the altar room is no more. The cleric is forced to venture into the temple halls, now conquered territory for the barbaric brigands."
+previous_site = NodePath("../Temple1")
+next_site = NodePath("../Temple3")
+area_dialogue = ExtResource("7_8v7ud")
+area_battle = NodePath("HallsBattle")
+
+[node name="HallsBattle" type="Node" parent="Temple2" node_paths=PackedStringArray("player_actors", "enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "Brigand scoundrels roam the halls! They shall not let you pass without a fight!"
+player_actors = [NodePath("Claira")]
+enemy_actors = [NodePath("Musketeer"), NodePath("Blademaster")]
+battle_music = ExtResource("3_ls1of")
+background_name = "Battle_HallwayBG"
+
+[node name="Claira" parent="Temple2/HallsBattle" instance=ExtResource("3_pfqgb")]
+
+[node name="Musketeer" parent="Temple2/HallsBattle" instance=ExtResource("7_w7s3r")]
+actor_identifier = "musketeer"
+
+[node name="Blademaster" parent="Temple2/HallsBattle" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster"
+
+[node name="Temple3" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1150.0
+offset_top = 270.0
+offset_right = 1214.0
+offset_bottom = 334.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Temple - Inner Halls 2"
+description = "Meanwhile, a lone knight fights off a swath of brigands with swift might and prejudice. His temple now forsaken, justice and fury burns in his soul."
+previous_site = NodePath("../Temple2")
+next_site = NodePath("../Temple5")
+area_dialogue = ExtResource("11_082pc")
+area_battle = NodePath("HenrickIntro")
+
+[node name="HenrickIntro" type="Node" parent="Temple3" node_paths=PackedStringArray("player_actors", "enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "Prepare your blade, valiant knight! Bring justice to these foul raiders."
+player_actors = [NodePath("Henrick")]
+enemy_actors = [NodePath("Blademaster"), NodePath("Blademaster2"), NodePath("Blademaster3")]
+battle_music = ExtResource("3_ls1of")
+background_name = "Battle_HallwayBG"
+
+[node name="Henrick" parent="Temple3/HenrickIntro" instance=ExtResource("10_e7h3l")]
+
+[node name="Blademaster" parent="Temple3/HenrickIntro" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster1"
+
+[node name="Blademaster2" parent="Temple3/HenrickIntro" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster2"
+
+[node name="Blademaster3" parent="Temple3/HenrickIntro" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster3"
+
+[node name="Temple5" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 2299.0
+offset_top = 162.0
+offset_right = 2363.0
+offset_bottom = 226.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Temple - Deep Atrium"
+description = "A cleric and a knight unite in arms amid the chaos of the raid. An alliance of soldier and priest, soon to be forged through further turmoil and bloodshed."
+previous_site = NodePath("../Temple3")
+next_site = NodePath("../Temple6")
+area_dialogue = ExtResource("13_mqdwg")
+area_battle = NodePath("AtriumWave1")
+
+[node name="AtriumWave1" type="Node" parent="Temple5" node_paths=PackedStringArray("player_actors", "enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+log_message = "Prepare your arms once more! The brigands are upon the freshly-minted duo."
+player_actors = [NodePath("../../Temple3/HenrickIntro/Henrick"), NodePath("Claira")]
+enemy_actors = [NodePath("Blademaster"), NodePath("Blademaster2")]
+battle_music = ExtResource("3_ls1of")
+background_name = "Battle_AtriumBG"
+next_battle = NodePath("../AtriumWave2")
+
+[node name="Claira" parent="Temple5/AtriumWave1" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Temple5/AtriumWave1" instance=ExtResource("10_e7h3l")]
+
+[node name="Blademaster" parent="Temple5/AtriumWave1" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster1"
+
+[node name="Blademaster2" parent="Temple5/AtriumWave1" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster2"
+
+[node name="AtriumWave2" type="Node" parent="Temple5" node_paths=PackedStringArray("player_actors", "enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "Another wave of raiders arrive! The atrium will be their final resting place."
+player_actors = [NodePath("Henrick"), NodePath("Claira")]
+enemy_actors = [NodePath("Blunderbuster"), NodePath("Musketeer")]
+background_name = "Battle_AtriumBG"
+
+[node name="Henrick" parent="Temple5/AtriumWave2" instance=ExtResource("10_e7h3l")]
+
+[node name="Claira" parent="Temple5/AtriumWave2" instance=ExtResource("3_pfqgb")]
+
+[node name="Blunderbuster" parent="Temple5/AtriumWave2" instance=ExtResource("12_13eh4")]
+actor_identifier = "blunderbuster"
+
+[node name="Musketeer" parent="Temple5/AtriumWave2" instance=ExtResource("7_w7s3r")]
+actor_identifier = "musketeer"
+
+[node name="Temple6" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 2551.0
+offset_top = -458.0
+offset_right = 2615.0
+offset_bottom = -394.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Temple - Quarters"
+description = "The surface level of the temple is as battered as its deepest recesses. The entrance is close, but these halls remain a den for vile men of war.
+
+But not for much longer."
+previous_site = NodePath("../Temple5")
+next_site = NodePath("../Temple7")
+area_dialogue = ExtResource("15_7jp21")
+area_battle = NodePath("QuartersFight")
+
+[node name="QuartersFight" type="Node" parent="Temple6" node_paths=PackedStringArray("player_actors", "enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "The halls billow with smoke and cinders, yet a pair of brigands stand firm in your way."
+player_actors = [NodePath("Claira"), NodePath("Henrick")]
+enemy_actors = [NodePath("Musketeer"), NodePath("Blunderbuster")]
+battle_music = ExtResource("18_wp5s5")
+background_name = "Battle_RuinedHalls"
+
+[node name="Claira" parent="Temple6/QuartersFight" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Temple6/QuartersFight" instance=ExtResource("10_e7h3l")]
+
+[node name="Musketeer" parent="Temple6/QuartersFight" instance=ExtResource("7_w7s3r")]
+actor_identifier = "musketeer"
+
+[node name="Blunderbuster" parent="Temple6/QuartersFight" instance=ExtResource("12_13eh4")]
+actor_identifier = "blunderbuster"
+
+[node name="Temple7" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 3251.0
+offset_top = -420.0
+offset_right = 3315.0
+offset_bottom = -356.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Temple - Outer Halls"
+description = "A final push must be made to the entrance of the temple, closer to the heart of the brigand incursion."
+previous_site = NodePath("../Temple6")
+next_site = NodePath("../Temple8")
+area_dialogue = ExtResource("17_pqjfs")
+area_battle = NodePath("WaveOne")
+
+[node name="WaveOne" type="Node" parent="Temple7" node_paths=PackedStringArray("player_actors", "enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+log_message = "Brigands storm through the entrance! This wickedness cannot be allowed to prevail."
+player_actors = [NodePath("Claira"), NodePath("Henrick")]
+enemy_actors = [NodePath("Musketeer2"), NodePath("Blunderbuster"), NodePath("Musketeer")]
+battle_music = ExtResource("16_v5wgq")
+background_name = "Battle_RuinedHalls"
+next_battle = NodePath("../WaveTwo")
+
+[node name="Claira" parent="Temple7/WaveOne" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Temple7/WaveOne" instance=ExtResource("10_e7h3l")]
+
+[node name="Blunderbuster" parent="Temple7/WaveOne" instance=ExtResource("12_13eh4")]
+actor_identifier = "blunderbuster1Wave1"
+
+[node name="Musketeer" parent="Temple7/WaveOne" instance=ExtResource("7_w7s3r")]
+actor_identifier = "musketeer1Wave1"
+
+[node name="Musketeer2" parent="Temple7/WaveOne" instance=ExtResource("7_w7s3r")]
+actor_identifier = "musketeer2Wave1"
+
+[node name="WaveTwo" type="Node" parent="Temple7" node_paths=PackedStringArray("enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "Another raider pair follows suit after the others are felled!"
+enemy_actors = [NodePath("Blunderbuster"), NodePath("Blunderbuster2")]
+battle_music = ExtResource("18_wp5s5")
+background_name = "Battle_RuinedHalls"
+
+[node name="Blunderbuster" parent="Temple7/WaveTwo" instance=ExtResource("12_13eh4")]
+actor_identifier = "blunderbuster1Wave2"
+
+[node name="Blunderbuster2" parent="Temple7/WaveTwo" instance=ExtResource("12_13eh4")]
+actor_identifier = "blunderbuster2Wave2"
+
+[node name="Temple8" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 4473.0
+offset_top = -453.0
+offset_right = 4537.0
+offset_bottom = -389.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Temple - The Entrance"
+description = "The temple continues to smoulder and crumble as the duo exit, a vicious army of brigands remaining. To flee the battlefield, they must face the warmongers head-on with all their might."
+previous_site = NodePath("../Temple7")
+next_site = NodePath("../TempleBoss")
+area_dialogue = ExtResource("19_y5nak")
+area_battle = NodePath("WaveOne")
+
+[node name="WaveOne" type="Node" parent="Temple8" node_paths=PackedStringArray("player_actors", "enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+log_message = "The battlefield stands before you. The warband awaits your move. Lead this fight into swift victory."
+player_actors = [NodePath("Henrick"), NodePath("Claira")]
+enemy_actors = [NodePath("Blademaster"), NodePath("Blademaster2")]
+battle_music = ExtResource("16_v5wgq")
+smooth_fade = true
+background_name = "Battle_TempleEntrance"
+next_battle = NodePath("../WaveTwo")
+
+[node name="Henrick" parent="Temple8/WaveOne" instance=ExtResource("10_e7h3l")]
+
+[node name="Claira" parent="Temple8/WaveOne" instance=ExtResource("3_pfqgb")]
+
+[node name="Blademaster" parent="Temple8/WaveOne" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster1Wave1"
+
+[node name="Blademaster2" parent="Temple8/WaveOne" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster2Wave1"
+
+[node name="WaveTwo" type="Node" parent="Temple8" node_paths=PackedStringArray("enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+log_message = "Riflemen step forth to avenge their fallen bladesingers!"
+enemy_actors = [NodePath("Blunderbuster"), NodePath("Blunderbuster2")]
+battle_music = ExtResource("12_5qfyg")
+smooth_fade = true
+background_name = "Battle_TempleEntrance"
+next_battle = NodePath("../WaveThree")
+
+[node name="Blunderbuster" parent="Temple8/WaveTwo" instance=ExtResource("12_13eh4")]
+actor_identifier = "blunderbuster1Wave2"
+
+[node name="Blunderbuster2" parent="Temple8/WaveTwo" instance=ExtResource("12_13eh4")]
+actor_identifier = "blunderbuster2Wave2"
+
+[node name="WaveThree" type="Node" parent="Temple8" node_paths=PackedStringArray("enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "A final wave approaches as the warband disperses against your might! Persist and prevail once again!"
+enemy_actors = [NodePath("Blademaster"), NodePath("Blademaster2"), NodePath("Blunderbuster")]
+background_name = "Battle_TempleEntrance"
+
+[node name="Blademaster" parent="Temple8/WaveThree" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster1Wave3"
+
+[node name="Blademaster2" parent="Temple8/WaveThree" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster2Wave3"
+
+[node name="Blunderbuster" parent="Temple8/WaveThree" instance=ExtResource("12_13eh4")]
+actor_identifier = "blunderbusterWave3"
+
+[node name="TempleBoss" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 6364.0
+offset_top = -253.0
+offset_right = 6428.0
+offset_bottom = -189.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Temple Outskirts - BOSS"
+description = "The brigand's army is on the retreat, but a straggling party remains, as well as the raid's leader himself, deadset on exterminating the ambitious heroes."
+previous_site = NodePath("../Temple8")
+next_site = NodePath("../TempleCamp")
+area_dialogue = ExtResource("16_htm4s")
+area_battle = NodePath("WaveOne")
+
+[node name="WaveOne" type="Node" parent="TempleBoss" node_paths=PackedStringArray("player_actors", "enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+log_message = "The brigands are on the retreat! Yet a final incursion stands in your way."
+player_actors = [NodePath("Claira"), NodePath("Henrick")]
+enemy_actors = [NodePath("Blademaster"), NodePath("Blademaster2")]
+battle_music = ExtResource("12_5qfyg")
+smooth_fade = true
+background_name = "Battle_TempleEntrance"
+next_battle = NodePath("../WaveTwo")
+
+[node name="Claira" parent="TempleBoss/WaveOne" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="TempleBoss/WaveOne" instance=ExtResource("10_e7h3l")]
+
+[node name="Blademaster" parent="TempleBoss/WaveOne" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster1Wave1"
+
+[node name="Blademaster2" parent="TempleBoss/WaveOne" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster2Wave1"
+
+[node name="WaveTwo" type="Node" parent="TempleBoss" node_paths=PackedStringArray("enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+log_message = "A final wave of brigands approach, armed with gunpowder and fury! Break through, fight them off!"
+enemy_actors = [NodePath("Blunderbuster"), NodePath("Musketeer")]
+background_name = "Battle_TempleEntrance"
+next_battle = NodePath("../BossWave")
+big_victory = true
+victory_message = "The Gutterman falls in defeat... The temple grounds finally fall silent amid the bloodshed."
+
+[node name="Blunderbuster" parent="TempleBoss/WaveTwo" instance=ExtResource("12_13eh4")]
+actor_identifier = "blunderbusterWave2"
+
+[node name="Musketeer" parent="TempleBoss/WaveTwo" instance=ExtResource("7_w7s3r")]
+actor_identifier = "musketeerWave2"
+
+[node name="BossWave" type="Node" parent="TempleBoss" node_paths=PackedStringArray("enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "The raiders have fallen, but their leader remains! [color=red]Finish the fight or die trying![/color]"
+boss_title = "BOSS: BRIGAND GUTTERMAN"
+enemy_actors = [NodePath("GuttermanBoss")]
+battle_music = ExtResource("13_xjbuv")
+background_name = "Battle_TempleEntrance"
+big_victory = true
+victory_message = "The Gutterman falls... as all goes quiet on the temple grounds once again."
+
+[node name="GuttermanBoss" parent="TempleBoss/BossWave" instance=ExtResource("12_bkibs")]
+actor_identifier = "guttermanBoss"
+
+[node name="TempleCamp" parent="." node_paths=PackedStringArray("previous_site", "next_site") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 8088.0
+offset_top = -388.0
+offset_right = 8152.0
+offset_bottom = -324.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Forest Outlands - Campsite"
+description = "The duo has fled from the temple after a grizzly battle with what remained of the brigand army. They have a chance for brief respite and contemplation before continuing their journey into the forest."
+previous_site = NodePath("../TempleBoss")
+next_site = NodePath("../Forest1")
+area_dialogue = ExtResource("24_ikjvg")
+
+[node name="Forest1" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 10286.0
+offset_top = -460.0
+offset_right = 10350.0
+offset_bottom = -396.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Winding Forest Path"
+description = "Lost in the wilderness, the duo orient themselves as the native fauna introduces itself."
+previous_site = NodePath("../TempleCamp")
+next_site = NodePath("../Forest2")
+area_dialogue = ExtResource("30_c1w5j")
+area_battle = NodePath("Battle_Sequence")
+
+[node name="Battle_Sequence" type="Node" parent="Forest1" node_paths=PackedStringArray("player_actors", "enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "The trees scatter in the wind as arachnids ambush from the foliage!"
+player_actors = [NodePath("Henrick"), NodePath("Claira")]
+enemy_actors = [NodePath("Spitter"), NodePath("Webber")]
+battle_music = ExtResource("28_s1mb7")
+background_name = "Battle_Forest"
+
+[node name="Henrick" parent="Forest1/Battle_Sequence" instance=ExtResource("10_e7h3l")]
+
+[node name="Claira" parent="Forest1/Battle_Sequence" instance=ExtResource("3_pfqgb")]
+
+[node name="Spitter" parent="Forest1/Battle_Sequence" instance=ExtResource("28_4xwej")]
+actor_identifier = "spitter"
+
+[node name="Webber" parent="Forest1/Battle_Sequence" instance=ExtResource("29_vabe8")]
+actor_identifier = "webber"
+
+[node name="Forest2" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 9866.0
+offset_top = -2424.0
+offset_right = 9930.0
+offset_bottom = -2360.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Deep Detour"
+description = "Trekking further into the detour of the forest, another ambush awaits the two."
+previous_site = NodePath("../Forest1")
+next_site = NodePath("../Forest3")
+area_dialogue = ExtResource("34_7ysm7")
+area_battle = NodePath("Battle_Sequence")
+
+[node name="Battle_Sequence" type="Node" parent="Forest2" node_paths=PackedStringArray("player_actors", "enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "Arachnophobia plagues the party as more spiders emerge!"
+player_actors = [NodePath("Claira"), NodePath("Henrick")]
+enemy_actors = [NodePath("Spitter"), NodePath("Spitter2"), NodePath("Webber")]
+battle_music = ExtResource("28_s1mb7")
+background_name = "Battle_Forest"
+
+[node name="Claira" parent="Forest2/Battle_Sequence" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Forest2/Battle_Sequence" instance=ExtResource("10_e7h3l")]
+
+[node name="Spitter" parent="Forest2/Battle_Sequence" instance=ExtResource("28_4xwej")]
+actor_identifier = "spitter1"
+
+[node name="Spitter2" parent="Forest2/Battle_Sequence" instance=ExtResource("28_4xwej")]
+actor_identifier = "spitter2"
+
+[node name="Webber" parent="Forest2/Battle_Sequence" instance=ExtResource("29_vabe8")]
+actor_identifier = "webber"
+
+[node name="Forest3" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12037.0
+offset_top = -2707.0
+offset_right = 12101.0
+offset_bottom = -2643.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Forest Crash Site"
+description = "A mysterious crashed carriage is found, alongside a peculiar figure... But fiends ambush from the shadows before questions can be answered."
+previous_site = NodePath("../Forest2")
+next_site = NodePath("../Forest4")
+area_dialogue = ExtResource("35_gdyw0")
+area_battle = NodePath("Battle_Sequence")
+
+[node name="Battle_Sequence" type="Node" parent="Forest3" node_paths=PackedStringArray("player_actors", "enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+log_message = "An odd stranger joins the fight as undead fiends attack!"
+player_actors = [NodePath("Henrick"), NodePath("Claira"), NodePath("Vikki")]
+enemy_actors = [NodePath("Undead_Commoner"), NodePath("Undead_Commoner2"), NodePath("Spitter")]
+battle_music = ExtResource("33_18nav")
+background_name = "Battle_VikkiMeetup"
+next_battle = NodePath("../Wave2")
+
+[node name="Henrick" parent="Forest3/Battle_Sequence" instance=ExtResource("10_e7h3l")]
+
+[node name="Claira" parent="Forest3/Battle_Sequence" instance=ExtResource("3_pfqgb")]
+
+[node name="Vikki" parent="Forest3/Battle_Sequence" instance=ExtResource("31_4wynb")]
+
+[node name="Undead_Commoner" parent="Forest3/Battle_Sequence" instance=ExtResource("32_ms7hc")]
+actor_identifier = "commoner1"
+
+[node name="Undead_Commoner2" parent="Forest3/Battle_Sequence" instance=ExtResource("32_ms7hc")]
+actor_identifier = "commoner2"
+
+[node name="Spitter" parent="Forest3/Battle_Sequence" instance=ExtResource("28_4xwej")]
+actor_identifier = "spitter"
+
+[node name="Wave2" type="Node" parent="Forest3" node_paths=PackedStringArray("enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "Another zombie lurches into the fray!"
+enemy_actors = [NodePath("Undead_Commoner"), NodePath("Webber")]
+background_name = "Battle_VikkiMeetup"
+
+[node name="Webber" parent="Forest3/Wave2" instance=ExtResource("29_vabe8")]
+actor_identifier = "webber"
+
+[node name="Undead_Commoner" parent="Forest3/Wave2" instance=ExtResource("32_ms7hc")]
+actor_identifier = "commonerWave2"
+
+[node name="Forest4" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12178.0
+offset_top = -463.0
+offset_right = 12242.0
+offset_bottom = -399.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Accursed Vista"
+description = "The doctor ventures deeper into the forest, and the duo pursue before they endanger themselves."
+previous_site = NodePath("../Forest3")
+next_site = NodePath("../Forest5")
+area_dialogue = ExtResource("39_lcymf")
+area_battle = NodePath("Battle_Sequence")
+
+[node name="Battle_Sequence" type="Node" parent="Forest4" node_paths=PackedStringArray("player_actors", "enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "The plague doctor scurries into the fog, but a celestial beast blocks the way!"
+player_actors = [NodePath("Henrick"), NodePath("Claira")]
+enemy_actors = [NodePath("Celestial_Squid")]
+battle_music = ExtResource("33_18nav")
+smooth_fade = true
+background_name = "Battle_CursedForest"
+
+[node name="Henrick" parent="Forest4/Battle_Sequence" instance=ExtResource("10_e7h3l")]
+
+[node name="Claira" parent="Forest4/Battle_Sequence" instance=ExtResource("3_pfqgb")]
+
+[node name="Celestial_Squid" parent="Forest4/Battle_Sequence" instance=ExtResource("33_v740n")]
+actor_identifier = "squid"
+max_health = 28
+
+[node name="Forest5" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 13852.0
+offset_top = -37.0
+offset_right = 13916.0
+offset_bottom = 27.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Windy Wrathlands"
+description = "Pursuing the doctor further into the forest, the winds pick up as a greater horde emerges..."
+previous_site = NodePath("../Forest4")
+next_site = NodePath("../Grave1")
+area_dialogue = ExtResource("41_m5vcf")
+area_battle = NodePath("Battle_Sequence")
+
+[node name="Battle_Sequence" type="Node" parent="Forest5" node_paths=PackedStringArray("player_actors", "enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+log_message = "The winds howl as a celestial horde seeks out its prey!"
+player_actors = [NodePath("Claira"), NodePath("Henrick"), NodePath("Vikki")]
+enemy_actors = [NodePath("Celestial_Squid"), NodePath("Celestial_Squid2")]
+battle_music = ExtResource("36_x1bu2")
+background_name = "Battle_WindyForestBG"
+next_battle = NodePath("../Wave2")
+
+[node name="Claira" parent="Forest5/Battle_Sequence" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Forest5/Battle_Sequence" instance=ExtResource("10_e7h3l")]
+
+[node name="Vikki" parent="Forest5/Battle_Sequence" instance=ExtResource("31_4wynb")]
+
+[node name="Celestial_Squid" parent="Forest5/Battle_Sequence" instance=ExtResource("33_v740n")]
+actor_identifier = "squid1Wave1"
+
+[node name="Celestial_Squid2" parent="Forest5/Battle_Sequence" instance=ExtResource("33_v740n")]
+actor_identifier = "squid2Wave1"
+
+[node name="Wave2" type="Node" parent="Forest5" node_paths=PackedStringArray("enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "Another celestial emerges, along with arachnid companions!"
+enemy_actors = [NodePath("Celestial_Squid"), NodePath("Spitter"), NodePath("Webber")]
+background_name = "Battle_WindyForestBG"
+
+[node name="Celestial_Squid" parent="Forest5/Wave2" instance=ExtResource("33_v740n")]
+actor_identifier = "squidWave2"
+
+[node name="Spitter" parent="Forest5/Wave2" instance=ExtResource("28_4xwej")]
+actor_identifier = "spitter"
+
+[node name="Webber" parent="Forest5/Wave2" instance=ExtResource("29_vabe8")]
+actor_identifier = "webber"
+
+[node name="Grave1" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 16864.0
+offset_top = -326.0
+offset_right = 16928.0
+offset_bottom = -262.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Graveyard Entrance"
+description = "Narrowly escaping the grasp of the celestial horde, the trio seeks refuge in a graveyard. But the spirits have already been disturbed. Sometimes, dead is better."
+previous_site = NodePath("../Forest5")
+next_site = NodePath("../Grave2")
+area_dialogue = ExtResource("43_tv81i")
+area_battle = NodePath("Battle_Sequence")
+
+[node name="Battle_Sequence" type="Node" parent="Grave1" node_paths=PackedStringArray("player_actors", "enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "Spirits whisper all around, as shambling corpses burst from their graves!"
+player_actors = [NodePath("Claira"), NodePath("Henrick"), NodePath("Vikki")]
+enemy_actors = [NodePath("Undead_Defender"), NodePath("Undead_Arbalest"), NodePath("Undead_Commoner")]
+battle_music = ExtResource("33_18nav")
+background_name = "Battle_Graveyard"
+
+[node name="Claira" parent="Grave1/Battle_Sequence" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Grave1/Battle_Sequence" instance=ExtResource("10_e7h3l")]
+
+[node name="Vikki" parent="Grave1/Battle_Sequence" instance=ExtResource("31_4wynb")]
+
+[node name="Undead_Defender" parent="Grave1/Battle_Sequence" instance=ExtResource("37_h0tag")]
+actor_identifier = "defender"
+
+[node name="Undead_Arbalest" parent="Grave1/Battle_Sequence" instance=ExtResource("38_10e3s")]
+actor_identifier = "arbalest"
+
+[node name="Undead_Commoner" parent="Grave1/Battle_Sequence" instance=ExtResource("32_ms7hc")]
+actor_identifier = "commoner"
+
+[node name="Grave2" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 17913.0
+offset_top = -2213.0
+offset_right = 17977.0
+offset_bottom = -2149.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Nameless Graves"
+description = "Graves yet to be claimed, yet occupied all the same by more undead fiends."
+previous_site = NodePath("../Grave1")
+next_site = NodePath("../Grave3")
+area_dialogue = null
+area_battle = NodePath("Battle_Sequence")
+
+[node name="Battle_Sequence" type="Node" parent="Grave2" node_paths=PackedStringArray("player_actors", "enemy_actors")]
+script = ExtResource("2_is1ha")
+player_actors = [NodePath("Claira"), NodePath("Henrick"), NodePath("Vikki")]
+enemy_actors = [NodePath("Undead_Commoner"), NodePath("Undead_Commoner2"), NodePath("Undead_Commoner3")]
+battle_music = ExtResource("33_18nav")
+background_name = "Battle_Graveyard"
+
+[node name="Claira" parent="Grave2/Battle_Sequence" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Grave2/Battle_Sequence" instance=ExtResource("10_e7h3l")]
+
+[node name="Vikki" parent="Grave2/Battle_Sequence" instance=ExtResource("31_4wynb")]
+
+[node name="Undead_Commoner" parent="Grave2/Battle_Sequence" instance=ExtResource("32_ms7hc")]
+actor_identifier = "commoner1"
+
+[node name="Undead_Commoner2" parent="Grave2/Battle_Sequence" instance=ExtResource("32_ms7hc")]
+actor_identifier = "commoner2"
+
+[node name="Undead_Commoner3" parent="Grave2/Battle_Sequence" instance=ExtResource("32_ms7hc")]
+actor_identifier = "commoner3"
+
+[node name="Grave3" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 18613.0
+offset_top = -470.0
+offset_right = 18677.0
+offset_bottom = -406.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Honored Heroes"
+description = "Beautiful monuments to veterans of hard-fought wars. Fallen soldiers of fortune arise once more to face the trio of warriors."
+previous_site = NodePath("../Grave2")
+next_site = NodePath("../Grave4")
+area_dialogue = null
+area_battle = NodePath("Battle_Sequence")
+
+[node name="Battle_Sequence" type="Node" parent="Grave3" node_paths=PackedStringArray("player_actors", "enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+player_actors = [NodePath("Claira"), NodePath("Henrick"), NodePath("Vikki")]
+enemy_actors = [NodePath("Undead_Defender"), NodePath("Undead_Defender2")]
+battle_music = ExtResource("33_18nav")
+background_name = "Battle_Graveyard"
+next_battle = NodePath("../Wave2")
+
+[node name="Claira" parent="Grave3/Battle_Sequence" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Grave3/Battle_Sequence" instance=ExtResource("10_e7h3l")]
+
+[node name="Vikki" parent="Grave3/Battle_Sequence" instance=ExtResource("31_4wynb")]
+
+[node name="Undead_Defender" parent="Grave3/Battle_Sequence" instance=ExtResource("37_h0tag")]
+actor_identifier = "defender1"
+
+[node name="Undead_Defender2" parent="Grave3/Battle_Sequence" instance=ExtResource("37_h0tag")]
+actor_identifier = "defender2"
+
+[node name="Wave2" type="Node" parent="Grave3" node_paths=PackedStringArray("enemy_actors")]
+script = ExtResource("2_is1ha")
+enemy_actors = [NodePath("Undead_Arbalest"), NodePath("Undead_Arbalest2")]
+background_name = "Battle_Graveyard"
+
+[node name="Undead_Arbalest" parent="Grave3/Wave2" instance=ExtResource("38_10e3s")]
+actor_identifier = "arbalest1"
+
+[node name="Undead_Arbalest2" parent="Grave3/Wave2" instance=ExtResource("38_10e3s")]
+actor_identifier = "arbalest2"
+
+[node name="Grave4" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 20575.0
+offset_top = -1223.0
+offset_right = 20639.0
+offset_bottom = -1159.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Neglected Peasantry"
+description = "A vast stretch of rotting gravestones lies ahead. Names young and old, yet forgotten all the same. But this undead horde will make sure the heroes know their tragic tales."
+previous_site = NodePath("../Grave3")
+next_site = NodePath("../Grave5")
+area_dialogue = null
+area_battle = NodePath("Battle_Sequence")
+
+[node name="Battle_Sequence" type="Node" parent="Grave4" node_paths=PackedStringArray("player_actors", "enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+player_actors = [NodePath("Claira"), NodePath("Henrick"), NodePath("Vikki")]
+enemy_actors = [NodePath("Undead_Arbalest"), NodePath("Undead_Arbalest2")]
+battle_music = ExtResource("33_18nav")
+background_name = "Battle_Graveyard"
+next_battle = NodePath("../Wave2")
+
+[node name="Claira" parent="Grave4/Battle_Sequence" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Grave4/Battle_Sequence" instance=ExtResource("10_e7h3l")]
+
+[node name="Vikki" parent="Grave4/Battle_Sequence" instance=ExtResource("31_4wynb")]
+
+[node name="Undead_Arbalest" parent="Grave4/Battle_Sequence" instance=ExtResource("38_10e3s")]
+actor_identifier = "arbalest1"
+
+[node name="Undead_Arbalest2" parent="Grave4/Battle_Sequence" instance=ExtResource("38_10e3s")]
+actor_identifier = "arbalest2"
+
+[node name="Wave2" type="Node" parent="Grave4" node_paths=PackedStringArray("enemy_actors")]
+script = ExtResource("2_is1ha")
+enemy_actors = [NodePath("Undead_Defender2"), NodePath("Undead_Defender"), NodePath("Undead_Arbalest")]
+battle_music = ExtResource("30_pvhvu")
+background_name = "Battle_Graveyard"
+
+[node name="Undead_Arbalest" parent="Grave4/Wave2" instance=ExtResource("38_10e3s")]
+actor_identifier = "arbalest3"
+
+[node name="Undead_Defender" parent="Grave4/Wave2" instance=ExtResource("37_h0tag")]
+actor_identifier = "defender1"
+
+[node name="Undead_Defender2" parent="Grave4/Wave2" instance=ExtResource("37_h0tag")]
+actor_identifier = "defender2"
+
+[node name="Grave5" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 21768.0
+offset_top = -2777.0
+offset_right = 21832.0
+offset_bottom = -2713.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Forgotten Burial Site"
+description = "The deepest recess of the graveyard has been reached. But the forest dwellers and undead are hot on the trail of the heroes."
+previous_site = NodePath("../Grave4")
+next_site = NodePath("../GraveBoss")
+area_dialogue = null
+area_battle = NodePath("Battle_Sequence")
+
+[node name="Battle_Sequence" type="Node" parent="Grave5" node_paths=PackedStringArray("player_actors", "enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+player_actors = [NodePath("Claira"), NodePath("Henrick"), NodePath("Vikki")]
+enemy_actors = [NodePath("Undead_Defender"), NodePath("Undead_Defender2")]
+battle_music = ExtResource("33_18nav")
+background_name = "Battle_Graveyard"
+next_battle = NodePath("../Wave2")
+
+[node name="Claira" parent="Grave5/Battle_Sequence" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Grave5/Battle_Sequence" instance=ExtResource("10_e7h3l")]
+
+[node name="Vikki" parent="Grave5/Battle_Sequence" instance=ExtResource("31_4wynb")]
+
+[node name="Undead_Defender" parent="Grave5/Battle_Sequence" instance=ExtResource("37_h0tag")]
+actor_identifier = "defender1Wave1"
+
+[node name="Undead_Defender2" parent="Grave5/Battle_Sequence" instance=ExtResource("37_h0tag")]
+actor_identifier = "defender2Wave1"
+
+[node name="Wave2" type="Node" parent="Grave5" node_paths=PackedStringArray("enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+enemy_actors = [NodePath("Undead_Commoner"), NodePath("Undead_Arbalest"), NodePath("Undead_Arbalest2")]
+battle_music = ExtResource("30_pvhvu")
+background_name = "Battle_Graveyard"
+next_battle = NodePath("../Wave3")
+
+[node name="Undead_Commoner" parent="Grave5/Wave2" instance=ExtResource("32_ms7hc")]
+actor_identifier = "commonerWave2"
+
+[node name="Undead_Arbalest" parent="Grave5/Wave2" instance=ExtResource("38_10e3s")]
+actor_identifier = "arbalest1"
+
+[node name="Undead_Arbalest2" parent="Grave5/Wave2" instance=ExtResource("38_10e3s")]
+actor_identifier = "arbalest2"
+
+[node name="Wave3" type="Node" parent="Grave5" node_paths=PackedStringArray("enemy_actors")]
+script = ExtResource("2_is1ha")
+enemy_actors = [NodePath("Undead_Commoner"), NodePath("Undead_Defender")]
+battle_music = ExtResource("30_pvhvu")
+background_name = "Battle_Graveyard"
+
+[node name="Undead_Commoner" parent="Grave5/Wave3" instance=ExtResource("32_ms7hc")]
+actor_identifier = "commonerWave3"
+
+[node name="Undead_Defender" parent="Grave5/Wave3" instance=ExtResource("37_h0tag")]
+actor_identifier = "defenderWave3"
+
+[node name="GraveBoss" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 22746.0
+offset_top = -2839.0
+offset_right = 22810.0
+offset_bottom = -2775.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Tomb Entrance - BOSS"
+description = "The undead are felled, the tomb within sight. But before respite can be taken, one of the guardian statues by the doorway awakens..."
+previous_site = NodePath("../Grave5")
+next_site = NodePath("../GraveyardCamp")
+area_dialogue = ExtResource("47_o5ybc")
+area_battle = NodePath("Battle_Sequence")
+
+[node name="Battle_Sequence" type="Node" parent="GraveBoss" node_paths=PackedStringArray("player_actors", "enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "The statue comes to life as the beastly gargoyle swoops into battle!"
+boss_title = "BOSS: GUARDIAN GARGOYLE"
+player_actors = [NodePath("Claira"), NodePath("Henrick"), NodePath("Vikki")]
+enemy_actors = [NodePath("Gargoyle")]
+battle_music = ExtResource("30_pvhvu")
+background_name = "Battle_TombEntrance"
+big_victory = true
+victory_message = "The gargoyle unleashes a deathly howl as it crumbles apart... The graveyard falls silent."
+
+[node name="Claira" parent="GraveBoss/Battle_Sequence" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="GraveBoss/Battle_Sequence" instance=ExtResource("10_e7h3l")]
+
+[node name="Vikki" parent="GraveBoss/Battle_Sequence" instance=ExtResource("31_4wynb")]
+
+[node name="Gargoyle" parent="GraveBoss/Battle_Sequence" instance=ExtResource("32_i08jo")]
+actor_name = "Guardian Gargoyle"
+actor_identifier = "bossGargoyle"
+
+[node name="GraveyardCamp" parent="." node_paths=PackedStringArray("previous_site", "next_site") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 24072.0
+offset_top = -2841.0
+offset_right = 24136.0
+offset_bottom = -2777.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Tomb Halls - Campsite"
+description = "Another moment of respite for the trio, and a time to inquire about their peculiar new party member."
+previous_site = NodePath("../GraveBoss")
+next_site = NodePath("../ForestToCreitus")
+area_dialogue = null
+
+[node name="ForestToCreitus" parent="." node_paths=PackedStringArray("previous_site", "next_site") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 29390.0
+offset_top = -2872.0
+offset_right = 29454.0
+offset_bottom = -2808.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Creitus Outlands"
+description = "Creitus, at long last, is just within reach.
+
+But perhaps they've arrived far too late..."
+previous_site = NodePath("../GraveyardCamp")
+next_site = NodePath("../Creitus1")
+area_dialogue = ExtResource("49_cp6rk")
+
+[node name="Creitus1" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 32577.0
+offset_top = -2910.0
+offset_right = 32641.0
+offset_bottom = -2846.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Creitus Outskirts"
+description = "The trio ventures forward, preparing to cut through the brigand defense to halt the invasion."
+previous_site = NodePath("../ForestToCreitus")
+next_site = NodePath("../Creitus2")
+area_dialogue = null
+area_battle = NodePath("Wave1")
+
+[node name="Wave1" type="Node" parent="Creitus1" node_paths=PackedStringArray("player_actors", "enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+log_message = "You have the brigands by surprise! Strike through, carve a path through their defenses into the heart of the city!"
+player_actors = [NodePath("Claira"), NodePath("Henrick"), NodePath("Vikki")]
+enemy_actors = [NodePath("Blunderbuster"), NodePath("Blademaster")]
+battle_music = ExtResource("12_5qfyg")
+background_name = "Battle_TownOutskirts"
+next_battle = NodePath("../Wave2")
+
+[node name="Claira" parent="Creitus1/Wave1" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Creitus1/Wave1" instance=ExtResource("10_e7h3l")]
+
+[node name="Vikki" parent="Creitus1/Wave1" instance=ExtResource("31_4wynb")]
+
+[node name="Blunderbuster" parent="Creitus1/Wave1" instance=ExtResource("12_13eh4")]
+actor_identifier = "blunderbuster"
+
+[node name="Blademaster" parent="Creitus1/Wave1" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademasterWave1"
+
+[node name="Wave2" type="Node" parent="Creitus1" node_paths=PackedStringArray("enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "Another raiding party arrives to fend off the heroes!"
+enemy_actors = [NodePath("Blademaster"), NodePath("Blademaster2"), NodePath("Musketeer")]
+background_name = "Battle_TownOutskirts"
+
+[node name="Blademaster" parent="Creitus1/Wave2" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster1Wave2"
+
+[node name="Blademaster2" parent="Creitus1/Wave2" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster2Wave2"
+
+[node name="Musketeer" parent="Creitus1/Wave2" instance=ExtResource("7_w7s3r")]
+actor_identifier = "musketeer"
+
+[node name="Creitus2" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 34711.0
+offset_top = -2806.0
+offset_right = 34775.0
+offset_bottom = -2742.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Creitus Streets"
+description = "Undead, brigands, riflemen, oh my!"
+previous_site = NodePath("../Creitus1")
+next_site = NodePath("../Creitus3")
+area_dialogue = null
+area_battle = NodePath("Wave1")
+
+[node name="Wave1" type="Node" parent="Creitus2" node_paths=PackedStringArray("player_actors", "enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+log_message = "Undead minions arrive, but they're on the side of the brigands!"
+player_actors = [NodePath("Claira"), NodePath("Henrick"), NodePath("Vikki")]
+enemy_actors = [NodePath("Undead_Commoner"), NodePath("Undead_Commoner2"), NodePath("Blademaster")]
+battle_music = ExtResource("16_v5wgq")
+background_name = "Battle_TownStreet"
+next_battle = NodePath("../Wave2")
+
+[node name="Claira" parent="Creitus2/Wave1" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Creitus2/Wave1" instance=ExtResource("10_e7h3l")]
+
+[node name="Vikki" parent="Creitus2/Wave1" instance=ExtResource("31_4wynb")]
+
+[node name="Undead_Commoner" parent="Creitus2/Wave1" instance=ExtResource("32_ms7hc")]
+actor_identifier = "commoner1"
+
+[node name="Undead_Commoner2" parent="Creitus2/Wave1" instance=ExtResource("32_ms7hc")]
+actor_identifier = "commoner2"
+
+[node name="Blademaster" parent="Creitus2/Wave1" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster"
+
+[node name="Wave2" type="Node" parent="Creitus2" node_paths=PackedStringArray("enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "Riflemen old and new prepare to take up arms!"
+enemy_actors = [NodePath("Musketeer"), NodePath("Undead_Arbalest"), NodePath("Undead_Arbalest2")]
+battle_music = ExtResource("18_wp5s5")
+smooth_fade = true
+background_name = "Battle_TownStreet"
+
+[node name="Musketeer" parent="Creitus2/Wave2" instance=ExtResource("7_w7s3r")]
+actor_identifier = "musketeer"
+
+[node name="Undead_Arbalest" parent="Creitus2/Wave2" instance=ExtResource("38_10e3s")]
+actor_identifier = "arbalest1"
+
+[node name="Undead_Arbalest2" parent="Creitus2/Wave2" instance=ExtResource("38_10e3s")]
+actor_identifier = "arbalest2"
+
+[node name="Creitus3" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 35553.0
+offset_top = -3783.0
+offset_right = 35617.0
+offset_bottom = -3719.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Creitus Streets 2"
+description = "It seems even the forest fauna now seeks to partake in the invasion!"
+previous_site = NodePath("../Creitus2")
+next_site = NodePath("../Creitus4")
+area_dialogue = null
+area_battle = NodePath("Wave1")
+
+[node name="Wave1" type="Node" parent="Creitus3" node_paths=PackedStringArray("player_actors", "enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+log_message = "Arachnids creep in from the burning buildings!"
+player_actors = [NodePath("Claira"), NodePath("Henrick"), NodePath("Vikki")]
+enemy_actors = [NodePath("Webber"), NodePath("Spitter"), NodePath("Spitter2")]
+battle_music = ExtResource("16_v5wgq")
+background_name = "Battle_TownStreet"
+next_battle = NodePath("../Wave2")
+
+[node name="Claira" parent="Creitus3/Wave1" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Creitus3/Wave1" instance=ExtResource("10_e7h3l")]
+
+[node name="Vikki" parent="Creitus3/Wave1" instance=ExtResource("31_4wynb")]
+
+[node name="Webber" parent="Creitus3/Wave1" instance=ExtResource("29_vabe8")]
+actor_identifier = "webber"
+
+[node name="Spitter" parent="Creitus3/Wave1" instance=ExtResource("28_4xwej")]
+actor_identifier = "spitter1"
+
+[node name="Spitter2" parent="Creitus3/Wave1" instance=ExtResource("28_4xwej")]
+actor_identifier = "spitter2"
+
+[node name="Wave2" type="Node" parent="Creitus3" node_paths=PackedStringArray("enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "A pair of brigands arrive into the fray, coerced by a celestial thrall!"
+enemy_actors = [NodePath("Blademaster"), NodePath("Celestial_Squid"), NodePath("Musketeer")]
+battle_music = ExtResource("18_wp5s5")
+smooth_fade = true
+background_name = "Battle_TownStreet"
+
+[node name="Blademaster" parent="Creitus3/Wave2" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster"
+
+[node name="Celestial_Squid" parent="Creitus3/Wave2" instance=ExtResource("33_v740n")]
+actor_identifier = "squid"
+
+[node name="Musketeer" parent="Creitus3/Wave2" instance=ExtResource("7_w7s3r")]
+actor_identifier = "musketeer"
+
+[node name="Creitus4" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 36533.0
+offset_top = -4691.0
+offset_right = 36597.0
+offset_bottom = -4627.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Creitus Streets 3"
+description = "Nearing the town square, the brigands pull out all the stops! And an old friend comes to visit..."
+previous_site = NodePath("../Creitus3")
+next_site = NodePath("../CreitusBoss")
+area_dialogue = null
+area_battle = NodePath("Wave1")
+
+[node name="Wave1" type="Node" parent="Creitus4" node_paths=PackedStringArray("player_actors", "enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+log_message = "The statue comes to life as the beastly gargoyle swoops into battle!"
+player_actors = [NodePath("Claira"), NodePath("Henrick"), NodePath("Vikki")]
+enemy_actors = [NodePath("Blunderbuster"), NodePath("Blunderbuster2"), NodePath("Blademaster")]
+battle_music = ExtResource("13_xjbuv")
+background_name = "Battle_TownStreet"
+next_battle = NodePath("../Wave2")
+
+[node name="Claira" parent="Creitus4/Wave1" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="Creitus4/Wave1" instance=ExtResource("10_e7h3l")]
+
+[node name="Vikki" parent="Creitus4/Wave1" instance=ExtResource("31_4wynb")]
+
+[node name="Blunderbuster" parent="Creitus4/Wave1" instance=ExtResource("12_13eh4")]
+actor_identifier = "blunderbuster1Wave1"
+
+[node name="Blunderbuster2" parent="Creitus4/Wave1" instance=ExtResource("12_13eh4")]
+actor_identifier = "blunderbuster2Wave1"
+
+[node name="Blademaster" parent="Creitus4/Wave1" instance=ExtResource("4_m28qa")]
+actor_identifier = "blademaster"
+
+[node name="Wave2" type="Node" parent="Creitus4" node_paths=PackedStringArray("enemy_actors", "next_battle")]
+script = ExtResource("2_is1ha")
+enemy_actors = [NodePath("Musketeer"), NodePath("Undead_Defender"), NodePath("Blunderbuster")]
+background_name = "Battle_TownStreet"
+next_battle = NodePath("../Wave3")
+
+[node name="Musketeer" parent="Creitus4/Wave2" instance=ExtResource("7_w7s3r")]
+actor_identifier = "musketeer"
+
+[node name="Undead_Defender" parent="Creitus4/Wave2" instance=ExtResource("37_h0tag")]
+actor_identifier = "defender"
+
+[node name="Blunderbuster" parent="Creitus4/Wave2" instance=ExtResource("12_13eh4")]
+actor_identifier = "blunderbusterWave2"
+
+[node name="Wave3" type="Node" parent="Creitus4" node_paths=PackedStringArray("enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "Look who's come crawling back from the dead! Slay him where he stands once more!"
+boss_title = "BOSS: GUTTERMAN REMATCH"
+enemy_actors = [NodePath("Gutterman")]
+battle_music = ExtResource("13_xjbuv")
+smooth_fade = true
+background_name = "Battle_TownStreet"
+
+[node name="Gutterman" parent="Creitus4/Wave3" instance=ExtResource("42_3ruho")]
+actor_identifier = "gutterman"
+max_health = 48
+
+[node name="CreitusBoss" parent="." node_paths=PackedStringArray("previous_site", "next_site", "area_battle") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 39333.0
+offset_top = -4762.0
+offset_right = 39397.0
+offset_bottom = -4698.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Town Square - BOSS"
+description = "The city continues to burn. The brigand army is all but slain, but a final foe approaches: The warlord leader of the raiders. A battle to decide the fate of the entire region."
+previous_site = NodePath("../Creitus4")
+next_site = NodePath("../Epilogue")
+area_dialogue = ExtResource("45_5u3f2")
+area_battle = NodePath("FinalBattle")
+
+[node name="FinalBattle" type="Node" parent="CreitusBoss" node_paths=PackedStringArray("player_actors", "enemy_actors")]
+script = ExtResource("2_is1ha")
+log_message = "[color=red]Everything burns. The Warlord towers over you all. It's all or nothing. This battleground will become his grave... or else everything is lost.[/color]"
+boss_title = "BOSS: THE BRIGAND WARLORD"
+player_actors = [NodePath("Claira"), NodePath("Henrick"), NodePath("Vikki")]
+enemy_actors = [NodePath("Warlord")]
+battle_music = ExtResource("9_5omvr")
+background_name = "Battle_TownSquare"
+big_victory = true
+victory_message = "The Warlord releases a final agonized war cry as he slumps over in defeat. At last, the brigands have been defeated."
+
+[node name="Claira" parent="CreitusBoss/FinalBattle" instance=ExtResource("3_pfqgb")]
+
+[node name="Henrick" parent="CreitusBoss/FinalBattle" instance=ExtResource("10_e7h3l")]
+
+[node name="Vikki" parent="CreitusBoss/FinalBattle" instance=ExtResource("31_4wynb")]
+
+[node name="Warlord" parent="CreitusBoss/FinalBattle" instance=ExtResource("44_4tc6n")]
+
+[node name="Epilogue" parent="." node_paths=PackedStringArray("previous_site", "next_site") instance=ExtResource("1_oxg4n")]
+z_index = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 39821.0
+offset_top = -4765.0
+offset_right = 39885.0
+offset_bottom = -4701.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+site_name = "Epilogue"
+description = "Days have passed since the brigands were defeated, and the city begins to rebuild."
+previous_site = NodePath("../CreitusBoss")
+next_site = NodePath("../Temple1")
+area_dialogue = ExtResource("54_lh1le")
+area_battle = NodePath("")
+
+[node name="Player" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-578, 68)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_cebda")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.38, 0.38)
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
+
+[node name="NavText" type="RichTextLabel" parent="."]
+offset_left = -335.0
+offset_top = -585.0
+offset_right = 548.0
+offset_bottom = -296.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "Use the arrow buttons to navigate between areas!
+[color=red][b]You can only go to areas you have unlocked.[/b][/color]
+
+Click the button in the bottom to enter a marker's region for dialogue and battle sequences."

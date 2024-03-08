@@ -1,0 +1,110 @@
+[gd_scene load_steps=15 format=3 uid="uid://c8kggjpb501of"]
+
+[ext_resource type="Texture2D" uid="uid://b8uqk73r5hv61" path="res://sprites/MapSiteIcon.png" id="1_nmt5y"]
+[ext_resource type="Texture2D" uid="uid://csndyfioejjoj" path="res://sprites/MapSitePush.png" id="2_8jdo8"]
+[ext_resource type="Texture2D" uid="uid://b581jqk2b6eu" path="res://sprites/MapSiteHover.png" id="3_jyk2g"]
+[ext_resource type="Script" path="res://scripts/map_site.gd" id="4_qnjil"]
+[ext_resource type="Texture2D" uid="uid://baxafx2ickiod" path="res://sprites/SiteCursorHover.png" id="5_ab6jx"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="5_klhql"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="7_oi22t"]
+
+[sub_resource type="Resource" id="Resource_5mb0p"]
+script = ExtResource("5_klhql")
+narrator_title = "narrator test name"
+dialogue_contents = "blah blah words words"
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_l1skp"]
+script = ExtResource("5_klhql")
+narrator_title = ""
+dialogue_contents = "current dialogue speaker's sprite can be on the right"
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_f8q63"]
+script = ExtResource("5_klhql")
+narrator_title = "kjakdk3 placeholder here"
+dialogue_contents = "or on the right!! waow.... im so awesome at programming"
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_y8cs6"]
+script = ExtResource("7_oi22t")
+dialogue_statements = Array[ExtResource("5_klhql")]([SubResource("Resource_5mb0p"), SubResource("Resource_l1skp"), SubResource("Resource_f8q63")])
+scene_background = ""
+smooth_fade = false
+
+[sub_resource type="Animation" id="Animation_sp8wy"]
+resource_name = "CursorSpin"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_3jrl8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rygud"]
+_data = {
+"CursorSpin": SubResource("Animation_sp8wy"),
+"RESET": SubResource("Animation_3jrl8")
+}
+
+[node name="AreaSite" type="TextureButton"]
+texture_filter = 1
+anchors_preset = -1
+anchor_right = 0.0546875
+anchor_bottom = 0.0972222
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+shortcut_feedback = false
+shortcut_in_tooltip = false
+texture_normal = ExtResource("1_nmt5y")
+texture_pressed = ExtResource("2_8jdo8")
+texture_hover = ExtResource("3_jyk2g")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("4_qnjil")
+pawn_offset = Vector2(64, 64)
+site_name = "region name here"
+description = "insert funny placeholder text here
+
+this is where a description of the level goes"
+area_dialogue = SubResource("Resource_y8cs6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(31.5, 31.5)
+scale = Vector2(1.20313, 1.20313)
+texture = ExtResource("5_ab6jx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rygud")
+}
+autoplay = "CursorSpin"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

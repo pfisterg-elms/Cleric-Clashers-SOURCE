@@ -1,0 +1,100 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=19 format=3 uid="uid://c4ql8x3mmxt3w"]
+
+[ext_resource type="Texture2D" uid="uid://coa502opjef0s" path="res://sprites/heroes/cleric/cleric.png" id="1_1cdbl"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_2qrld"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="2_edb3u"]
+[ext_resource type="Texture2D" uid="uid://dv8m7ojkm1jv6" path="res://sprites/enemies/musketeer/musketeer_idle.png" id="4_evv8d"]
+[ext_resource type="Texture2D" uid="uid://t2n56jelh8yu" path="res://sprites/enemies/blademaster/blademaster_dialog_flipped.png" id="5_6nnfx"]
+[ext_resource type="Texture2D" uid="uid://4thfr30gia4d" path="res://sprites/heroes/cleric/cleric_bolster.png" id="6_fajw7"]
+[ext_resource type="AudioStream" uid="uid://bart76p4yu7xc" path="res://sounds/music/WorldMap.mp3" id="7_1x6ja"]
+[ext_resource type="Texture2D" uid="uid://b281yda66v71g" path="res://sprites/enemies/blade_musk_duo.png" id="7_lailo"]
+
+[sub_resource type="Resource" id="Resource_5qb0r"]
+script = ExtResource("2_edb3u")
+narrator_title = ""
+dialogue_contents = "The cleric flees the altar chamber as the cold atmosphere from the labyrinthine temple halls seeps through. Once a calming scent, it is now replaced with the foul odor of death, wrought upon by the warband wreaking havoc upon the sanctuary's foundations."
+left_sprite = ExtResource("1_1cdbl")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_eu7dj"]
+script = ExtResource("2_edb3u")
+narrator_title = ""
+dialogue_contents = "The cleric shrouds her figure, stalking among the shadows as yet another warband rummages through the corridors."
+left_sprite = ExtResource("1_1cdbl")
+right_sprite = ExtResource("7_lailo")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_m8yyd"]
+script = ExtResource("2_edb3u")
+narrator_title = "Blademaster"
+dialogue_contents = "...Can barely see anythin' in this mess. Whatta we even doin' in this place? Shoulda gon' to the city already. Ain't nothin' useful 'round here except lousy scriptures. Boss ain't much of a reader anyhow."
+left_sprite = ExtResource("4_evv8d")
+right_sprite = ExtResource("5_6nnfx")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_r8bh2"]
+script = ExtResource("2_edb3u")
+narrator_title = "Musketeer"
+dialogue_contents = "Ya heard 'im, he wanted this place burned an' ransacked. May as well be thorough 'fore we get back on the trails."
+left_sprite = ExtResource("4_evv8d")
+right_sprite = ExtResource("5_6nnfx")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_n7v0c"]
+script = ExtResource("2_edb3u")
+narrator_title = "Blademaster"
+dialogue_contents = "Tsht. Whatta waste of me time. Ain't got much to blow apart no more. C'mawn, let's get topside, I wanna get movin' already."
+left_sprite = ExtResource("4_evv8d")
+right_sprite = ExtResource("5_6nnfx")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_m8q4l"]
+script = ExtResource("2_edb3u")
+narrator_title = ""
+dialogue_contents = "The pair huff and nod amongst each other as they begin to leave. The cleric emerges from the shadows, seeing an opportunity to sneak past.
+
+Yet a lingering sense of dread pervades her; what city do they speak of? It couldn't be the city across the valley, surely?"
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_cbni0"]
+script = ExtResource("2_edb3u")
+narrator_title = ""
+dialogue_contents = "Creitus, just beyond the valley, stands tall as a crucial trading settlement for the region, connecting the kingdoms of Vallus and Trefelm together.
+
+If Creitus fell, a great portion of the continent would be in disarray. This cannot happen, whatever the cost."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_p6opj"]
+script = ExtResource("2_edb3u")
+narrator_title = ""
+dialogue_contents = "Lost in her thoughts, the cleric stumbles, the debris in her path unforeseen. Rock and brick tumble together with an orchestra of a brief, yet abrupt and arousing disturbance.
+
+The brigand pair pause dead in their tracks, a bloodthirsty twitch of their bodies in the direction of the cleric, meeting her gaze."
+left_sprite = ExtResource("1_1cdbl")
+right_sprite = ExtResource("7_lailo")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_xv0vl"]
+script = ExtResource("2_edb3u")
+narrator_title = "Blademaster"
+dialogue_contents = "--Whuh?! Oi, Erket, I see somethin' over 'ere! C'mawn, I ain't leavin' this place empty-handed!"
+left_sprite = ExtResource("1_1cdbl")
+right_sprite = ExtResource("5_6nnfx")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_dxsln"]
+script = ExtResource("2_edb3u")
+narrator_title = ""
+dialogue_contents = "No time for a plan of evasion. Another call to action beckons the cleric into a battle stance as the brigands storm forward, thirsting for the thrill of war.
+
+Yet again, a battle brews in these once-sacred halls."
+left_sprite = ExtResource("6_fajw7")
+right_sprite = ExtResource("7_lailo")
+sprite_focus = "Left"
+
+[resource]
+script = ExtResource("1_2qrld")
+dialogue_statements = Array[ExtResource("2_edb3u")]([SubResource("Resource_5qb0r"), SubResource("Resource_eu7dj"), SubResource("Resource_m8yyd"), SubResource("Resource_r8bh2"), SubResource("Resource_n7v0c"), SubResource("Resource_m8q4l"), SubResource("Resource_cbni0"), SubResource("Resource_p6opj"), SubResource("Resource_xv0vl"), SubResource("Resource_dxsln")])
+scene_background = "Dialog_TempleHalls"
+scene_music = ExtResource("7_1x6ja")
+smooth_fade = false

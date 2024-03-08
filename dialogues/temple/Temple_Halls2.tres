@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=12 format=3 uid="uid://gdmk6kb07w6p"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_l6acn"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_ukaam"]
+[ext_resource type="Texture2D" uid="uid://dkajghtmj4odr" path="res://sprites/heroes/knight/knight_idle.png" id="2_1j8eq"]
+[ext_resource type="Texture2D" uid="uid://uika8s8ors2n" path="res://sprites/enemies/blademaster/blademaster_duo.png" id="3_81ipr"]
+[ext_resource type="Texture2D" uid="uid://dd6upkxbwxoo7" path="res://sprites/heroes/knight/knight_hit.png" id="4_xxbfo"]
+[ext_resource type="AudioStream" uid="uid://bart76p4yu7xc" path="res://sounds/music/WorldMap.mp3" id="5_pyy5r"]
+
+[sub_resource type="Resource" id="Resource_poje4"]
+script = ExtResource("1_ukaam")
+narrator_title = ""
+dialogue_contents = "...Elsewhere in the confines of the temple, screams wail through the labyrinthine corridors. A cacophony of battle, blades singing against other blades, cleaving against person and armor."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_j4hkm"]
+script = ExtResource("1_ukaam")
+narrator_title = ""
+dialogue_contents = "But these screams come not from innocent souls, but from a swath of brigands, felled by the blade of a single soldier."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_e53yy"]
+script = ExtResource("1_ukaam")
+narrator_title = ""
+dialogue_contents = "A knight in clad armor storms through the temple halls. His sanctuary he once swore to protect, now a desolate battlefield.
+
+But it shall be a battlefield that he, and he alone, will reign victorious upon. In the name of all who fell before him."
+left_sprite = ExtResource("2_1j8eq")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_c2sak"]
+script = ExtResource("1_ukaam")
+narrator_title = ""
+dialogue_contents = "Another raiding party emerges from around the corner before the lone knight can flee the deepest tunnels of the temple. A desperate measure to fend off a man emboldened by justice and fury.
+
+Such a man is truly an unstoppable force."
+left_sprite = ExtResource("2_1j8eq")
+right_sprite = ExtResource("3_81ipr")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_cpws6"]
+script = ExtResource("1_ukaam")
+narrator_title = ""
+dialogue_contents = "The brigands show no sign of surrender, but neither does the knight as he raises his blade; a valiant stand against true wickedness and cruelty.
+
+They shall have no quarter in his temple. For their crimes, their punishment is clear: A deadly trial by combat."
+left_sprite = ExtResource("4_xxbfo")
+right_sprite = ExtResource("3_81ipr")
+sprite_focus = "Left"
+
+[resource]
+script = ExtResource("1_l6acn")
+dialogue_statements = Array[ExtResource("1_ukaam")]([SubResource("Resource_poje4"), SubResource("Resource_j4hkm"), SubResource("Resource_e53yy"), SubResource("Resource_c2sak"), SubResource("Resource_cpws6")])
+scene_background = "Dialog_TempleHalls"
+scene_music = ExtResource("5_pyy5r")
+smooth_fade = false

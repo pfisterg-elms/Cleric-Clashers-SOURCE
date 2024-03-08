@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://br3gwykrk4i0p"]
+
+[ext_resource type="AudioStream" uid="uid://ddhtdned2gcgk" path="res://sounds/weapons/blade/hilt_bash.mp3" id="1_acgch"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_coyif"]
+[ext_resource type="AudioStream" uid="uid://w52sx28fp1be" path="res://sounds/weapons/blunt_swing.mp3" id="3_pl4yn"]
+
+[resource]
+script = ExtResource("1_coyif")
+attack_name = "Rifle Bash"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 4
+base_damage = 3
+damage_type = "Bludgeoning"
+swing_sound = ExtResource("3_pl4yn")
+hit_sound = ExtResource("1_acgch")
+inflict_challenge = 0

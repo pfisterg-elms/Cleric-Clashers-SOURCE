@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3wujhnlk00f4"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_55x6d"]
+[ext_resource type="Resource" uid="uid://bio31mrh6wwxs" path="res://spritegroups/blademaster_spritegroup.tres" id="2_mvi1k"]
+[ext_resource type="Resource" uid="uid://bkvwqrc81etbt" path="res://attacks/dev_cheats/instakill.tres" id="3_f3w2y"]
+
+[node name="Blademaster" type="Node"]
+script = ExtResource("1_55x6d")
+actor_name = "Debug Blademaster"
+sprite_group = ExtResource("2_mvi1k")
+max_health = 4
+armor_class = 6
+infliction_save = -2
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("3_f3w2y")])

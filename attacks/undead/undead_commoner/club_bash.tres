@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://byimabqf4s5c2"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_65ykw"]
+[ext_resource type="AudioStream" uid="uid://ddhtdned2gcgk" path="res://sounds/weapons/blade/hilt_bash.mp3" id="1_s0vw5"]
+[ext_resource type="AudioStream" uid="uid://w52sx28fp1be" path="res://sounds/weapons/blunt_swing.mp3" id="3_rl4g1"]
+
+[resource]
+script = ExtResource("1_65ykw")
+attack_name = "Club Bash"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 1
+base_damage = 6
+damage_type = "Bludgeoning"
+swing_sound = ExtResource("3_rl4g1")
+hit_sound = ExtResource("1_s0vw5")
+inflict_challenge = 0

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://dpke53bw4d8wb"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_agjtw"]
+[ext_resource type="AudioStream" uid="uid://ddhtdned2gcgk" path="res://sounds/weapons/blade/hilt_bash.mp3" id="1_c8sol"]
+[ext_resource type="PackedScene" uid="uid://bimu0tjfjast6" path="res://scenes/inflictions/stunned.tscn" id="2_wotqx"]
+[ext_resource type="AudioStream" uid="uid://w52sx28fp1be" path="res://sounds/weapons/blunt_swing.mp3" id="4_0akta"]
+
+[resource]
+script = ExtResource("1_agjtw")
+attack_name = "Shield Power-Bash"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 4
+base_damage = 3
+damage_type = "Bludgeoning"
+swing_sound = ExtResource("4_0akta")
+hit_sound = ExtResource("1_c8sol")
+infliction = ExtResource("2_wotqx")
+inflict_challenge = 11

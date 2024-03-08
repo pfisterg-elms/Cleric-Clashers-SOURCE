@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqe0c3pb376gr"]
+
+[ext_resource type="Script" path="res://scripts/inflictions/shielded.gd" id="1_onuic"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_onuic")
+effect_name = "SHIELD"
+turn_count = 1

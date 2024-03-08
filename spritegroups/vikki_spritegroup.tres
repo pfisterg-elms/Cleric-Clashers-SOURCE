@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Actor_SpriteGroup" load_steps=6 format=3 uid="uid://dlcbmuoyeiooe"]
+
+[ext_resource type="Texture2D" uid="uid://cmch4a0suwchd" path="res://sprites/heroes/doctor/doctor_attack.png" id="1_h3lrr"]
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_sprite_group.gd" id="1_ofrjm"]
+[ext_resource type="Texture2D" uid="uid://07bifqjfwvvo" path="res://sprites/heroes/doctor/doctor.png" id="1_tj305"]
+[ext_resource type="Texture2D" uid="uid://bygf8b65hfgm2" path="res://sprites/heroes/doctor/doctor_bolster.png" id="2_bsy3t"]
+[ext_resource type="Texture2D" uid="uid://ddqglrfrr6kos" path="res://sprites/heroes/doctor/doctor_hit.png" id="3_xh402"]
+
+[resource]
+script = ExtResource("1_ofrjm")
+idle_sprite = ExtResource("1_tj305")
+attack_sprite = ExtResource("1_h3lrr")
+bolster_sprite = ExtResource("2_bsy3t")
+hurt_sprite = ExtResource("3_xh402")

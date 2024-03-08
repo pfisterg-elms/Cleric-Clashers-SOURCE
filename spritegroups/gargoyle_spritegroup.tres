@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Actor_SpriteGroup" load_steps=5 format=3 uid="uid://b5s5p5a0al8nh"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_sprite_group.gd" id="1_c5nau"]
+[ext_resource type="Texture2D" uid="uid://mrwgghfj82js" path="res://sprites/enemies/gargoyle/gargoyle_attack.png" id="1_xakat"]
+[ext_resource type="Texture2D" uid="uid://cnm4581yjmai5" path="res://sprites/enemies/gargoyle/gargoyle_hit.png" id="2_qp4q8"]
+[ext_resource type="Texture2D" uid="uid://c1dw6jdwyam71" path="res://sprites/enemies/gargoyle/gargoyle_idle.png" id="3_0aqhm"]
+
+[resource]
+script = ExtResource("1_c5nau")
+idle_sprite = ExtResource("3_0aqhm")
+attack_sprite = ExtResource("1_xakat")
+bolster_sprite = ExtResource("1_xakat")
+hurt_sprite = ExtResource("2_qp4q8")

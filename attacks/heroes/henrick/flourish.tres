@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://8msw8s2cq616"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_2nm8p"]
+[ext_resource type="PackedScene" uid="uid://dlcck7u8byxpp" path="res://scenes/inflictions/precision.tscn" id="1_315kp"]
+[ext_resource type="AudioStream" uid="uid://pstikebq6s8m" path="res://sounds/weapons/flourish.mp3" id="3_1qq6b"]
+
+[resource]
+script = ExtResource("1_2nm8p")
+attack_name = "Flourish"
+attack_descriptor = "Ready your blade for a more precise strike next turn.
+
+Gives you advantage on your next turn's attack."
+attack_type = "SelfBolster"
+hit_modifier = 0
+base_damage = 0
+damage_type = ""
+swing_sound = ExtResource("3_1qq6b")
+infliction = ExtResource("1_315kp")
+inflict_challenge = 0

@@ -1,0 +1,22 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqlket8d1vq8t"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_0ryif"]
+[ext_resource type="Resource" uid="uid://r8dhgkghslid" path="res://spritegroups/claira_spritegroup.tres" id="2_vht26"]
+[ext_resource type="Resource" uid="uid://bkasenni0o14a" path="res://attacks/heroes/claira/mending_touch.tres" id="3_kbf7k"]
+[ext_resource type="Resource" uid="uid://y3kmm656bf4r" path="res://attacks/heroes/claira/vandoras_radiance.tres" id="4_ij8yh"]
+[ext_resource type="Resource" uid="uid://cu8nkrchmw32x" path="res://attacks/heroes/claira/mace_bash.tres" id="5_7ycug"]
+[ext_resource type="Resource" uid="uid://cvqkl6aouug63" path="res://attacks/heroes/claira/mace_clobber.tres" id="6_qamaa"]
+[ext_resource type="Resource" uid="uid://5r0lij4aga3m" path="res://attacks/heroes/claira/radiant_resolve.tres" id="7_gui5b"]
+
+[node name="Claira" type="Node"]
+script = ExtResource("1_0ryif")
+actor_name = "Claira"
+actor_identifier = "playerClaira"
+sprite_group = ExtResource("2_vht26")
+max_health = 26
+initiative_bonus = 2
+armor_class = 10
+infliction_save = 2
+resistances = Array[String](["Psychic"])
+weaknesses = Array[String](["Fire"])
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("6_qamaa"), ExtResource("5_7ycug"), ExtResource("3_kbf7k"), ExtResource("4_ij8yh"), ExtResource("7_gui5b")])

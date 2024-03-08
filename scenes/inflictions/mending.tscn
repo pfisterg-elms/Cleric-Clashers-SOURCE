@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbky3adhdc2el"]
+
+[ext_resource type="Script" path="res://scripts/inflictions/mending.gd" id="1_kmjmy"]
+
+[node name="Mending" type="Node"]
+script = ExtResource("1_kmjmy")
+effect_name = "MENDING"
+turn_count = 1

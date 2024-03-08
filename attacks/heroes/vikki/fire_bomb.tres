@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://bpl4aw1w8p6ac"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_5aefe"]
+[ext_resource type="AudioStream" uid="uid://b1ky6d3u051vf" path="res://sounds/weapons/fire_burn.mp3" id="1_5t6yw"]
+[ext_resource type="PackedScene" uid="uid://ckg4c6sx1tagc" path="res://scenes/inflictions/burning.tscn" id="1_k1iq7"]
+[ext_resource type="AudioStream" uid="uid://w52sx28fp1be" path="res://sounds/weapons/blunt_swing.mp3" id="4_4o4kl"]
+
+[resource]
+script = ExtResource("1_5aefe")
+attack_name = "Fire Bomb"
+attack_descriptor = "Lob a small (and weak) combustible grenade that releases flames on impact. Difficult to avoid.
+
+Inflicts BURNING alongside 6 Fire damage:
+- 3 Fire damage per turn. 3 turns."
+attack_type = "Damage"
+hit_modifier = 4
+base_damage = 6
+damage_type = "Fire"
+swing_sound = ExtResource("4_4o4kl")
+hit_sound = ExtResource("1_5t6yw")
+infliction = ExtResource("1_k1iq7")
+inflict_challenge = 11

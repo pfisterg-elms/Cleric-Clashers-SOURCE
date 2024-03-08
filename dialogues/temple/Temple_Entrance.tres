@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=15 format=3 uid="uid://xxuo6rscsy1c"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_q5urj"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_s8g58"]
+[ext_resource type="Texture2D" uid="uid://coa502opjef0s" path="res://sprites/heroes/cleric/cleric.png" id="2_dryqc"]
+[ext_resource type="Texture2D" uid="uid://861n35fy0505" path="res://sprites/heroes/knight/knight.png" id="3_nnsrq"]
+[ext_resource type="Texture2D" uid="uid://ure11o8rq5kq" path="res://sprites/heroes/knight/knight_dialog.png" id="4_dbnaw"]
+[ext_resource type="Texture2D" uid="uid://du6fvqmsx41nv" path="res://sprites/heroes/duo_prep.png" id="5_bqoie"]
+[ext_resource type="Texture2D" uid="uid://183rl8hf04us" path="res://sprites/enemies/blademaster/bm_duo_battle.png" id="6_2sdh0"]
+[ext_resource type="AudioStream" uid="uid://c5wd11demj6gd" path="res://sounds/music/Sprawl2_Heavy.mp3" id="7_h0e3r"]
+
+[sub_resource type="Resource" id="Resource_7iahj"]
+script = ExtResource("1_s8g58")
+narrator_title = ""
+dialogue_contents = "At last, the entrance is within arm's grasp. The harsh winds of the autumnal song streak into the entry hall, a burning red glow glistening through the forest surrounding the temple, set ablaze by the rampancy of the brigands' might."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_fx6ig"]
+script = ExtResource("1_s8g58")
+narrator_title = ""
+dialogue_contents = "To count the raiders that remain is an impossible feat. Yet the groups disperse, their interest in the desecration of the temple now waning.
+
+Despite the retreat, a great many brigands linger in the burning battleground."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_44bvp"]
+script = ExtResource("1_s8g58")
+narrator_title = "The Cleric"
+dialogue_contents = "They begin to flee. We may yet have a chance of surviving after all. Do we proceed?"
+left_sprite = ExtResource("2_dryqc")
+right_sprite = ExtResource("3_nnsrq")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_jgoop"]
+script = ExtResource("1_s8g58")
+narrator_title = "The Knight"
+dialogue_contents = "What is a battlefield, if not entertained by a skirmish? They will not yield to us otherwise. Their numbers diminish, we have the opportunity to cut through. We shall not squander our chance."
+left_sprite = ExtResource("2_dryqc")
+right_sprite = ExtResource("4_dbnaw")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_fxujs"]
+script = ExtResource("1_s8g58")
+narrator_title = ""
+dialogue_contents = "The cleric nods, standing beside the knight as they step out from the darkness of the temple's ruins into the valley ahead."
+left_sprite = ExtResource("2_dryqc")
+right_sprite = ExtResource("4_dbnaw")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_vqma6"]
+script = ExtResource("1_s8g58")
+narrator_title = ""
+dialogue_contents = "The sun has begun to set, slowly dipping beyond the mountain range. The deep silhouettes of the remaining warband stand ahead in wait.
+
+Weapons drawn, the knight and cleric storm forth into the fray."
+left_sprite = ExtResource("5_bqoie")
+right_sprite = ExtResource("6_2sdh0")
+sprite_focus = "Left"
+
+[resource]
+script = ExtResource("1_q5urj")
+dialogue_statements = Array[ExtResource("1_s8g58")]([SubResource("Resource_7iahj"), SubResource("Resource_fx6ig"), SubResource("Resource_44bvp"), SubResource("Resource_jgoop"), SubResource("Resource_fxujs"), SubResource("Resource_vqma6")])
+scene_background = "Dialog_TempleEntrance"
+scene_music = ExtResource("7_h0e3r")
+smooth_fade = false

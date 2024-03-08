@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=16 format=3 uid="uid://dtwjaydmhs8m"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_1gwo1"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_wuwdk"]
+[ext_resource type="Texture2D" uid="uid://coa502opjef0s" path="res://sprites/heroes/cleric/cleric.png" id="2_b0ygs"]
+[ext_resource type="Texture2D" uid="uid://ure11o8rq5kq" path="res://sprites/heroes/knight/knight_dialog.png" id="3_1iq4g"]
+[ext_resource type="Texture2D" uid="uid://dxl8dpa8r6woi" path="res://sprites/heroes/cleric_knight_duo.png" id="4_ui0dd"]
+[ext_resource type="Texture2D" uid="uid://dkqp1a3mags6j" path="res://sprites/enemies/blund_musk_duo.png" id="5_jyf5h"]
+[ext_resource type="AudioStream" uid="uid://bart76p4yu7xc" path="res://sounds/music/WorldMap.mp3" id="6_co75u"]
+
+[sub_resource type="Resource" id="Resource_ol2ar"]
+script = ExtResource("1_1gwo1")
+narrator_title = ""
+dialogue_contents = "The atrium left behind with the felled bodies of brigands, the cleric follows close with the knight, rounding the bend to the quarters of the temple. Sunlight glistens through the ruined structure, ashes and cinder rising in the air. An unbearable stench of death and destruction wafts through as the two march on."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_l5pyo"]
+script = ExtResource("1_1gwo1")
+narrator_title = "The Knight"
+dialogue_contents = "Keep moving. They may yet burn this sanctum until there is nothing but ash in its wake."
+left_sprite = ExtResource("2_b0ygs")
+right_sprite = ExtResource("3_1iq4g")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_seqah"]
+script = ExtResource("1_1gwo1")
+narrator_title = "The Cleric"
+dialogue_contents = "But what of the others still within? We cannot be the only ones left amid the chaos."
+left_sprite = ExtResource("2_b0ygs")
+right_sprite = ExtResource("3_1iq4g")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_rfsxo"]
+script = ExtResource("1_1gwo1")
+narrator_title = ""
+dialogue_contents = "The Knight is silent for a moment as they walk forth. His body heaves as he sighs with a shake of his head."
+left_sprite = ExtResource("2_b0ygs")
+right_sprite = ExtResource("3_1iq4g")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_ujq5o"]
+script = ExtResource("1_1gwo1")
+narrator_title = "The Knight"
+dialogue_contents = "There is no one else. We are the last burning embers of light within this darkness. We shall not let them extinguish our flame."
+left_sprite = ExtResource("2_b0ygs")
+right_sprite = ExtResource("3_1iq4g")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_aoacs"]
+script = ExtResource("1_1gwo1")
+narrator_title = "The Cleric"
+dialogue_contents = "..I see.
+
+Then let us move with haste."
+left_sprite = ExtResource("2_b0ygs")
+right_sprite = ExtResource("3_1iq4g")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_48n6p"]
+script = ExtResource("1_1gwo1")
+narrator_title = "The Knight"
+dialogue_contents = "Indeed. Follow my lead. I see two more ahead. Act swiftly by my side and we will proceed unscathed."
+left_sprite = ExtResource("2_b0ygs")
+right_sprite = ExtResource("3_1iq4g")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_ny3um"]
+script = ExtResource("1_1gwo1")
+narrator_title = ""
+dialogue_contents = "The Knight points down the hall as his blade lowers to his side. A pair of riflemen stand in the hall, yet unaware of their presence.
+
+With swift mettle, they will not stand for much longer."
+left_sprite = ExtResource("4_ui0dd")
+right_sprite = ExtResource("5_jyf5h")
+sprite_focus = "Left"
+
+[resource]
+script = ExtResource("1_wuwdk")
+dialogue_statements = Array[ExtResource("1_1gwo1")]([SubResource("Resource_ol2ar"), SubResource("Resource_l5pyo"), SubResource("Resource_seqah"), SubResource("Resource_rfsxo"), SubResource("Resource_ujq5o"), SubResource("Resource_aoacs"), SubResource("Resource_48n6p"), SubResource("Resource_ny3um")])
+scene_background = "Dialog_OuterHalls"
+scene_music = ExtResource("6_co75u")
+smooth_fade = false

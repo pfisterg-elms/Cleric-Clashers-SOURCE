@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyl5cn3xdm4hq"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_ej07l"]
+[ext_resource type="Resource" uid="uid://dabmx8rblmc8p" path="res://spritegroups/commoner_spritegroup.tres" id="2_ttccj"]
+[ext_resource type="Resource" uid="uid://dfxjxdor7etdi" path="res://attacks/undead/undead_commoner/claw_swipe.tres" id="3_du15m"]
+[ext_resource type="Resource" uid="uid://byimabqf4s5c2" path="res://attacks/undead/undead_commoner/club_bash.tres" id="4_inj7j"]
+
+[node name="Undead_Commoner" type="Node"]
+script = ExtResource("1_ej07l")
+actor_name = "Undead Commoner"
+sprite_group = ExtResource("2_ttccj")
+max_health = 18
+initiative_bonus = -1
+armor_class = 9
+infliction_save = -2
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("3_du15m"), ExtResource("4_inj7j")])

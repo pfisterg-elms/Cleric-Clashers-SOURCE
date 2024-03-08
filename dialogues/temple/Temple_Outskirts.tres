@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=15 format=3 uid="uid://c1tw5aax4mnwg"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_a8wgf"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_btvic"]
+[ext_resource type="Texture2D" uid="uid://dxl8dpa8r6woi" path="res://sprites/heroes/cleric_knight_duo.png" id="1_q7l6f"]
+[ext_resource type="AudioStream" uid="uid://c5wd11demj6gd" path="res://sounds/music/Sprawl2_Heavy.mp3" id="2_m16ky"]
+[ext_resource type="Texture2D" uid="uid://dkqp1a3mags6j" path="res://sprites/enemies/blund_musk_duo.png" id="3_bj3cj"]
+[ext_resource type="Texture2D" uid="uid://183rl8hf04us" path="res://sprites/enemies/blademaster/bm_duo_battle.png" id="4_kwee8"]
+[ext_resource type="Texture2D" uid="uid://du6fvqmsx41nv" path="res://sprites/heroes/duo_prep.png" id="4_xmu82"]
+[ext_resource type="Texture2D" uid="uid://bml22mxfpcph7" path="res://sprites/enemies/gutterman/gutterman_dialog.png" id="5_b3621"]
+
+[sub_resource type="Resource" id="Resource_fv6li"]
+script = ExtResource("1_a8wgf")
+narrator_title = ""
+dialogue_contents = "For but a moment, as the forest path leading out of the temple draws ever closer, the temple battleground grows quiet. Many have fallen before the day's errand had been done. "
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_p50r7"]
+script = ExtResource("1_a8wgf")
+narrator_title = ""
+dialogue_contents = "Weary from battle, the knight and cleric both march on. The temple has fallen, but their hope survives, emboldened by their victories against the brigands."
+left_sprite = ExtResource("1_q7l6f")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_ah423"]
+script = ExtResource("1_a8wgf")
+narrator_title = ""
+dialogue_contents = "The brigands appear to head upon an urgent retreat now, vanishing through the treeline, heading northward as the sun sets upon the horizon, painting a harsh red gradient on the sky.
+
+Yet ahead, one last raiding party remains."
+left_sprite = ExtResource("1_q7l6f")
+right_sprite = ExtResource("3_bj3cj")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_wyr7f"]
+script = ExtResource("1_a8wgf")
+narrator_title = ""
+dialogue_contents = "Others emerge from the shadows, drawing their blades without hesitance. A desperate countermeasure as the bulk of the raiding party vanishes from sight. 
+
+The two will not pass without a final grizzly endeavour."
+left_sprite = ExtResource("1_q7l6f")
+right_sprite = ExtResource("4_kwee8")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_21e7d"]
+script = ExtResource("1_a8wgf")
+narrator_title = ""
+dialogue_contents = "Beyond the lingering swath of brigands stands tall a monolithic hooded brawler; lying in wait as the remnants of his army staggers forth to fend off the heroes of the sanctuary."
+left_sprite = ExtResource("1_q7l6f")
+right_sprite = ExtResource("5_b3621")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_2ka6m"]
+script = ExtResource("1_a8wgf")
+narrator_title = ""
+dialogue_contents = "Once more, for one final effort, the knight and cleric bear their arms. These brigands will be vanquished, and this duo will yet live to see the sun fall and rise another day.
+
+A prayer is uttered. Blades are drawn. Rifles armed. Fires blaze behind as the temple crumbles. One final battle before the day shall be done."
+left_sprite = ExtResource("4_xmu82")
+right_sprite = ExtResource("5_b3621")
+sprite_focus = "Left"
+
+[resource]
+script = ExtResource("1_btvic")
+dialogue_statements = Array[ExtResource("1_a8wgf")]([SubResource("Resource_fv6li"), SubResource("Resource_p50r7"), SubResource("Resource_ah423"), SubResource("Resource_wyr7f"), SubResource("Resource_21e7d"), SubResource("Resource_2ka6m")])
+scene_background = "Dialog_TempleEntrance"
+scene_music = ExtResource("2_m16ky")
+smooth_fade = false

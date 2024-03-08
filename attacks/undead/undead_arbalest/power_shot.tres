@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://mc17t0kjmwau"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_70n8x"]
+[ext_resource type="AudioStream" uid="uid://5y78noc6ps4x" path="res://sounds/weapons/rifle/rifle_hit.mp3" id="1_vss47"]
+[ext_resource type="AudioStream" uid="uid://v1vsdpltep5" path="res://sounds/weapons/crossbow_fire.mp3" id="3_xnlts"]
+
+[resource]
+script = ExtResource("1_70n8x")
+attack_name = "Power Shot"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 2
+base_damage = 7
+damage_type = "Piercing"
+swing_sound = ExtResource("3_xnlts")
+hit_sound = ExtResource("1_vss47")
+inflict_challenge = 0

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://bf8ww40bv10b7"]
+
+[ext_resource type="AudioStream" uid="uid://5y78noc6ps4x" path="res://sounds/weapons/rifle/rifle_hit.mp3" id="1_4njyp"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_mudnb"]
+[ext_resource type="PackedScene" uid="uid://c252uksyfrklq" path="res://scenes/inflictions/bleeding.tscn" id="2_5kmwc"]
+[ext_resource type="AudioStream" uid="uid://k24slod8qusi" path="res://sounds/weapons/rifle/rifle_fire.mp3" id="4_tekbn"]
+
+[resource]
+script = ExtResource("1_mudnb")
+attack_name = "Precision Shot"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 2
+base_damage = 2
+damage_type = "Piercing"
+swing_sound = ExtResource("4_tekbn")
+hit_sound = ExtResource("1_4njyp")
+infliction = ExtResource("2_5kmwc")
+inflict_challenge = 12

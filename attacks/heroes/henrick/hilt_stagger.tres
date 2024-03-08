@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://dvprspvcpwipp"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_7dvb8"]
+[ext_resource type="AudioStream" uid="uid://ddhtdned2gcgk" path="res://sounds/weapons/blade/hilt_bash.mp3" id="1_sam85"]
+[ext_resource type="PackedScene" uid="uid://dj53xlo0sverx" path="res://scenes/inflictions/staggered.tscn" id="2_c5if3"]
+[ext_resource type="AudioStream" uid="uid://c4ijr0ryqaxk2" path="res://sounds/weapons/blade/blade_swing.ogg" id="4_h71hi"]
+
+[resource]
+script = ExtResource("1_7dvb8")
+attack_name = "Hilt Stagger"
+attack_descriptor = "Strike an enemy with your blade's hilt to send them off-balance, but also anger them at the same time. 2 Bludgeoning damage.
+
+Disadvantage on their next attack, but damage multiplied by 1.5X."
+attack_type = "Damage"
+hit_modifier = 1
+base_damage = 2
+damage_type = "Bludgeoning"
+swing_sound = ExtResource("4_h71hi")
+hit_sound = ExtResource("1_sam85")
+infliction = ExtResource("2_c5if3")
+inflict_challenge = 14

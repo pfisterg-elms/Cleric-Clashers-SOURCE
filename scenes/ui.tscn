@@ -1,0 +1,1845 @@
+[gd_scene load_steps=52 format=3 uid="uid://c7olhw0se7nb2"]
+
+[ext_resource type="StyleBox" uid="uid://dppm1qpufbga4" path="res://styles/AreaInteractorNormal.tres" id="1_p0d0b"]
+[ext_resource type="Texture2D" uid="uid://bodjhed1xclrk" path="res://sprites/backgrounds/crypts/crypts_altar.png" id="1_x5px0"]
+[ext_resource type="StyleBox" uid="uid://dwnerxfkcc0oj" path="res://styles/AreaInteractorHover.tres" id="2_b7uqq"]
+[ext_resource type="Texture2D" uid="uid://dsgrnk1rvfwo2" path="res://sprites/backgrounds/crypts/crypts_foreground.png" id="2_bdngk"]
+[ext_resource type="Texture2D" uid="uid://dycoljw7dtcw2" path="res://sprites/backgrounds/crypts/crypts_largeHall.png" id="3_gvrcc"]
+[ext_resource type="StyleBox" uid="uid://cl8s3fegwk1cl" path="res://styles/AreaInteractorPress.tres" id="3_owrid"]
+[ext_resource type="Texture2D" uid="uid://xguxdyktgyuk" path="res://sprites/backgrounds/crypts/crypts_arches.png" id="3_yp4sh"]
+[ext_resource type="Texture2D" uid="uid://duxcut4nfn2ov" path="res://sprites/backgrounds/town/town_square.png" id="4_1jfeq"]
+[ext_resource type="Texture2D" uid="uid://dbkqdhba1d0te" path="res://sprites/backgrounds/twisted_woods/woodlands_dense.png" id="4_1727o"]
+[ext_resource type="Script" path="res://scripts/area_button.gd" id="4_fk6kg"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_box.gd" id="4_q50hv"]
+[ext_resource type="Texture2D" uid="uid://b2sdoilehvo8t" path="res://sprites/backgrounds/crypts/crypts_ruinedHall.png" id="5_64f1j"]
+[ext_resource type="Texture2D" uid="uid://c1wi3vq55ra23" path="res://sprites/backgrounds/twisted_woods/woodlands_foreground.png" id="5_afv8k"]
+[ext_resource type="Texture2D" uid="uid://4thfr30gia4d" path="res://sprites/heroes/cleric/cleric_bolster.png" id="5_hy6iu"]
+[ext_resource type="Script" path="res://scripts/start_button.gd" id="5_t65qa"]
+[ext_resource type="Texture2D" uid="uid://cg455it0ng7d6" path="res://sprites/backgrounds/town/town_foreground.png" id="5_u8qau"]
+[ext_resource type="Texture2D" uid="uid://bgyby1c0qkfsm" path="res://icon.svg" id="6_a2vhe"]
+[ext_resource type="Texture2D" uid="uid://cci0she8rrcoy" path="res://sprites/smokeFX.png" id="6_c80j1"]
+[ext_resource type="Script" path="res://scripts/load_button.gd" id="6_h8ijn"]
+[ext_resource type="Texture2D" uid="uid://dd6upkxbwxoo7" path="res://sprites/heroes/knight/knight_hit.png" id="6_sw47j"]
+[ext_resource type="Script" path="res://scripts/battle_system/action_list.gd" id="7_7jej8"]
+[ext_resource type="Texture2D" uid="uid://07bifqjfwvvo" path="res://sprites/heroes/doctor/doctor.png" id="7_fj2ex"]
+[ext_resource type="Script" path="res://scripts/battle_system/battle_scene.gd" id="7_l7t4y"]
+[ext_resource type="PackedScene" uid="uid://dfwox8jic22j5" path="res://scenes/actor_pawn.tscn" id="8_5xokq"]
+[ext_resource type="Texture2D" uid="uid://dkqp1a3mags6j" path="res://sprites/enemies/blund_musk_duo.png" id="8_lbh1f"]
+[ext_resource type="Script" path="res://scripts/dialog_skipbox.gd" id="8_ttl6f"]
+[ext_resource type="Texture2D" uid="uid://183rl8hf04us" path="res://sprites/enemies/blademaster/bm_duo_battle.png" id="9_ccfka"]
+[ext_resource type="Texture2D" uid="uid://csag7nw5e404y" path="res://sprites/heroes/doctor/doctor_camp.png" id="9_qsrlu"]
+[ext_resource type="Texture2D" uid="uid://bm16wttngy681" path="res://sprites/backgrounds/crypts/crypts_entrance.png" id="10_d03la"]
+[ext_resource type="Script" path="res://scripts/battle_system/pawn_info.gd" id="10_hej4y"]
+[ext_resource type="FontFile" uid="uid://cjt8wgbcsqu7k" path="res://fonts/Leorio.ttf" id="11_t0v3x"]
+[ext_resource type="Texture2D" uid="uid://c3ax7jbbobm8q" path="res://sprites/backgrounds/templeCamp.png" id="14_hp4rw"]
+[ext_resource type="Texture2D" uid="uid://b8xmorqu4ymq2" path="res://sprites/light_halo.png" id="15_b7lky"]
+[ext_resource type="Script" path="res://scripts/area_navigator.gd" id="17_xrkbn"]
+[ext_resource type="Texture2D" uid="uid://dlse3law8rgeh" path="res://sprites/heroes/cleric/cleric_camping.png" id="18_ny4be"]
+[ext_resource type="Texture2D" uid="uid://csdjh6f7nj8q3" path="res://sprites/heroes/knight/knight_camping.png" id="19_qk1ig"]
+[ext_resource type="Texture2D" uid="uid://dmitohqyomnb3" path="res://sprites/backgrounds/town/town_square_end.png" id="21_h8yku"]
+[ext_resource type="Texture2D" uid="uid://kp6oke1es0sa" path="res://sprites/backgrounds/twisted_woods/woodlands_vista.png" id="25_qfgmn"]
+[ext_resource type="Texture2D" uid="uid://cds6i05iac1m5" path="res://sprites/backgrounds/twisted_woods/woodlands_vikki.png" id="26_fnw7g"]
+[ext_resource type="Script" path="res://scripts/save_button.gd" id="26_or5yk"]
+[ext_resource type="Texture2D" uid="uid://cm2sgs2sokatq" path="res://sprites/backgrounds/twisted_woods/woodlands_graveyard.png" id="28_hcpmy"]
+[ext_resource type="Texture2D" uid="uid://bismnfso7h02y" path="res://sprites/backgrounds/twisted_woods/woodlands_grave_entry.png" id="29_4ydxn"]
+[ext_resource type="Texture2D" uid="uid://dmyoa7yoaqbdc" path="res://sprites/backgrounds/town/town_street.png" id="31_igc38"]
+[ext_resource type="Texture2D" uid="uid://cx2nn1ljb8qkh" path="res://sprites/backgrounds/town/town_house.png" id="32_1twdy"]
+
+[sub_resource type="Animation" id="Animation_wa028"]
+resource_name = "CampfireFlicker"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.5, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.8, 0.75, 0.6, 0.7, 0.6, 0.8]
+}
+
+[sub_resource type="Animation" id="Animation_gk2mh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4yvme"]
+_data = {
+"CampfireFlicker": SubResource("Animation_wa028"),
+"RESET": SubResource("Animation_gk2mh")
+}
+
+[sub_resource type="Curve" id="Curve_sedx4"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.499037, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_b442h"]
+
+[sub_resource type="Gradient" id="Gradient_7voy7"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cacxj"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Dialog" type="CanvasLayer" parent="."]
+
+[node name="Dialog_AltarRoom" type="Node2D" parent="Dialog"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/Dialog_AltarRoom"]
+position = Vector2(586, 303)
+texture = ExtResource("1_x5px0")
+
+[node name="Dialog_TempleCamp" type="Node2D" parent="Dialog"]
+visible = false
+position = Vector2(-56, 0)
+
+[node name="bg" type="Sprite2D" parent="Dialog/Dialog_TempleCamp"]
+position = Vector2(426, 87)
+texture = ExtResource("14_hp4rw")
+
+[node name="PointLight2D" type="PointLight2D" parent="Dialog/Dialog_TempleCamp"]
+position = Vector2(618, 288)
+scale = Vector2(3.80435, 2.83)
+color = Color(1, 0.576471, 0, 1)
+energy = 5.0
+range_layer_min = -1
+range_layer_max = 100
+texture = ExtResource("15_b7lky")
+texture_scale = 0.8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialog/Dialog_TempleCamp/PointLight2D"]
+libraries = {
+"": SubResource("AnimationLibrary_4yvme")
+}
+autoplay = "CampfireFlicker"
+speed_scale = 0.15
+
+[node name="Smoke" type="CPUParticles2D" parent="Dialog/Dialog_TempleCamp"]
+position = Vector2(640, 392)
+amount = 16
+lifetime = 3.0
+lifetime_randomness = 1.0
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(25, 0)
+particle_flag_align_y = true
+direction = Vector2(19.14, 0)
+spread = 180.0
+gravity = Vector2(0, -40)
+orbit_velocity_max = 0.05
+scale_amount_min = 0.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_sedx4")
+color = Color(0, 0, 0, 0.317647)
+color_ramp = SubResource("Gradient_b442h")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="Fire" type="CPUParticles2D" parent="Dialog/Dialog_TempleCamp"]
+position = Vector2(640, 392)
+amount = 128
+lifetime = 3.0
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(25, 0)
+particle_flag_align_y = true
+direction = Vector2(19.14, 0)
+spread = 180.0
+gravity = Vector2(0, -40)
+initial_velocity_max = 5.0
+orbit_velocity_max = 0.05
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_sedx4")
+color = Color(1, 0.231373, 0, 1)
+color_ramp = SubResource("Gradient_b442h")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="Fire2" type="CPUParticles2D" parent="Dialog/Dialog_TempleCamp"]
+position = Vector2(640, 392)
+amount = 128
+lifetime = 3.0
+lifetime_randomness = 1.0
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(25, 0)
+particle_flag_align_y = true
+direction = Vector2(19.14, 0)
+spread = 180.0
+gravity = Vector2(0, -40)
+initial_velocity_max = 5.0
+orbit_velocity_max = 0.05
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_sedx4")
+color = Color(1, 0.231373, 0, 1)
+color_ramp = SubResource("Gradient_b442h")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="fg" type="Sprite2D" parent="Dialog/Dialog_TempleCamp"]
+position = Vector2(378, 335)
+texture = ExtResource("5_afv8k")
+
+[node name="fg2" type="Sprite2D" parent="Dialog/Dialog_TempleCamp"]
+position = Vector2(1098, 335)
+texture = ExtResource("5_afv8k")
+
+[node name="cleric" type="Sprite2D" parent="Dialog/Dialog_TempleCamp"]
+modulate = Color(0.52549, 0.52549, 0.52549, 1)
+position = Vector2(519, 219)
+scale = Vector2(1.78977, 1.78977)
+texture = ExtResource("18_ny4be")
+
+[node name="knight" type="Sprite2D" parent="Dialog/Dialog_TempleCamp"]
+modulate = Color(0.52549, 0.52549, 0.52549, 1)
+position = Vector2(773, 211)
+scale = Vector2(1.85758, 1.85758)
+texture = ExtResource("19_qk1ig")
+flip_h = true
+
+[node name="ColorRect" type="ColorRect" parent="Dialog/Dialog_TempleCamp"]
+offset_left = 56.0
+offset_top = 443.0
+offset_right = 1213.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Dialog/Dialog_TempleCamp"]
+color = Color(0.423529, 0.607843, 1, 1)
+
+[node name="Dialog_TombCamp" type="Node2D" parent="Dialog"]
+visible = false
+position = Vector2(-56, 0)
+
+[node name="bg" type="Sprite2D" parent="Dialog/Dialog_TombCamp"]
+position = Vector2(426, 87)
+texture = ExtResource("3_gvrcc")
+
+[node name="PointLight2D" type="PointLight2D" parent="Dialog/Dialog_TombCamp"]
+position = Vector2(618, 288)
+scale = Vector2(3.80435, 2.83)
+color = Color(1, 0.576471, 0, 1)
+energy = 5.0
+range_layer_min = -1
+range_layer_max = 100
+texture = ExtResource("15_b7lky")
+texture_scale = 0.8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialog/Dialog_TombCamp/PointLight2D"]
+libraries = {
+"": SubResource("AnimationLibrary_4yvme")
+}
+autoplay = "CampfireFlicker"
+speed_scale = 0.15
+
+[node name="Smoke" type="CPUParticles2D" parent="Dialog/Dialog_TombCamp"]
+position = Vector2(640, 392)
+amount = 16
+lifetime = 3.0
+lifetime_randomness = 1.0
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(25, 0)
+particle_flag_align_y = true
+direction = Vector2(19.14, 0)
+spread = 180.0
+gravity = Vector2(0, -40)
+orbit_velocity_max = 0.05
+scale_amount_min = 0.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_sedx4")
+color = Color(0, 0, 0, 0.317647)
+color_ramp = SubResource("Gradient_b442h")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="Fire" type="CPUParticles2D" parent="Dialog/Dialog_TombCamp"]
+position = Vector2(640, 392)
+amount = 128
+lifetime = 3.0
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(25, 0)
+particle_flag_align_y = true
+direction = Vector2(19.14, 0)
+spread = 180.0
+gravity = Vector2(0, -40)
+initial_velocity_max = 5.0
+orbit_velocity_max = 0.05
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_sedx4")
+color = Color(1, 0.231373, 0, 1)
+color_ramp = SubResource("Gradient_b442h")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="Fire2" type="CPUParticles2D" parent="Dialog/Dialog_TombCamp"]
+position = Vector2(640, 392)
+amount = 128
+lifetime = 3.0
+lifetime_randomness = 1.0
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(25, 0)
+particle_flag_align_y = true
+direction = Vector2(19.14, 0)
+spread = 180.0
+gravity = Vector2(0, -40)
+initial_velocity_max = 5.0
+orbit_velocity_max = 0.05
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_sedx4")
+color = Color(1, 0.231373, 0, 1)
+color_ramp = SubResource("Gradient_b442h")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="cleric" type="Sprite2D" parent="Dialog/Dialog_TombCamp"]
+modulate = Color(0.52549, 0.52549, 0.52549, 1)
+position = Vector2(519, 275)
+scale = Vector2(1.78977, 1.78977)
+texture = ExtResource("18_ny4be")
+
+[node name="doctor" type="Sprite2D" parent="Dialog/Dialog_TombCamp"]
+modulate = Color(0.52549, 0.52549, 0.52549, 1)
+position = Vector2(399, 323)
+scale = Vector2(1.78977, 1.78977)
+texture = ExtResource("9_qsrlu")
+
+[node name="knight" type="Sprite2D" parent="Dialog/Dialog_TombCamp"]
+modulate = Color(0.52549, 0.52549, 0.52549, 1)
+position = Vector2(797, 275)
+scale = Vector2(1.85758, 1.85758)
+texture = ExtResource("19_qk1ig")
+flip_h = true
+
+[node name="fg" type="Sprite2D" parent="Dialog/Dialog_TombCamp"]
+position = Vector2(378, 399)
+texture = ExtResource("2_bdngk")
+
+[node name="fg2" type="Sprite2D" parent="Dialog/Dialog_TombCamp"]
+position = Vector2(1098, 399)
+texture = ExtResource("2_bdngk")
+
+[node name="ColorRect" type="ColorRect" parent="Dialog/Dialog_TombCamp"]
+offset_left = 56.0
+offset_top = 443.0
+offset_right = 1213.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Dialog/Dialog_TombCamp"]
+color = Color(0.423529, 0.607843, 1, 1)
+
+[node name="Dialog_TempleHalls" type="Node2D" parent="Dialog"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/Dialog_TempleHalls"]
+position = Vector2(579.667, 328)
+scale = Vector2(0.919444, 0.919444)
+texture = ExtResource("3_yp4sh")
+
+[node name="Dialog_OuterHalls" type="Node2D" parent="Dialog"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/Dialog_OuterHalls"]
+position = Vector2(579.667, 328)
+scale = Vector2(0.919444, 0.919444)
+texture = ExtResource("5_64f1j")
+
+[node name="Dialog_TempleAtrium" type="Node2D" parent="Dialog"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/Dialog_TempleAtrium"]
+position = Vector2(475.667, 328)
+scale = Vector2(0.919444, 0.919444)
+texture = ExtResource("3_gvrcc")
+
+[node name="Dialog_TempleEntrance" type="Node2D" parent="Dialog"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/Dialog_TempleEntrance"]
+position = Vector2(587.667, 328)
+scale = Vector2(0.919444, 0.919444)
+texture = ExtResource("10_d03la")
+
+[node name="Dialog_Forest" type="Node2D" parent="Dialog"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/Dialog_Forest"]
+position = Vector2(587.667, 328)
+scale = Vector2(0.919444, 0.919444)
+texture = ExtResource("4_1727o")
+
+[node name="Dialog_VikkiMeet" type="Node2D" parent="Dialog"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/Dialog_VikkiMeet"]
+position = Vector2(587.667, 328)
+scale = Vector2(0.919444, 0.919444)
+texture = ExtResource("26_fnw7g")
+
+[node name="Dialog_Vista" type="Node2D" parent="Dialog"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/Dialog_Vista"]
+position = Vector2(587.667, 328)
+scale = Vector2(0.919444, 0.919444)
+texture = ExtResource("25_qfgmn")
+
+[node name="Dialog_Graveyard" type="Node2D" parent="Dialog"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/Dialog_Graveyard"]
+position = Vector2(587.667, 328)
+scale = Vector2(0.919444, 0.919444)
+texture = ExtResource("28_hcpmy")
+
+[node name="Dialog_TombEntrance" type="Node2D" parent="Dialog"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/Dialog_TombEntrance"]
+position = Vector2(587.667, 328)
+scale = Vector2(0.919444, 0.919444)
+texture = ExtResource("29_4ydxn")
+
+[node name="Dialog_TownOutskirts" type="Node2D" parent="Dialog"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/Dialog_TownOutskirts"]
+position = Vector2(587.667, 328)
+scale = Vector2(0.919444, 0.919444)
+texture = ExtResource("32_1twdy")
+
+[node name="Dialog_TownSquare" type="Node2D" parent="Dialog"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/Dialog_TownSquare"]
+position = Vector2(587.667, 328)
+scale = Vector2(0.919444, 0.919444)
+texture = ExtResource("4_1jfeq")
+
+[node name="Dialog_Epilogue" type="Node2D" parent="Dialog"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/Dialog_Epilogue"]
+position = Vector2(580.334, 225.5)
+scale = Vector2(0.634722, 0.634722)
+texture = ExtResource("21_h8yku")
+
+[node name="ColorRect" type="ColorRect" parent="Dialog/Dialog_Epilogue"]
+offset_left = -4.0
+offset_top = 452.0
+offset_right = 1159.0
+offset_bottom = 656.0
+color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="MainMenu"]
+offset_left = -1.0
+offset_top = -4.0
+offset_right = 1155.0
+offset_bottom = 651.0
+color = Color(0.611765, 0.611765, 0.611765, 1)
+
+[node name="Start" type="Button" parent="MainMenu"]
+offset_left = 440.0
+offset_top = 91.0
+offset_right = 700.0
+offset_bottom = 157.0
+tooltip_text = "Begin a new game."
+focus_mode = 0
+theme_override_fonts/font = ExtResource("11_t0v3x")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = ExtResource("1_p0d0b")
+theme_override_styles/hover = ExtResource("2_b7uqq")
+theme_override_styles/pressed = ExtResource("3_owrid")
+theme_override_styles/focus = ExtResource("1_p0d0b")
+text = "New Game"
+script = ExtResource("5_t65qa")
+
+[node name="Load" type="Button" parent="MainMenu"]
+offset_left = 440.0
+offset_top = 171.0
+offset_right = 700.0
+offset_bottom = 237.0
+tooltip_text = "Load the previous save state."
+focus_mode = 0
+theme_override_fonts/font = ExtResource("11_t0v3x")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = ExtResource("1_p0d0b")
+theme_override_styles/hover = ExtResource("2_b7uqq")
+theme_override_styles/pressed = ExtResource("3_owrid")
+theme_override_styles/focus = ExtResource("1_p0d0b")
+text = "Load Game"
+script = ExtResource("6_h8ijn")
+
+[node name="ErrorLabel" type="RichTextLabel" parent="MainMenu/Load"]
+visible = false
+layout_mode = 0
+offset_left = 266.0
+offset_top = 19.0
+offset_right = 591.0
+offset_bottom = 52.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("11_t0v3x")
+theme_override_font_sizes/normal_font_size = 28
+text = "No save data to load!"
+
+[node name="Quit" type="Button" parent="MainMenu"]
+offset_left = 440.0
+offset_top = 251.0
+offset_right = 700.0
+offset_bottom = 317.0
+tooltip_text = "Quit to Desktop."
+focus_mode = 0
+theme_override_fonts/font = ExtResource("11_t0v3x")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = ExtResource("1_p0d0b")
+theme_override_styles/hover = ExtResource("2_b7uqq")
+theme_override_styles/pressed = ExtResource("3_owrid")
+theme_override_styles/focus = ExtResource("1_p0d0b")
+text = "Exit"
+
+[node name="TitleText" type="RichTextLabel" parent="MainMenu"]
+offset_left = 295.0
+offset_top = 17.0
+offset_right = 854.0
+offset_bottom = 90.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("11_t0v3x")
+theme_override_fonts/bold_font = ExtResource("11_t0v3x")
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 56
+bbcode_enabled = true
+text = "[center][b]CLERIC CLASHERS[/b][/center]"
+
+[node name="Ashes" type="CPUParticles2D" parent="MainMenu"]
+position = Vector2(582, 640)
+amount = 300
+lifetime = 10.0
+preprocess = 7.0
+randomness = 0.45
+lifetime_randomness = 0.4
+emission_shape = 3
+emission_rect_extents = Vector2(600, 1)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(0, -12)
+angular_velocity_max = 5.0
+tangential_accel_max = 8.0
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+color = Color(0, 0, 0, 1)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="cleric" type="Sprite2D" parent="MainMenu"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(592.9, 469.061)
+scale = Vector2(1.75506, 1.75506)
+texture = ExtResource("5_hy6iu")
+
+[node name="knight" type="Sprite2D" parent="MainMenu"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(424.1, 477.261)
+scale = Vector2(1.73259, 1.73259)
+texture = ExtResource("6_sw47j")
+flip_h = true
+
+[node name="doctor" type="Sprite2D" parent="MainMenu"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(730.236, 479.221)
+scale = Vector2(1.69711, 1.69711)
+texture = ExtResource("7_fj2ex")
+
+[node name="brigand_crowd" type="Sprite2D" parent="MainMenu"]
+modulate = Color(0, 0, 0, 0.607843)
+position = Vector2(1017.24, 408.221)
+scale = Vector2(1.69711, 1.69711)
+texture = ExtResource("8_lbh1f")
+
+[node name="brigand_crowd2" type="Sprite2D" parent="MainMenu"]
+modulate = Color(0, 0, 0, 0.607843)
+position = Vector2(153.236, 432.221)
+scale = Vector2(1.69711, 1.69711)
+texture = ExtResource("9_ccfka")
+flip_h = true
+
+[node name="foreground" type="Sprite2D" parent="MainMenu"]
+position = Vector2(576, 489)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("5_u8qau")
+
+[node name="Battle_AltarBG" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_AltarBG"]
+position = Vector2(585.667, 220)
+scale = Vector2(0.761111, 0.761111)
+texture = ExtResource("1_x5px0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_AltarBG"]
+z_index = 50
+position = Vector2(1024, 459)
+texture = ExtResource("2_bdngk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_AltarBG"]
+z_index = 50
+position = Vector2(304, 459)
+texture = ExtResource("2_bdngk")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_AltarBG"]
+offset_top = 509.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Battle_HallwayBG" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_HallwayBG"]
+z_index = -10
+position = Vector2(585.667, 220)
+scale = Vector2(0.761111, 0.761111)
+texture = ExtResource("3_yp4sh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_HallwayBG"]
+z_index = 50
+position = Vector2(1024, 459)
+texture = ExtResource("2_bdngk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_HallwayBG"]
+z_index = 50
+position = Vector2(304, 459)
+texture = ExtResource("2_bdngk")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_HallwayBG"]
+offset_top = 509.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="DungeonFog" type="CPUParticles2D" parent="Battle_HallwayBG"]
+z_index = -10
+position = Vector2(1364, 264)
+amount = 50
+lifetime = 10.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.2
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(0, 200)
+particle_flag_align_y = true
+gravity = Vector2(-35, 0)
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(1, 1, 1, 0.152941)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Battle_AtriumBG" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_AtriumBG"]
+z_index = -10
+position = Vector2(585.667, 220)
+scale = Vector2(0.761111, 0.761111)
+texture = ExtResource("3_gvrcc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_AtriumBG"]
+z_index = 50
+position = Vector2(1024, 459)
+texture = ExtResource("2_bdngk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_AtriumBG"]
+z_index = 50
+position = Vector2(304, 459)
+texture = ExtResource("2_bdngk")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_AtriumBG"]
+offset_top = 509.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="DungeonFog" type="CPUParticles2D" parent="Battle_AtriumBG"]
+z_index = -10
+position = Vector2(1364, 264)
+amount = 50
+lifetime = 10.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.2
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(0, 200)
+particle_flag_align_y = true
+gravity = Vector2(-35, 0)
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(1, 1, 1, 0.180392)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Battle_RuinedHalls" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_RuinedHalls"]
+z_index = -10
+position = Vector2(621.667, 245.5)
+scale = Vector2(0.690278, 0.690278)
+texture = ExtResource("5_64f1j")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_RuinedHalls"]
+z_index = 50
+position = Vector2(1024, 459)
+texture = ExtResource("2_bdngk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_RuinedHalls"]
+z_index = 50
+position = Vector2(304, 459)
+texture = ExtResource("2_bdngk")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_RuinedHalls"]
+offset_top = 509.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="DungeonFog" type="CPUParticles2D" parent="Battle_RuinedHalls"]
+z_index = -10
+position = Vector2(-192, 271)
+amount = 50
+lifetime = 12.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.2
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(0, 200)
+particle_flag_align_y = true
+gravity = Vector2(35, 0)
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(1, 1, 1, 0.164706)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Ashes" type="CPUParticles2D" parent="Battle_RuinedHalls"]
+z_index = -10
+position = Vector2(583, 493)
+amount = 60
+lifetime = 7.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.4
+emission_shape = 3
+emission_rect_extents = Vector2(500, 1)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(0, -50)
+orbit_velocity_max = 0.05
+radial_accel_max = 70.63
+tangential_accel_max = 15.0
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+color = Color(1, 0.360784, 0.231373, 0.368627)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Battle_TempleEntrance" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_TempleEntrance"]
+z_index = -10
+position = Vector2(580.334, 246.5)
+scale = Vector2(0.684722, 0.684722)
+texture = ExtResource("10_d03la")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_TempleEntrance"]
+z_index = 10
+position = Vector2(1076, 410)
+texture = ExtResource("5_u8qau")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_TempleEntrance"]
+z_index = 10
+position = Vector2(356, 410)
+texture = ExtResource("5_u8qau")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_TempleEntrance"]
+z_index = -10
+offset_top = 509.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Ashes" type="CPUParticles2D" parent="Battle_TempleEntrance"]
+z_index = -10
+position = Vector2(583, 493)
+amount = 60
+lifetime = 7.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.4
+emission_shape = 3
+emission_rect_extents = Vector2(500, 1)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(0, -50)
+orbit_velocity_max = 0.05
+radial_accel_max = 70.63
+tangential_accel_max = 15.0
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+color = Color(1, 0.360784, 0.231373, 0.792157)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Smoke" type="CPUParticles2D" parent="Battle_TempleEntrance"]
+z_index = -10
+position = Vector2(583, 605)
+amount = 100
+lifetime = 10.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.2
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(500, 1)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(0, -30)
+radial_accel_max = 15.0
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(0, 0, 0, 0.560784)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Battle_Forest" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_Forest"]
+z_index = -10
+position = Vector2(605.334, 246)
+scale = Vector2(0.688889, 0.688889)
+texture = ExtResource("4_1727o")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_Forest"]
+z_index = 50
+position = Vector2(1024, 419)
+texture = ExtResource("5_afv8k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_Forest"]
+z_index = 50
+position = Vector2(304, 419)
+texture = ExtResource("5_afv8k")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_Forest"]
+offset_top = 493.0
+offset_right = 1152.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="Battle_VikkiMeetup" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_VikkiMeetup"]
+z_index = -10
+position = Vector2(605.334, 246)
+scale = Vector2(0.688889, 0.688889)
+texture = ExtResource("26_fnw7g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_VikkiMeetup"]
+z_index = 50
+position = Vector2(1024, 419)
+texture = ExtResource("5_afv8k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_VikkiMeetup"]
+z_index = 50
+position = Vector2(304, 419)
+texture = ExtResource("5_afv8k")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_VikkiMeetup"]
+offset_top = 493.0
+offset_right = 1152.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="Fog" type="CPUParticles2D" parent="Battle_VikkiMeetup"]
+z_index = -10
+position = Vector2(1460, 272)
+amount = 100
+lifetime = 15.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.2
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(0, 200)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(-15, 0)
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(0.694118, 1, 0.74902, 0.164706)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Battle_CursedForest" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_CursedForest"]
+z_index = -10
+position = Vector2(605.334, 246)
+scale = Vector2(0.688889, 0.688889)
+texture = ExtResource("25_qfgmn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_CursedForest"]
+z_index = 50
+position = Vector2(1024, 419)
+texture = ExtResource("5_afv8k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_CursedForest"]
+z_index = 50
+position = Vector2(304, 419)
+texture = ExtResource("5_afv8k")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_CursedForest"]
+offset_top = 493.0
+offset_right = 1152.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="Fog" type="CPUParticles2D" parent="Battle_CursedForest"]
+z_index = -10
+position = Vector2(1460, 272)
+amount = 100
+lifetime = 15.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.2
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(0, 200)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(-15, 0)
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(0.694118, 1, 0.74902, 0.164706)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Battle_WindyForestBG" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_WindyForestBG"]
+z_index = -10
+position = Vector2(605.334, 246)
+scale = Vector2(0.688889, 0.688889)
+texture = ExtResource("4_1727o")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_WindyForestBG"]
+z_index = 50
+position = Vector2(1024, 419)
+texture = ExtResource("5_afv8k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_WindyForestBG"]
+z_index = 50
+position = Vector2(304, 419)
+texture = ExtResource("5_afv8k")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_WindyForestBG"]
+offset_top = 493.0
+offset_right = 1152.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="Fog" type="CPUParticles2D" parent="Battle_WindyForestBG"]
+z_index = -10
+position = Vector2(1460, 272)
+amount = 100
+lifetime = 10.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.2
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(0, 200)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(-65, 0)
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(1, 1, 1, 0.294118)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Frost" type="CPUParticles2D" parent="Battle_WindyForestBG"]
+z_index = -10
+position = Vector2(1367, 291)
+amount = 200
+lifetime = 7.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.4
+emission_shape = 3
+emission_rect_extents = Vector2(0, 300)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(-150, 0)
+angular_velocity_max = 604.91
+tangential_accel_max = 15.0
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+color = Color(1, 1, 1, 0.588235)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Battle_Graveyard" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_Graveyard"]
+z_index = -10
+position = Vector2(605.334, 246)
+scale = Vector2(0.688889, 0.688889)
+texture = ExtResource("28_hcpmy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_Graveyard"]
+z_index = 50
+position = Vector2(1024, 419)
+texture = ExtResource("5_afv8k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_Graveyard"]
+z_index = 50
+position = Vector2(304, 419)
+texture = ExtResource("5_afv8k")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_Graveyard"]
+offset_top = 493.0
+offset_right = 1152.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="Fog" type="CPUParticles2D" parent="Battle_Graveyard"]
+z_index = -10
+position = Vector2(1460, 272)
+amount = 100
+lifetime = 15.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.2
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(0, 200)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(-15, 0)
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(0.694118, 1, 0.74902, 0.164706)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Frost" type="CPUParticles2D" parent="Battle_Graveyard"]
+z_index = -10
+position = Vector2(1367, 291)
+amount = 200
+lifetime = 7.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.4
+emission_shape = 3
+emission_rect_extents = Vector2(0, 300)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(-150, 0)
+angular_velocity_max = 604.91
+tangential_accel_max = 15.0
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+color = Color(0.4, 1, 0.329412, 0.27451)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Battle_TombEntrance" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_TombEntrance"]
+z_index = -10
+position = Vector2(605.334, 246)
+scale = Vector2(0.688889, 0.688889)
+texture = ExtResource("29_4ydxn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_TombEntrance"]
+z_index = 50
+position = Vector2(1024, 419)
+texture = ExtResource("5_afv8k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_TombEntrance"]
+z_index = 50
+position = Vector2(304, 419)
+texture = ExtResource("5_afv8k")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_TombEntrance"]
+offset_top = 493.0
+offset_right = 1152.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="Fog" type="CPUParticles2D" parent="Battle_TombEntrance"]
+z_index = -10
+position = Vector2(1460, 272)
+amount = 100
+lifetime = 15.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.2
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(0, 200)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(-30, 0)
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(0.694118, 1, 0.74902, 0.164706)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Frost" type="CPUParticles2D" parent="Battle_TombEntrance"]
+z_index = -10
+position = Vector2(1367, 291)
+amount = 300
+lifetime = 7.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.4
+emission_shape = 3
+emission_rect_extents = Vector2(0, 300)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(-90, 0)
+angular_velocity_max = 604.91
+tangential_accel_max = 15.0
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+color = Color(0.4, 1, 0.329412, 0.27451)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Battle_TownSquare" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_TownSquare"]
+z_index = -10
+position = Vector2(580.334, 246.5)
+scale = Vector2(0.684722, 0.684722)
+texture = ExtResource("4_1jfeq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_TownSquare"]
+z_index = 10
+position = Vector2(1076, 410)
+texture = ExtResource("5_u8qau")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_TownSquare"]
+z_index = 10
+position = Vector2(356, 410)
+texture = ExtResource("5_u8qau")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_TownSquare"]
+z_index = -10
+offset_top = 509.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Ashes" type="CPUParticles2D" parent="Battle_TownSquare"]
+z_index = -10
+position = Vector2(583, 493)
+amount = 200
+lifetime = 7.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.4
+emission_shape = 3
+emission_rect_extents = Vector2(500, 1)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(0, -50)
+orbit_velocity_max = 0.05
+radial_accel_max = 70.63
+tangential_accel_max = 15.0
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+color = Color(1, 0.360784, 0.231373, 1)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Smoke" type="CPUParticles2D" parent="Battle_TownSquare"]
+z_index = -10
+position = Vector2(583, 605)
+amount = 100
+lifetime = 10.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.2
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(500, 1)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(0, -30)
+radial_accel_max = 15.0
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(0, 0, 0, 0.886275)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Battle_TownStreet" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_TownStreet"]
+z_index = -10
+position = Vector2(580.334, 246.5)
+scale = Vector2(0.684722, 0.684722)
+texture = ExtResource("31_igc38")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_TownStreet"]
+z_index = 10
+position = Vector2(1076, 410)
+texture = ExtResource("5_u8qau")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_TownStreet"]
+z_index = 10
+position = Vector2(356, 410)
+texture = ExtResource("5_u8qau")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_TownStreet"]
+z_index = -10
+offset_top = 509.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Ashes" type="CPUParticles2D" parent="Battle_TownStreet"]
+z_index = -10
+position = Vector2(583, 477)
+amount = 100
+lifetime = 7.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.4
+emission_shape = 3
+emission_rect_extents = Vector2(500, 1)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(0, -50)
+orbit_velocity_max = 0.05
+radial_accel_max = 70.63
+tangential_accel_max = 15.0
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+color = Color(1, 0.360784, 0.231373, 1)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Smoke" type="CPUParticles2D" parent="Battle_TownStreet"]
+z_index = -10
+position = Vector2(583, 605)
+amount = 100
+lifetime = 10.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.2
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(500, 1)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(0, -30)
+radial_accel_max = 15.0
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(0, 0, 0, 0.462745)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Battle_TownOutskirts" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Node2D" type="Sprite2D" parent="Battle_TownOutskirts"]
+z_index = -10
+position = Vector2(580.334, 246.5)
+scale = Vector2(0.684722, 0.684722)
+texture = ExtResource("32_1twdy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Battle_TownOutskirts"]
+z_index = 10
+position = Vector2(1076, 410)
+texture = ExtResource("5_u8qau")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Battle_TownOutskirts"]
+z_index = 10
+position = Vector2(356, 410)
+texture = ExtResource("5_u8qau")
+
+[node name="ColorRect" type="ColorRect" parent="Battle_TownOutskirts"]
+z_index = -10
+offset_top = 509.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Ashes" type="CPUParticles2D" parent="Battle_TownOutskirts"]
+z_index = -10
+position = Vector2(583, 477)
+amount = 50
+lifetime = 7.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.4
+emission_shape = 3
+emission_rect_extents = Vector2(500, 1)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(0, -50)
+orbit_velocity_max = 0.05
+radial_accel_max = 70.63
+tangential_accel_max = 15.0
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+color = Color(1, 0.360784, 0.231373, 0.686275)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="Smoke" type="CPUParticles2D" parent="Battle_TownOutskirts"]
+z_index = -10
+position = Vector2(583, 605)
+amount = 100
+lifetime = 10.0
+preprocess = 10.0
+randomness = 0.45
+lifetime_randomness = 0.2
+texture = ExtResource("6_c80j1")
+emission_shape = 3
+emission_rect_extents = Vector2(500, 1)
+particle_flag_align_y = true
+spread = 180.0
+gravity = Vector2(0, -30)
+radial_accel_max = 15.0
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(0, 0, 0, 0.462745)
+color_ramp = SubResource("Gradient_7voy7")
+
+[node name="MapInterface" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 5
+
+[node name="TitlePanel" type="Panel" parent="MapInterface"]
+offset_left = 4.0
+offset_top = 421.0
+offset_right = 364.0
+offset_bottom = 463.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cacxj")
+
+[node name="SiteTitle" type="RichTextLabel" parent="MapInterface/TitlePanel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 354.0
+offset_bottom = 37.0
+theme_override_fonts/normal_font = ExtResource("11_t0v3x")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]Site Label Here[/center]"
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="DescriptorPanel" type="Panel" parent="MapInterface"]
+offset_left = 4.0
+offset_top = 468.0
+offset_right = 364.0
+offset_bottom = 645.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cacxj")
+
+[node name="SiteDescriptor" type="RichTextLabel" parent="MapInterface/DescriptorPanel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 353.0
+offset_bottom = 171.0
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("11_t0v3x")
+theme_override_font_sizes/normal_font_size = 20
+text = "Site Description here"
+scroll_active = false
+
+[node name="SkipPanel" type="Panel" parent="MapInterface"]
+offset_left = 599.0
+offset_top = 604.0
+offset_right = 1149.0
+offset_bottom = 645.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cacxj")
+
+[node name="ColorRect" type="ColorRect" parent="MapInterface/SkipPanel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 36.0
+offset_bottom = 37.0
+mouse_filter = 2
+
+[node name="ColorRect2" type="ColorRect" parent="MapInterface/SkipPanel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 11.0
+offset_right = 27.0
+offset_bottom = 29.0
+mouse_filter = 2
+color = Color(0.729412, 0.729412, 0.729412, 1)
+
+[node name="DialogSkipper" type="CheckBox" parent="MapInterface/SkipPanel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 529.0
+offset_bottom = 36.0
+focus_mode = 0
+theme_override_constants/h_separation = 15
+theme_override_fonts/font = ExtResource("11_t0v3x")
+theme_override_font_sizes/font_size = 18
+text = "SKIP DIALOGUE (Not recommended for first playthrough)"
+script = ExtResource("8_ttl6f")
+
+[node name="RegionEnter" type="Button" parent="MapInterface"]
+unique_name_in_owner = true
+offset_left = 368.0
+offset_top = 587.0
+offset_right = 580.0
+offset_bottom = 645.0
+tooltip_text = "Enter the current region."
+focus_mode = 0
+theme_override_fonts/font = ExtResource("11_t0v3x")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = ExtResource("1_p0d0b")
+theme_override_styles/hover = ExtResource("2_b7uqq")
+theme_override_styles/pressed = ExtResource("3_owrid")
+theme_override_styles/focus = ExtResource("1_p0d0b")
+text = "Click to Enter Region"
+script = ExtResource("4_fk6kg")
+
+[node name="PreviousArea" type="Button" parent="MapInterface"]
+offset_left = 400.0
+offset_top = 529.0
+offset_right = 466.0
+offset_bottom = 581.0
+tooltip_text = "Go back to the previous area."
+focus_mode = 0
+theme_override_fonts/font = ExtResource("11_t0v3x")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = ExtResource("1_p0d0b")
+theme_override_styles/hover = ExtResource("2_b7uqq")
+theme_override_styles/pressed = ExtResource("3_owrid")
+theme_override_styles/focus = ExtResource("1_p0d0b")
+text = "<"
+script = ExtResource("17_xrkbn")
+
+[node name="NextArea" type="Button" parent="MapInterface"]
+offset_left = 482.0
+offset_top = 529.0
+offset_right = 548.0
+offset_bottom = 581.0
+tooltip_text = "Go to the next map area, if unlocked."
+focus_mode = 0
+theme_override_fonts/font = ExtResource("11_t0v3x")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = ExtResource("1_p0d0b")
+theme_override_styles/hover = ExtResource("2_b7uqq")
+theme_override_styles/pressed = ExtResource("3_owrid")
+theme_override_styles/focus = ExtResource("1_p0d0b")
+text = ">"
+script = ExtResource("17_xrkbn")
+go_to_next = true
+
+[node name="Save" type="Button" parent="MapInterface"]
+offset_left = 907.0
+offset_top = 4.0
+offset_right = 1026.0
+offset_bottom = 42.0
+tooltip_text = "Load the previous save state."
+focus_mode = 0
+theme_override_fonts/font = ExtResource("11_t0v3x")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = ExtResource("1_p0d0b")
+theme_override_styles/hover = ExtResource("2_b7uqq")
+theme_override_styles/pressed = ExtResource("3_owrid")
+theme_override_styles/focus = ExtResource("1_p0d0b")
+text = "SAVE"
+script = ExtResource("26_or5yk")
+
+[node name="SaveLabel" type="RichTextLabel" parent="MapInterface/Save"]
+visible = false
+layout_mode = 0
+offset_left = 53.0
+offset_top = 43.0
+offset_right = 199.0
+offset_bottom = 67.0
+theme_override_colors/default_color = Color(0, 0.858824, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("11_t0v3x")
+theme_override_font_sizes/normal_font_size = 24
+text = "Game Saved!"
+
+[node name="Load" type="Button" parent="MapInterface"]
+offset_left = 1031.0
+offset_top = 4.0
+offset_right = 1147.0
+offset_bottom = 42.0
+tooltip_text = "Load the previous save state."
+focus_mode = 0
+theme_override_fonts/font = ExtResource("11_t0v3x")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = ExtResource("1_p0d0b")
+theme_override_styles/hover = ExtResource("2_b7uqq")
+theme_override_styles/pressed = ExtResource("3_owrid")
+theme_override_styles/focus = ExtResource("1_p0d0b")
+text = "LOAD"
+script = ExtResource("6_h8ijn")
+
+[node name="ErrorLabel" type="RichTextLabel" parent="MapInterface/Load"]
+visible = false
+layout_mode = 0
+offset_left = -103.0
+offset_top = 42.0
+offset_right = 99.0
+offset_bottom = 67.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("11_t0v3x")
+theme_override_font_sizes/normal_font_size = 20
+text = "No save data to load!"
+
+[node name="DialogueBox" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+visibility_layer = 2
+z_index = 5
+position = Vector2(3, 0)
+script = ExtResource("4_q50hv")
+
+[node name="LeftSprite" type="Sprite2D" parent="DialogueBox"]
+unique_name_in_owner = true
+position = Vector2(217.5, 418.5)
+scale = Vector2(3, 3.07)
+texture = ExtResource("6_a2vhe")
+
+[node name="RightSprite" type="Sprite2D" parent="DialogueBox"]
+unique_name_in_owner = true
+position = Vector2(929, 423)
+scale = Vector2(3, 3)
+texture = ExtResource("6_a2vhe")
+
+[node name="Panel" type="Panel" parent="DialogueBox"]
+anchors_preset = -1
+anchor_bottom = 0.5
+offset_left = 248.0
+offset_top = 447.0
+offset_right = 902.0
+offset_bottom = 643.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_p0d0b")
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueBox/Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 649.0
+offset_bottom = 191.0
+theme_override_colors/font_shadow_color = Color(0.0784314, 0.227451, 0.662745, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/normal_font = ExtResource("11_t0v3x")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "test dialogue blahblah blah blah blah blah
+
+woirds words words words worsd worsd waodaw WORDS I CNAT SPELL OH MY GOD WORDSI MEAN WORDS"
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="DialogueTitle" type="RichTextLabel" parent="DialogueBox/Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = -46.0
+offset_right = 643.0
+offset_bottom = 4.0
+theme_override_colors/font_shadow_color = Color(0, 0.270588, 0.623529, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/normal_font = ExtResource("11_t0v3x")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "John Baldur"
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="ContinueText" type="RichTextLabel" parent="DialogueBox"]
+offset_left = 908.0
+offset_top = 619.0
+offset_right = 1152.0
+offset_bottom = 657.0
+theme_override_fonts/normal_font = ExtResource("11_t0v3x")
+theme_override_font_sizes/normal_font_size = 24
+text = "Click to Continue..."
+
+[node name="BattleScene" type="Node2D" parent="." node_paths=PackedStringArray("player_spawns", "enemy_spawns")]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("7_l7t4y")
+player_spawns = [NodePath("PlayerSpawn1"), NodePath("PlayerSpawn2"), NodePath("PlayerSpawn3")]
+enemy_spawns = [NodePath("EnemySpawn1"), NodePath("EnemySpawn2"), NodePath("EnemySpawn3")]
+
+[node name="PlayerSpawn1" parent="BattleScene" instance=ExtResource("8_5xokq")]
+position = Vector2(448, 328)
+scale = Vector2(2, 2)
+attacker_offset = Vector2(75, 0)
+defeated_offset = Vector2(-40, 0)
+
+[node name="PlayerSpawn2" parent="BattleScene" instance=ExtResource("8_5xokq")]
+position = Vector2(256, 328)
+scale = Vector2(2, 2)
+attacker_offset = Vector2(75, 0)
+defeated_offset = Vector2(-40, 0)
+
+[node name="PlayerSpawn3" parent="BattleScene" instance=ExtResource("8_5xokq")]
+position = Vector2(72, 328)
+scale = Vector2(2, 2)
+attacker_offset = Vector2(75, 0)
+defeated_offset = Vector2(-40, 0)
+
+[node name="EnemySpawn1" parent="BattleScene" instance=ExtResource("8_5xokq")]
+position = Vector2(720, 328)
+scale = Vector2(2, 2)
+attacker_offset = Vector2(-75, 0)
+defeated_offset = Vector2(45, 0)
+
+[node name="PawnSprite" parent="BattleScene/EnemySpawn1" index="5"]
+flip_h = true
+
+[node name="EnemySpawn2" parent="BattleScene" instance=ExtResource("8_5xokq")]
+position = Vector2(904, 328)
+scale = Vector2(2, 2)
+attacker_offset = Vector2(-75, 0)
+defeated_offset = Vector2(45, 0)
+
+[node name="PawnSprite" parent="BattleScene/EnemySpawn2" index="5"]
+flip_h = true
+
+[node name="EnemySpawn3" parent="BattleScene" instance=ExtResource("8_5xokq")]
+position = Vector2(1088, 328)
+scale = Vector2(2, 2)
+attacker_offset = Vector2(-75, 0)
+defeated_offset = Vector2(45, 0)
+
+[node name="PawnSprite" parent="BattleScene/EnemySpawn3" index="5"]
+flip_h = true
+
+[node name="BattleInterface" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 100
+
+[node name="ActionLister" type="Panel" parent="BattleInterface"]
+offset_left = 4.0
+offset_top = 468.0
+offset_right = 262.0
+offset_bottom = 645.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cacxj")
+
+[node name="ActionList" type="ItemList" parent="BattleInterface/ActionLister"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 251.0
+offset_bottom = 170.0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.662745, 0.870588, 1, 1)
+theme_override_colors/guide_color = Color(1, 1, 1, 1)
+theme_override_constants/v_separation = 5
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("11_t0v3x")
+theme_override_font_sizes/font_size = 18
+script = ExtResource("7_7jej8")
+
+[node name="PawnHighlight" type="Panel" parent="BattleInterface"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 356.0
+offset_bottom = 88.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cacxj")
+script = ExtResource("10_hej4y")
+
+[node name="PawnInfo" type="RichTextLabel" parent="BattleInterface/PawnHighlight"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 346.0
+offset_bottom = 78.0
+theme_override_fonts/normal_font = ExtResource("11_t0v3x")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "NAME:
+HEALTH: 10/20
+AC:"
+
+[node name="BossTitleHeader" type="Panel" parent="BattleInterface"]
+unique_name_in_owner = true
+offset_left = 780.0
+offset_top = 4.0
+offset_right = 1148.0
+offset_bottom = 41.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cacxj")
+
+[node name="BossTitle" type="RichTextLabel" parent="BattleInterface/BossTitleHeader"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 360.0
+offset_bottom = 30.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("11_t0v3x")
+theme_override_fonts/bold_font = ExtResource("11_t0v3x")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]BOSS: JOHN BALDUR HIMSELF[/center]"
+
+[node name="ActionDescriptor" type="Panel" parent="BattleInterface"]
+offset_left = 266.0
+offset_top = 468.0
+offset_right = 599.0
+offset_bottom = 645.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cacxj")
+
+[node name="ActionLabel" type="RichTextLabel" parent="BattleInterface/ActionDescriptor"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 326.0
+offset_bottom = 170.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0.505882, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("11_t0v3x")
+theme_override_font_sizes/normal_font_size = 18
+
+[node name="BattleLog" type="RichTextLabel" parent="BattleInterface"]
+unique_name_in_owner = true
+offset_left = 602.0
+offset_top = 478.0
+offset_right = 1146.0
+offset_bottom = 646.0
+theme_override_fonts/normal_font = ExtResource("11_t0v3x")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+scroll_following = true
+
+[node name="SwingEffect" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+volume_db = 6.0
+max_distance = 1e+09
+panning_strength = 0.0
+
+[node name="HitEffect" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+volume_db = 6.0
+max_distance = 1e+09
+panning_strength = 0.0
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+volume_db = -80.0
+max_distance = 1e+09
+panning_strength = 0.0
+
+[node name="PreviousMusic" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+max_distance = 1e+09
+panning_strength = 0.0
+
+[node name="GlobalFade" type="ColorRect" parent="."]
+self_modulate = Color(0.5, 0.25, 0.25, 1)
+z_index = 1000
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="LoseFade" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0.5, 0.25, 0.25, 1)
+z_index = 1000
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0.666667, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="MainMenu/Start" to="MainMenu/Start" method="_on_pressed"]
+[connection signal="pressed" from="MainMenu/Load" to="MainMenu/Load" method="_on_pressed"]
+[connection signal="toggled" from="MapInterface/SkipPanel/DialogSkipper" to="MapInterface/SkipPanel/DialogSkipper" method="_on_toggled"]
+[connection signal="pressed" from="MapInterface/RegionEnter" to="MapInterface/RegionEnter" method="_on_pressed"]
+[connection signal="pressed" from="MapInterface/PreviousArea" to="MapInterface/PreviousArea" method="_on_pressed"]
+[connection signal="pressed" from="MapInterface/NextArea" to="MapInterface/NextArea" method="_on_pressed"]
+[connection signal="pressed" from="MapInterface/Save" to="MapInterface/Save" method="_on_pressed"]
+[connection signal="pressed" from="MapInterface/Load" to="MapInterface/Load" method="_on_pressed"]
+[connection signal="item_selected" from="BattleInterface/ActionLister/ActionList" to="BattleInterface/ActionLister/ActionList" method="_on_item_selected"]
+
+[editable path="BattleScene/EnemySpawn1"]
+[editable path="BattleScene/EnemySpawn2"]
+[editable path="BattleScene/EnemySpawn3"]

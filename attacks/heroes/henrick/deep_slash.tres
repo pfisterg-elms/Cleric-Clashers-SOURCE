@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://gxqnj3tvv8lf"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_53242"]
+[ext_resource type="PackedScene" uid="uid://c252uksyfrklq" path="res://scenes/inflictions/bleeding.tscn" id="1_fu5so"]
+[ext_resource type="AudioStream" uid="uid://86as5fd38qm5" path="res://sounds/weapons/blade/blade_hit.ogg" id="1_smopi"]
+[ext_resource type="AudioStream" uid="uid://c4ijr0ryqaxk2" path="res://sounds/weapons/blade/blade_swing.ogg" id="4_35p66"]
+
+[resource]
+script = ExtResource("1_53242")
+attack_name = "Deep Slash"
+attack_descriptor = "Hurl your blade into an opponent with reckless abandon. Lower chance to hit, but it can cut deeper. 3 Slashing damage.
+
+On a hit, chance to inflict BLEEDING:
+ - 5HP lost per turn."
+attack_type = "Damage"
+hit_modifier = -2
+base_damage = 3
+damage_type = "Slashing"
+swing_sound = ExtResource("4_35p66")
+hit_sound = ExtResource("1_smopi")
+infliction = ExtResource("1_fu5so")
+inflict_challenge = 14

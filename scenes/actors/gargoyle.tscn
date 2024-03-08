@@ -1,0 +1,19 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4tnb320wo1y2"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_7i1uv"]
+[ext_resource type="Resource" uid="uid://b5s5p5a0al8nh" path="res://spritegroups/gargoyle_spritegroup.tres" id="2_0isua"]
+[ext_resource type="Resource" uid="uid://dh03tbswclpkn" path="res://attacks/undead/gargoyle/stonefist_slam.tres" id="2_ierb3"]
+[ext_resource type="Resource" uid="uid://dwwdssrm24w36" path="res://attacks/undead/gargoyle/frightening_howl.tres" id="3_rjy7s"]
+[ext_resource type="Resource" uid="uid://b4m7nx0svu016" path="res://attacks/undead/gargoyle/stunning_slice.tres" id="4_eebjc"]
+[ext_resource type="Resource" uid="uid://db2c6ntgudsyc" path="res://attacks/undead/gargoyle/blood_burden.tres" id="5_llun1"]
+
+[node name="Gargoyle" type="Node"]
+script = ExtResource("1_7i1uv")
+actor_name = "Graveyard Gargoyle"
+sprite_group = ExtResource("2_0isua")
+max_health = 120
+armor_class = 12
+infliction_save = 3
+resistances = Array[String](["Piercing", "Slashing"])
+weaknesses = Array[String](["Bludgeoning", "Fire"])
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("2_ierb3"), ExtResource("3_rjy7s"), ExtResource("4_eebjc"), ExtResource("5_llun1")])

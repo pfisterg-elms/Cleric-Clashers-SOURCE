@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Actor_SpriteGroup" load_steps=4 format=3 uid="uid://dabmx8rblmc8p"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_sprite_group.gd" id="1_febs6"]
+[ext_resource type="Texture2D" uid="uid://xb21ygfqxosh" path="res://sprites/enemies/undead/commoner/commoner_attack.png" id="1_os0xe"]
+[ext_resource type="Texture2D" uid="uid://c3picmfejldnw" path="res://sprites/enemies/undead/commoner/commoner_idle.png" id="2_xgmfh"]
+
+[resource]
+script = ExtResource("1_febs6")
+idle_sprite = ExtResource("2_xgmfh")
+attack_sprite = ExtResource("1_os0xe")
+bolster_sprite = ExtResource("1_os0xe")
+hurt_sprite = ExtResource("2_xgmfh")

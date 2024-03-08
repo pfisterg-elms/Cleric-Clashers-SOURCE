@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Actor_SpriteGroup" load_steps=5 format=3 uid="uid://cum5puds02pex"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_sprite_group.gd" id="1_beeqc"]
+[ext_resource type="Texture2D" uid="uid://dnsun4lcrrian" path="res://sprites/enemies/undead/defender/defender_attack.png" id="1_dnix2"]
+[ext_resource type="Texture2D" uid="uid://bdcmxevw1tys1" path="res://sprites/enemies/undead/defender/defender_hit.png" id="2_xnbda"]
+[ext_resource type="Texture2D" uid="uid://bix8t8xkk3swt" path="res://sprites/enemies/undead/defender/defender_idle.png" id="3_rnr2i"]
+
+[resource]
+script = ExtResource("1_beeqc")
+idle_sprite = ExtResource("3_rnr2i")
+attack_sprite = ExtResource("1_dnix2")
+bolster_sprite = ExtResource("1_dnix2")
+hurt_sprite = ExtResource("2_xnbda")

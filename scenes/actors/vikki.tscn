@@ -1,0 +1,22 @@
+[gd_scene load_steps=8 format=3 uid="uid://cswwfcnsyeiqx"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_c85m7"]
+[ext_resource type="Resource" uid="uid://dlcbmuoyeiooe" path="res://spritegroups/vikki_spritegroup.tres" id="2_4lhp8"]
+[ext_resource type="Resource" uid="uid://840j5urupyh0" path="res://attacks/heroes/vikki/noxious_spray.tres" id="3_u5lxc"]
+[ext_resource type="Resource" uid="uid://bwogfgav3geux" path="res://attacks/heroes/vikki/dagger_slash.tres" id="3_yn73s"]
+[ext_resource type="Resource" uid="uid://bpl4aw1w8p6ac" path="res://attacks/heroes/vikki/fire_bomb.tres" id="4_1wbtd"]
+[ext_resource type="Resource" uid="uid://cqe46ayekfttt" path="res://attacks/heroes/vikki/giants_scent.tres" id="5_1ia42"]
+[ext_resource type="Resource" uid="uid://wsbo4hca4bu2" path="res://attacks/heroes/vikki/madness_haze.tres" id="6_hvs0i"]
+
+[node name="Vikki" type="Node"]
+script = ExtResource("1_c85m7")
+actor_name = "Vikki"
+actor_identifier = "playerVikki"
+sprite_group = ExtResource("2_4lhp8")
+max_health = 32
+initiative_bonus = 1
+armor_class = 11
+infliction_save = 4
+resistances = Array[String](["Fire", "Poison"])
+weaknesses = Array[String](["Slashing"])
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("3_yn73s"), ExtResource("3_u5lxc"), ExtResource("4_1wbtd"), ExtResource("6_hvs0i"), ExtResource("5_1ia42")])

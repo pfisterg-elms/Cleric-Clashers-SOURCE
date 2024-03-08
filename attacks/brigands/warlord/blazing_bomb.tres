@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://d27yviky48p08"]
+
+[ext_resource type="AudioStream" uid="uid://b1ky6d3u051vf" path="res://sounds/weapons/fire_burn.mp3" id="1_kimoo"]
+[ext_resource type="PackedScene" uid="uid://ddwifx0gb3oui" path="res://scenes/inflictions/burning_webber.tscn" id="2_uoip5"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="3_45hfd"]
+[ext_resource type="AudioStream" uid="uid://w52sx28fp1be" path="res://sounds/weapons/blunt_swing.mp3" id="4_sslql"]
+
+[resource]
+script = ExtResource("3_45hfd")
+attack_name = "Blazing Bomb"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 4
+base_damage = 2
+damage_type = "Fire"
+swing_sound = ExtResource("4_sslql")
+hit_sound = ExtResource("1_kimoo")
+infliction = ExtResource("2_uoip5")
+inflict_challenge = 14

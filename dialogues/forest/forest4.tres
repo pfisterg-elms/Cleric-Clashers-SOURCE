@@ -1,0 +1,98 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=21 format=3 uid="uid://omnnmpl7hk0t"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_bec7j"]
+[ext_resource type="Texture2D" uid="uid://07bifqjfwvvo" path="res://sprites/heroes/doctor/doctor.png" id="1_n0vh5"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_ujwpy"]
+[ext_resource type="AudioStream" uid="uid://bart76p4yu7xc" path="res://sounds/music/WorldMap.mp3" id="2_308aq"]
+[ext_resource type="Texture2D" uid="uid://coa502opjef0s" path="res://sprites/heroes/cleric/cleric.png" id="3_663ur"]
+[ext_resource type="Texture2D" uid="uid://dxl8dpa8r6woi" path="res://sprites/heroes/cleric_knight_duo.png" id="4_5dbkh"]
+[ext_resource type="Texture2D" uid="uid://861n35fy0505" path="res://sprites/heroes/knight/knight.png" id="5_a4pbc"]
+[ext_resource type="Texture2D" uid="uid://cmy2w3pd0ohwf" path="res://sprites/enemies/celestial_squid/squid_dark.png" id="6_pddr6"]
+[ext_resource type="Texture2D" uid="uid://cq4k4bp3eqkwr" path="res://sprites/enemies/celestial_squid/squid_idle_dialog.png" id="7_gmeb0"]
+[ext_resource type="Texture2D" uid="uid://du6fvqmsx41nv" path="res://sprites/heroes/duo_prep.png" id="8_gfd62"]
+[ext_resource type="Texture2D" uid="uid://bcbnu8fmil0fl" path="res://sprites/enemies/celestial_squid/squid_attack_dialog.png" id="9_1folm"]
+
+[sub_resource type="Resource" id="Resource_yn1gc"]
+script = ExtResource("1_bec7j")
+narrator_title = ""
+dialogue_contents = "The doctor approaches the fallen corpses with a shake of their head, before looking onward at the path ahead."
+left_sprite = ExtResource("1_n0vh5")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_lgowc"]
+script = ExtResource("1_bec7j")
+narrator_title = "Doctor"
+dialogue_contents = "A pity that it had to end this way for dear Frederick. If we had yet made it to Creitus we may have shared a fine drink together!
+
+But no matter, the road is clear up ahead. Frankly, I'm eager to see what lies ahead! Come along now, I know the way ahead!"
+left_sprite = ExtResource("1_n0vh5")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_d7wh1"]
+script = ExtResource("1_bec7j")
+narrator_title = "Claira"
+dialogue_contents = "Wait! Where do you think you're going? The fog will render you blind if you aren't careful!"
+left_sprite = ExtResource("3_663ur")
+right_sprite = ExtResource("1_n0vh5")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_2c7vm"]
+script = ExtResource("1_bec7j")
+narrator_title = ""
+dialogue_contents = "But the doctor had already vanished, leaving both Claira and Henrick to pursue in a mad dash to reconvene with this bizarre figure.
+
+Stepping forward with haste, the fog thickens as they progress further into the woods. The wind howls fiercely as it grows only harsher."
+left_sprite = ExtResource("4_5dbkh")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_3k5a6"]
+script = ExtResource("1_bec7j")
+narrator_title = "Henrick"
+dialogue_contents = "I cannot see rhyme or reason anymore with this foul weather. Can you discern anything ahead? My old eyes may be failing me more than I anticipated in this fog."
+left_sprite = ExtResource("5_a4pbc")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_j3dfg"]
+script = ExtResource("1_bec7j")
+narrator_title = "Claira"
+dialogue_contents = "...Look up ahead, I see something! But... It's not that doctor, no. It's...
+
+Oh dear. Arm yourself, Henrick, we have a Celestial upon us!"
+left_sprite = ExtResource("3_663ur")
+right_sprite = ExtResource("6_pddr6")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_i7ipx"]
+script = ExtResource("1_bec7j")
+narrator_title = ""
+dialogue_contents = "From the fog emerges an almost-alien spiritual ghast, floating elegantly within the wind as it approaches the two. With a hooting call, its tendrils flourish with stride as they curl and unfurl with... excitement? Henrick cannot discern the behavior this beautiful creature is displaying."
+left_sprite = ExtResource("4_5dbkh")
+right_sprite = ExtResource("7_gmeb0")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_6o2l1"]
+script = ExtResource("1_bec7j")
+narrator_title = ""
+dialogue_contents = "But Claira knows better. She has read of stories of Celestials. Beasts depicting ocean-faring creatures, yet are never natural within the mortal plane.
+
+Its excitement is a show of hostility, in preparation to rend apart its next prey."
+left_sprite = ExtResource("4_5dbkh")
+right_sprite = ExtResource("7_gmeb0")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_62lm4"]
+script = ExtResource("1_bec7j")
+narrator_title = ""
+dialogue_contents = "The beast unleashes a shrill shriek as its tendrils flail about within the air, soon darting forward through the air toward the two with reckless abandon.
+
+The Celestial's prey is found. A battle with the spiritual is at hand."
+left_sprite = ExtResource("8_gfd62")
+right_sprite = ExtResource("9_1folm")
+sprite_focus = "Right"
+
+[resource]
+script = ExtResource("1_ujwpy")
+dialogue_statements = Array[ExtResource("1_bec7j")]([SubResource("Resource_yn1gc"), SubResource("Resource_lgowc"), SubResource("Resource_d7wh1"), SubResource("Resource_2c7vm"), SubResource("Resource_3k5a6"), SubResource("Resource_j3dfg"), SubResource("Resource_i7ipx"), SubResource("Resource_6o2l1"), SubResource("Resource_62lm4")])
+scene_background = "Dialog_VikkiMeet"
+scene_music = ExtResource("2_308aq")
+smooth_fade = false

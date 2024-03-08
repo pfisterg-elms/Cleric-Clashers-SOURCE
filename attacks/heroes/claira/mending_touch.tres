@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://bkasenni0o14a"]
+
+[ext_resource type="PackedScene" uid="uid://dbky3adhdc2el" path="res://scenes/inflictions/mending.tscn" id="1_3orjj"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_uoehw"]
+[ext_resource type="AudioStream" uid="uid://b5i1axsbuex8q" path="res://sounds/weapons/heal.mp3" id="3_aeo1i"]
+
+[resource]
+script = ExtResource("1_uoehw")
+attack_name = "Mending Touch"
+attack_descriptor = "Lay your hands upon an ally and expose them to the comforting warmth of Vandora's healing magic.
+
+Inflicts MENDING for 1 turn:
+- Heals 5 HP per turn."
+attack_type = "Bolster"
+hit_modifier = 0
+base_damage = 5
+damage_type = ""
+swing_sound = ExtResource("3_aeo1i")
+infliction = ExtResource("1_3orjj")
+inflict_challenge = 0

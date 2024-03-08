@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://7duvxsa0g08q"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_hvnrb"]
+[ext_resource type="AudioStream" uid="uid://86as5fd38qm5" path="res://sounds/weapons/blade/blade_hit.ogg" id="1_ugwc2"]
+[ext_resource type="PackedScene" uid="uid://c252uksyfrklq" path="res://scenes/inflictions/bleeding.tscn" id="2_sta1q"]
+[ext_resource type="AudioStream" uid="uid://c4ijr0ryqaxk2" path="res://sounds/weapons/blade/blade_swing.ogg" id="4_076ux"]
+
+[resource]
+script = ExtResource("1_hvnrb")
+attack_name = "Piercing Strike"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 3
+base_damage = 2
+damage_type = "Piercing"
+swing_sound = ExtResource("4_076ux")
+hit_sound = ExtResource("1_ugwc2")
+infliction = ExtResource("2_sta1q")
+inflict_challenge = 11

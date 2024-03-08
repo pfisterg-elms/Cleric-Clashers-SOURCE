@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://b4m7nx0svu016"]
+
+[ext_resource type="PackedScene" uid="uid://bimu0tjfjast6" path="res://scenes/inflictions/stunned.tscn" id="1_3afr6"]
+[ext_resource type="AudioStream" uid="uid://86as5fd38qm5" path="res://sounds/weapons/blade/blade_hit.ogg" id="1_eblqm"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_ggrnq"]
+[ext_resource type="AudioStream" uid="uid://c4ijr0ryqaxk2" path="res://sounds/weapons/blade/blade_swing.ogg" id="4_mposs"]
+
+[resource]
+script = ExtResource("1_ggrnq")
+attack_name = "Stunning Slice"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 2
+base_damage = 5
+damage_type = "Slashing"
+swing_sound = ExtResource("4_mposs")
+hit_sound = ExtResource("1_eblqm")
+infliction = ExtResource("1_3afr6")
+inflict_challenge = 15

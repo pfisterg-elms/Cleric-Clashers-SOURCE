@@ -1,0 +1,89 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=19 format=3 uid="uid://dh5r4qm67iw65"]
+
+[ext_resource type="Texture2D" uid="uid://dxl8dpa8r6woi" path="res://sprites/heroes/cleric_knight_duo.png" id="1_cpswk"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_fcimp"]
+[ext_resource type="Texture2D" uid="uid://cj0adlejo51t8" path="res://sprites/heroes/doctor/doctor_dialog.png" id="2_bhylr"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="3_1ov70"]
+[ext_resource type="Texture2D" uid="uid://07bifqjfwvvo" path="res://sprites/heroes/doctor/doctor.png" id="4_wqg4b"]
+[ext_resource type="Texture2D" uid="uid://gqytdp8jfooe" path="res://sprites/enemies/gargoyle/gargoyle_idle_dialog.png" id="5_ef11h"]
+[ext_resource type="Texture2D" uid="uid://dn33qusfpc7p2" path="res://sprites/enemies/gargoyle/gargoyle_idle_dialog2.png" id="6_ga7d7"]
+[ext_resource type="Texture2D" uid="uid://bbwmed2i25wa0" path="res://sprites/heroes/hero_trio_idle.png" id="7_eidjg"]
+[ext_resource type="Texture2D" uid="uid://bn1xfq1w78d5h" path="res://sprites/heroes/hero_trio.png" id="8_xtm20"]
+[ext_resource type="AudioStream" uid="uid://mp36cn2yvdov" path="res://sounds/music/Sluice2_Heavy.mp3" id="9_y1k5v"]
+
+[sub_resource type="Resource" id="Resource_3eqwn"]
+script = ExtResource("3_1ov70")
+narrator_title = ""
+dialogue_contents = "Undead skeletons torn asunder litter the graveyard. The gnarly battles with the necrotic fiends has been a blur and a frenzy, but the doctor continues to trudge forward, pointing at the tomb just ahead."
+left_sprite = ExtResource("1_cpswk")
+right_sprite = ExtResource("2_bhylr")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_fgk0q"]
+script = ExtResource("3_1ov70")
+narrator_title = "Doctor"
+dialogue_contents = "Here we are, at last! Wait one moment and I shall open the passage for us. The city will soon be upon us, have no fear!"
+left_sprite = ExtResource("1_cpswk")
+right_sprite = ExtResource("2_bhylr")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_52hnm"]
+script = ExtResource("3_1ov70")
+narrator_title = ""
+dialogue_contents = "The doctor steps forward, passing by two towering statues of gargoyles resting at the sides of the tomb. Beady red, glowing eyes haunt the gaze of the doctor.
+
+...They have the feeling that they're being watched."
+left_sprite = ExtResource("4_wqg4b")
+right_sprite = ExtResource("5_ef11h")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_mn2bp"]
+script = ExtResource("3_1ov70")
+narrator_title = ""
+dialogue_contents = "Suddenly, with a crackle of stone and cement, the statue comes to life. Its eyes shimmer as its jaw extends, its claws jutting out from its rocky body. Its wings sprout, its body twisting to face the trio as the doctor steps back in cautious retreat."
+left_sprite = ExtResource("4_wqg4b")
+right_sprite = ExtResource("6_ga7d7")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_qb372"]
+script = ExtResource("3_1ov70")
+narrator_title = "Guardian Gargoyle"
+dialogue_contents = "INTRUDERS. YOU DARE TRESPASS UPON THE DEAD. WHAT SAY YOU OF THIS HEINOUS CRIME."
+left_sprite = ExtResource("7_eidjg")
+right_sprite = ExtResource("6_ga7d7")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_ksuyj"]
+script = ExtResource("3_1ov70")
+narrator_title = "Doctor"
+dialogue_contents = "I- Well, you must understand! That was simply an act of defense! We trespass, yes, but we must get through-"
+left_sprite = ExtResource("7_eidjg")
+right_sprite = ExtResource("6_ga7d7")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_xim5i"]
+script = ExtResource("3_1ov70")
+narrator_title = "Guardian Gargoyle"
+dialogue_contents = "YOU ADMIT GUILT. YOU WILL BE PUNISHED. THE DEAD CANNOT SPEAK FOR THEMSELVES. I WILL SPEAK FOR THEM.
+
+I AM JUDGE. JURY. EXECUTIONER. AND SO YOUR PUNISHMENT... IS DEATH!"
+left_sprite = ExtResource("7_eidjg")
+right_sprite = ExtResource("6_ga7d7")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_mlqlq"]
+script = ExtResource("3_1ov70")
+narrator_title = ""
+dialogue_contents = "The gargoyle unleashes a blood-curdling roar as its wings extend outward, its body towering over the trio as it steps in front of the tomb, blocking the exit from the accursed graveyard.
+
+Another enduring battle with the frightful terrors of the night is at hand."
+left_sprite = ExtResource("8_xtm20")
+right_sprite = ExtResource("6_ga7d7")
+sprite_focus = "Right"
+
+[resource]
+script = ExtResource("1_fcimp")
+dialogue_statements = Array[ExtResource("3_1ov70")]([SubResource("Resource_3eqwn"), SubResource("Resource_fgk0q"), SubResource("Resource_52hnm"), SubResource("Resource_mn2bp"), SubResource("Resource_qb372"), SubResource("Resource_ksuyj"), SubResource("Resource_xim5i"), SubResource("Resource_mlqlq")])
+scene_background = "Dialog_TombEntrance"
+scene_music = ExtResource("9_y1k5v")
+smooth_fade = false

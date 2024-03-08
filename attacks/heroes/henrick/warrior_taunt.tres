@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://c8fd6nbxr8p60"]
+
+[ext_resource type="PackedScene" uid="uid://bficxfxwwhr1g" path="res://scenes/inflictions/challenged.tscn" id="1_biuuv"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_rybtu"]
+[ext_resource type="AudioStream" uid="uid://bvrf2aswplg0p" path="res://sounds/weapons/taunt.mp3" id="3_gnxo1"]
+
+[resource]
+script = ExtResource("1_rybtu")
+attack_name = "Warrior's Challenge"
+attack_descriptor = "Impose a brief duel between yourself and an enemy. If accepted, the enemy will only attack its challenger, but will also have advantage on their attack roll.
+
+1 Psychic damage."
+attack_type = "Damage"
+hit_modifier = 20
+base_damage = 1
+damage_type = "Psychic"
+swing_sound = ExtResource("3_gnxo1")
+infliction = ExtResource("1_biuuv")
+inflict_challenge = 16

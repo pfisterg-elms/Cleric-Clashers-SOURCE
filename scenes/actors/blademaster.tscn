@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7rtyu5rhia4c"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_iley0"]
+[ext_resource type="Resource" uid="uid://bio31mrh6wwxs" path="res://spritegroups/blademaster_spritegroup.tres" id="2_m0ckb"]
+[ext_resource type="Resource" uid="uid://mvs286gquhwd" path="res://attacks/brigands/blademaster/cleave.tres" id="3_swga8"]
+[ext_resource type="Resource" uid="uid://bwqtuuce3murj" path="res://attacks/brigands/blademaster/skewer.tres" id="4_fvygd"]
+
+[node name="Blademaster" type="Node"]
+script = ExtResource("1_iley0")
+actor_name = "Brigand Blademaster"
+sprite_group = ExtResource("2_m0ckb")
+max_health = 10
+armor_class = 6
+infliction_save = -2
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("3_swga8"), ExtResource("4_fvygd")])

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://k31m7uohculc"]
+
+[ext_resource type="Script" path="res://scripts/inflictions/blinded.gd" id="1_n16jm"]
+
+[node name="Blinded" type="Node"]
+script = ExtResource("1_n16jm")
+effect_name = "BLINDED"
+turn_count = 2

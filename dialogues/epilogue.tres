@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=9 format=3 uid="uid://pba6hs4urwvk"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_ccry1"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_ixgag"]
+[ext_resource type="AudioStream" uid="uid://1ld17simphwa" path="res://sounds/music/CampTheme.mp3" id="2_3tfoa"]
+[ext_resource type="Texture2D" uid="uid://cr4gkt4rssqd3" path="res://sprites/heroes/hero_trio_dark.png" id="2_656gr"]
+
+[sub_resource type="Resource" id="Resource_ornyd"]
+script = ExtResource("1_ccry1")
+narrator_title = ""
+dialogue_contents = "Days have passed since the brigands and their warlord were slain. Small flames still manage to fester in the wreckage of the city, but it has begun to rebuild. Without the threat of brigands any longer, the region has learned to breathe freely once again."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_d2nva"]
+script = ExtResource("1_ccry1")
+narrator_title = ""
+dialogue_contents = "Peace falls unto the region, with aid coming from the kingdoms of Vallus and Trefelm to help Creitus recover, especially in order to re-establish its trading operations."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_mrfkt"]
+script = ExtResource("1_ccry1")
+narrator_title = ""
+dialogue_contents = "As for the trio? Vallus calls to them, a messenger beckoning for its inquisitor, Vikki, to return home.
+
+But they would not leave without their new compatriots."
+left_sprite = ExtResource("2_656gr")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_gsvn0"]
+script = ExtResource("1_ccry1")
+narrator_title = ""
+dialogue_contents = "And so, vanishing back into the forests on yet another long trek, a new journey has begun, forging a new path upon distant horizons. 
+
+Where one story had ended, another had only just begun."
+left_sprite = ExtResource("2_656gr")
+sprite_focus = "Right"
+
+[resource]
+script = ExtResource("1_ixgag")
+dialogue_statements = Array[ExtResource("1_ccry1")]([SubResource("Resource_ornyd"), SubResource("Resource_d2nva"), SubResource("Resource_mrfkt"), SubResource("Resource_gsvn0")])
+scene_background = "Dialog_Epilogue"
+scene_music = ExtResource("2_3tfoa")
+smooth_fade = false

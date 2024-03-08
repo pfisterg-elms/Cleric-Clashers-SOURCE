@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://dhxifbrswqgbo"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_8dkux"]
+[ext_resource type="AudioStream" uid="uid://c4ijr0ryqaxk2" path="res://sounds/weapons/blade/blade_swing.ogg" id="1_rx2ys"]
+[ext_resource type="AudioStream" uid="uid://86as5fd38qm5" path="res://sounds/weapons/blade/blade_hit.ogg" id="3_xbfew"]
+
+[resource]
+script = ExtResource("1_8dkux")
+attack_name = "Dagger Fling"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 4
+base_damage = 5
+damage_type = "Piercing"
+swing_sound = ExtResource("1_rx2ys")
+hit_sound = ExtResource("3_xbfew")
+inflict_challenge = 0

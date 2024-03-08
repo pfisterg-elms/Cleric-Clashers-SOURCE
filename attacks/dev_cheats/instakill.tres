@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=2 format=3 uid="uid://bkvwqrc81etbt"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_43rqd"]
+
+[resource]
+script = ExtResource("1_43rqd")
+attack_name = "Instakill"
+attack_descriptor = "if an enemy survives this then honestly they deserve to win"
+attack_type = "Damage"
+hit_modifier = 999999
+base_damage = 999999
+damage_type = "Fire"
+inflict_challenge = 0

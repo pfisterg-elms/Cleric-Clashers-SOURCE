@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://840j5urupyh0"]
+
+[ext_resource type="AudioStream" uid="uid://bvy5sd7lgboe2" path="res://sounds/weapons/poison_burn.mp3" id="1_cc7xb"]
+[ext_resource type="PackedScene" uid="uid://6w6wpkqjfe25" path="res://scenes/inflictions/poisoned.tscn" id="1_w6wmd"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="2_347l1"]
+[ext_resource type="AudioStream" uid="uid://w52sx28fp1be" path="res://sounds/weapons/blunt_swing.mp3" id="4_qxy51"]
+
+[resource]
+script = ExtResource("2_347l1")
+attack_name = "Noxious Spray"
+attack_descriptor = "Release a poisonous cloud into the face of an enemy. Disgusting and debilitating for anything that can't stomach it.
+
+Inflicts POISON on the target:
+- 4 Poison damage per turn. Lasts for 3 turns."
+attack_type = "Damage"
+hit_modifier = 4
+base_damage = 2
+damage_type = "Poison"
+swing_sound = ExtResource("4_qxy51")
+hit_sound = ExtResource("1_cc7xb")
+infliction = ExtResource("1_w6wmd")
+inflict_challenge = 15

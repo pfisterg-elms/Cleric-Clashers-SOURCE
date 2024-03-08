@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://c8d5imi11m84n"]
+
+[ext_resource type="Texture2D" uid="uid://b8uqk73r5hv61" path="res://sprites/MapSiteIcon.png" id="1_iqjac"]
+[ext_resource type="Script" path="res://scripts/map_site.gd" id="1_tyjo2"]
+[ext_resource type="Texture2D" uid="uid://csndyfioejjoj" path="res://sprites/MapSitePush.png" id="2_vckhi"]
+[ext_resource type="Texture2D" uid="uid://b581jqk2b6eu" path="res://sprites/MapSiteHover.png" id="3_8ghd4"]
+[ext_resource type="Texture2D" uid="uid://baxafx2ickiod" path="res://sprites/SiteCursorHover.png" id="5_luq0n"]
+
+[sub_resource type="Animation" id="Animation_sp8wy"]
+resource_name = "CursorSpin"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_3jrl8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rygud"]
+_data = {
+"CursorSpin": SubResource("Animation_sp8wy"),
+"RESET": SubResource("Animation_3jrl8")
+}
+
+[node name="MapSite" type="TextureButton"]
+texture_filter = 1
+anchors_preset = -1
+anchor_right = 0.0546875
+anchor_bottom = 0.0972222
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_iqjac")
+texture_pressed = ExtResource("2_vckhi")
+texture_hover = ExtResource("3_8ghd4")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("1_tyjo2")
+pawn_offset = Vector2(32, 32)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(31.5, 31.5)
+scale = Vector2(1.20313, 1.20313)
+texture = ExtResource("5_luq0n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rygud")
+}
+autoplay = "CursorSpin"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

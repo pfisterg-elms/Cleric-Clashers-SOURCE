@@ -1,0 +1,21 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6oiihf3pvm5n"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_ny2rx"]
+[ext_resource type="Resource" uid="uid://bja1hv0std8dp" path="res://spritegroups/warlord_spritegroup.tres" id="2_eoj33"]
+[ext_resource type="Resource" uid="uid://dhxifbrswqgbo" path="res://attacks/brigands/warlord/dagger_fling.tres" id="3_mgn0t"]
+[ext_resource type="Resource" uid="uid://d27yviky48p08" path="res://attacks/brigands/warlord/blazing_bomb.tres" id="4_l4f1g"]
+[ext_resource type="Resource" uid="uid://44k5xejb17fa" path="res://attacks/brigands/warlord/scorching_grenade.tres" id="5_33rq4"]
+[ext_resource type="Resource" uid="uid://dpke53bw4d8wb" path="res://attacks/brigands/warlord/shield_bash.tres" id="6_syokw"]
+[ext_resource type="Resource" uid="uid://b0jel7boqiny" path="res://attacks/brigands/warlord/fist_topple.tres" id="7_xynde"]
+[ext_resource type="Resource" uid="uid://cjboofwf3ths2" path="res://attacks/brigands/warlord/warrior_roar.tres" id="8_uhqhc"]
+
+[node name="Warlord" type="Node"]
+script = ExtResource("1_ny2rx")
+actor_name = "Brigand Warlord"
+actor_identifier = "warlordBoss"
+sprite_group = ExtResource("2_eoj33")
+max_health = 144
+armor_class = 12
+infliction_save = 6
+weaknesses = Array[String](["Psychic", "Slashing"])
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("3_mgn0t"), ExtResource("4_l4f1g"), ExtResource("5_33rq4"), ExtResource("6_syokw"), ExtResource("7_xynde"), ExtResource("8_uhqhc")])

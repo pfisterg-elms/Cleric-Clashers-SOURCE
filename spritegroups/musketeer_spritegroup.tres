@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Actor_SpriteGroup" load_steps=4 format=3 uid="uid://bgan4rwwk4pne"]
+
+[ext_resource type="Texture2D" uid="uid://dv8m7ojkm1jv6" path="res://sprites/enemies/musketeer/musketeer_idle.png" id="1_ne7d1"]
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_sprite_group.gd" id="1_wjd2b"]
+[ext_resource type="Texture2D" uid="uid://cybxcdjewjjtx" path="res://sprites/enemies/musketeer/musketeer_hit.png" id="2_m7u4v"]
+
+[resource]
+script = ExtResource("1_wjd2b")
+idle_sprite = ExtResource("1_ne7d1")
+attack_sprite = ExtResource("2_m7u4v")
+bolster_sprite = ExtResource("2_m7u4v")
+hurt_sprite = ExtResource("2_m7u4v")

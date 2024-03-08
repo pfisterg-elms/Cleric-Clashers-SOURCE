@@ -1,0 +1,119 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=24 format=3 uid="uid://c8xnd6e2j4b8a"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_a28g6"]
+[ext_resource type="AudioStream" uid="uid://bart76p4yu7xc" path="res://sounds/music/WorldMap.mp3" id="1_l767c"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_wxw7u"]
+[ext_resource type="Texture2D" uid="uid://coa502opjef0s" path="res://sprites/heroes/cleric/cleric.png" id="2_guodv"]
+[ext_resource type="Texture2D" uid="uid://ure11o8rq5kq" path="res://sprites/heroes/knight/knight_dialog.png" id="3_3hw00"]
+[ext_resource type="Texture2D" uid="uid://861n35fy0505" path="res://sprites/heroes/knight/knight.png" id="4_px4on"]
+[ext_resource type="Texture2D" uid="uid://cj0adlejo51t8" path="res://sprites/heroes/doctor/doctor_dialog.png" id="5_6iddy"]
+[ext_resource type="Texture2D" uid="uid://bbwmed2i25wa0" path="res://sprites/heroes/hero_trio_idle.png" id="5_tqhhq"]
+[ext_resource type="Texture2D" uid="uid://dwowalnfa1tuj" path="res://sprites/enemies/undead/commoner/commoner_groupDark.png" id="6_r3wy7"]
+[ext_resource type="Texture2D" uid="uid://bn1xfq1w78d5h" path="res://sprites/heroes/hero_trio.png" id="7_dyxvd"]
+[ext_resource type="Texture2D" uid="uid://cbday1e7udb8u" path="res://sprites/enemies/undead/commoner/commoner_group.png" id="8_c4p4s"]
+
+[sub_resource type="Resource" id="Resource_uhcgg"]
+script = ExtResource("1_a28g6")
+narrator_title = ""
+dialogue_contents = "Henrick's intuition was correct, leading the two to the edge of the forest by a cliffside overseeing the sprawl of the valley ahead. At the edge lies a carriage, dilapidated and battered from a crash.
+
+Something stirs within, freezing in place as the two approach."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_adi8n"]
+script = ExtResource("1_a28g6")
+narrator_title = "Henrick"
+dialogue_contents = "Keep watch from a distance, ensure that we are not disturbed by any other beasts. I will see what lingers in the crash."
+left_sprite = ExtResource("2_guodv")
+right_sprite = ExtResource("3_3hw00")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_8vohe"]
+script = ExtResource("1_a28g6")
+narrator_title = ""
+dialogue_contents = "Claira nods and turns her gaze to the treeline, as Henrick steps forward to the carriage. His blade rests upon his shoulder, ready to swing at a moment's notice, as his free arm grasps the handle to the carriage door."
+left_sprite = ExtResource("4_px4on")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_x7x1w"]
+script = ExtResource("1_a28g6")
+narrator_title = ""
+dialogue_contents = "But within the carriage is no beast nor brigand, but... a doctor? By their lonesome, no less, no other passengers or even a driver of the carriage present. They greet the knight with something of a friendly, enthusiastic wave."
+left_sprite = ExtResource("4_px4on")
+right_sprite = ExtResource("5_6iddy")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_o658q"]
+script = ExtResource("1_a28g6")
+narrator_title = "Doctor"
+dialogue_contents = "Ahhh, and who may you be? And to think, I believed I was the only traveler braving this treacherous valley. How splendid nonetheless! Any company is good company around here."
+left_sprite = ExtResource("4_px4on")
+right_sprite = ExtResource("5_6iddy")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_wqeuj"]
+script = ExtResource("1_a28g6")
+narrator_title = ""
+dialogue_contents = "The doctor waves their arm beside Henrick, gesturing for him to step back as they exit the carriage, dusting their attire free of debris in an almost casual manner."
+left_sprite = ExtResource("4_px4on")
+right_sprite = ExtResource("5_6iddy")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_bgbpj"]
+script = ExtResource("1_a28g6")
+narrator_title = "Henrick"
+dialogue_contents = "Surely it is not only you entertaining the leisure of carriage travel? What happened to its driver? Are you perhaps harmed?"
+left_sprite = ExtResource("4_px4on")
+right_sprite = ExtResource("5_6iddy")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_lf074"]
+script = ExtResource("1_a28g6")
+narrator_title = "Doctor"
+dialogue_contents = "Questions, questions, so many questions, and we only just met! Assuage yourself, good soldier. But I will still indulge, of course.
+
+My driver fled as soon as the carriage crashed. The fog around here is truly dastardly for vision, clearly. But I was its only passenger."
+left_sprite = ExtResource("4_px4on")
+right_sprite = ExtResource("5_6iddy")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_abhmw"]
+script = ExtResource("1_a28g6")
+narrator_title = "Henrick"
+dialogue_contents = "Then where has he gone? We will look for him at once. I would not stand to let someone isolate themselves with the dangers of these woods."
+left_sprite = ExtResource("4_px4on")
+right_sprite = ExtResource("5_6iddy")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_r684p"]
+script = ExtResource("1_a28g6")
+narrator_title = "Doctor"
+dialogue_contents = "Bah! Worry not, he's already been claimed by a pack of ghouls. He should have hid within the carriage like I was wise to do. Ooh, in fact, I believe he's just over there! O' Frederick, come hither!"
+left_sprite = ExtResource("4_px4on")
+right_sprite = ExtResource("5_6iddy")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_b27fd"]
+script = ExtResource("1_a28g6")
+narrator_title = ""
+dialogue_contents = "The three turn towards the skirting edges of the treeline, as shambling figures stumble upon the beaten road just beyond the fog. Ghoulish moans emerge from their voices as they drag their bodies limply toward the group."
+left_sprite = ExtResource("5_tqhhq")
+right_sprite = ExtResource("6_r3wy7")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_dq5dy"]
+script = ExtResource("1_a28g6")
+narrator_title = "Doctor"
+dialogue_contents = "Ah, well, it seems my dear driver is no longer with us upon this mortal plane.
+
+No matter! New friends, please be so kind as to help introduce my old compatriot to the grave where he belongs!"
+left_sprite = ExtResource("7_dyxvd")
+right_sprite = ExtResource("8_c4p4s")
+sprite_focus = "Right"
+
+[resource]
+script = ExtResource("1_wxw7u")
+dialogue_statements = Array[ExtResource("1_a28g6")]([SubResource("Resource_uhcgg"), SubResource("Resource_adi8n"), SubResource("Resource_8vohe"), SubResource("Resource_x7x1w"), SubResource("Resource_o658q"), SubResource("Resource_wqeuj"), SubResource("Resource_bgbpj"), SubResource("Resource_lf074"), SubResource("Resource_abhmw"), SubResource("Resource_r684p"), SubResource("Resource_b27fd"), SubResource("Resource_dq5dy")])
+scene_background = "Dialog_VikkiMeet"
+scene_music = ExtResource("1_l767c")
+smooth_fade = false

@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=18 format=3 uid="uid://dl7shtlv24fad"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_gui1k"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_inb1h"]
+[ext_resource type="Texture2D" uid="uid://dxl8dpa8r6woi" path="res://sprites/heroes/cleric_knight_duo.png" id="1_shnn5"]
+[ext_resource type="Texture2D" uid="uid://07bifqjfwvvo" path="res://sprites/heroes/doctor/doctor.png" id="2_aycd3"]
+[ext_resource type="Texture2D" uid="uid://cj0adlejo51t8" path="res://sprites/heroes/doctor/doctor_dialog.png" id="4_8ufsu"]
+[ext_resource type="Texture2D" uid="uid://ure11o8rq5kq" path="res://sprites/heroes/knight/knight_dialog.png" id="5_h6yq5"]
+[ext_resource type="Texture2D" uid="uid://bbwmed2i25wa0" path="res://sprites/heroes/hero_trio_idle.png" id="6_wgyyt"]
+[ext_resource type="Texture2D" uid="uid://dwowalnfa1tuj" path="res://sprites/enemies/undead/commoner/commoner_groupDark.png" id="7_qa6l7"]
+[ext_resource type="Texture2D" uid="uid://bn1xfq1w78d5h" path="res://sprites/heroes/hero_trio.png" id="8_45rxr"]
+[ext_resource type="Texture2D" uid="uid://cbday1e7udb8u" path="res://sprites/enemies/undead/commoner/commoner_group.png" id="9_3b4rt"]
+[ext_resource type="AudioStream" uid="uid://bart76p4yu7xc" path="res://sounds/music/WorldMap.mp3" id="10_wdd1m"]
+
+[sub_resource type="Resource" id="Resource_k4bl0"]
+script = ExtResource("1_inb1h")
+narrator_title = ""
+dialogue_contents = "The fog falters as the spirituals vanish into ash against the wind. A graveyard presents itself just down the path. The doctor eagerly approaches its front gate."
+left_sprite = ExtResource("1_shnn5")
+right_sprite = ExtResource("2_aycd3")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_psovq"]
+script = ExtResource("1_inb1h")
+narrator_title = "Doctor"
+dialogue_contents = "Let us not idle! I've had my fill with the Celestials for one day. And what better safe haven than the fields of buried dead? Hurry along now, my new friends!"
+left_sprite = ExtResource("1_shnn5")
+right_sprite = ExtResource("4_8ufsu")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_0s8qj"]
+script = ExtResource("1_inb1h")
+narrator_title = ""
+dialogue_contents = "Henrick and Claira look toward each other, before begrudgingly following the doctor as they enthusiastically dash into the graveyard. Clearly enjoying this exercise of violence and chaos more than the others."
+left_sprite = ExtResource("1_shnn5")
+right_sprite = ExtResource("5_h6yq5")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_7p4u0"]
+script = ExtResource("1_inb1h")
+narrator_title = "Doctor"
+dialogue_contents = "I see it both within you, you wish to seek Creitus like I do. Worry not, I know of a shortcut through the graveyard. An underground tomb acts as passageway to its outskirts. It won't be long now!"
+left_sprite = ExtResource("1_shnn5")
+right_sprite = ExtResource("4_8ufsu")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_akjx7"]
+script = ExtResource("1_inb1h")
+narrator_title = ""
+dialogue_contents = "As the doctor's voice hushes, mumbles and groans echo from the very earth itself. Grave mounds shake as skeletal hands claw through to break out onto the surface. A sickly green mist shrouds the graveyard as the air is filled with an aroma of death and decay."
+left_sprite = ExtResource("6_wgyyt")
+right_sprite = ExtResource("7_qa6l7")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_clhd8"]
+script = ExtResource("1_inb1h")
+narrator_title = "Doctor"
+dialogue_contents = "...Ah, of course. How unwise of me to forget that this graveyard is as accursed as the forest!
+
+Very well, no matter. Follow my lead, you two. We shall have to dance with the dead to yet survive this fright! Forward unto the fray, for what better laboratory than a battlefield?"
+left_sprite = ExtResource("8_45rxr")
+right_sprite = ExtResource("9_3b4rt")
+sprite_focus = "Left"
+
+[resource]
+script = ExtResource("1_gui1k")
+dialogue_statements = Array[ExtResource("1_inb1h")]([SubResource("Resource_k4bl0"), SubResource("Resource_psovq"), SubResource("Resource_0s8qj"), SubResource("Resource_7p4u0"), SubResource("Resource_akjx7"), SubResource("Resource_clhd8")])
+scene_background = "Dialog_Graveyard"
+scene_music = ExtResource("10_wdd1m")
+smooth_fade = false

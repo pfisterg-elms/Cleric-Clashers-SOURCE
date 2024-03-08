@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6a3q5cde2e6l"]
+
+[ext_resource type="Script" path="res://scripts/inflictions/strengthened.gd" id="1_yfph0"]
+
+[node name="Infliction_Strengthened" type="Node"]
+script = ExtResource("1_yfph0")
+effect_name = "STRENGTHENED"
+turn_count = 2

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://bwogfgav3geux"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_f6bi3"]
+[ext_resource type="AudioStream" uid="uid://86as5fd38qm5" path="res://sounds/weapons/blade/blade_hit.ogg" id="1_gngxx"]
+[ext_resource type="AudioStream" uid="uid://c4ijr0ryqaxk2" path="res://sounds/weapons/blade/blade_swing.ogg" id="3_m17br"]
+
+[resource]
+script = ExtResource("1_f6bi3")
+attack_name = "Dagger Slash"
+attack_descriptor = "A quick and rough jab of your dagger at an enemy. 5 Piercing damage."
+attack_type = "Damage"
+hit_modifier = 2
+base_damage = 5
+damage_type = "Piercing"
+swing_sound = ExtResource("3_m17br")
+hit_sound = ExtResource("1_gngxx")
+inflict_challenge = 0

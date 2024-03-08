@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3srbm574avct"]
+
+[ext_resource type="Script" path="res://scripts/inflictions/bleeding.gd" id="1_7ea6t"]
+
+[node name="Bleeding" type="Node"]
+script = ExtResource("1_7ea6t")
+bleed_amount = 3
+effect_name = "BLEEDING"
+turn_count = 2

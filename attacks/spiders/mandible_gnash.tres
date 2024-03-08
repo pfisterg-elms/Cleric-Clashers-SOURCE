@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://dfwvub3qseo8g"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_sbk7n"]
+[ext_resource type="AudioStream" uid="uid://86as5fd38qm5" path="res://sounds/weapons/blade/blade_hit.ogg" id="1_vggfo"]
+[ext_resource type="AudioStream" uid="uid://c4ijr0ryqaxk2" path="res://sounds/weapons/blade/blade_swing.ogg" id="3_fp5kv"]
+
+[resource]
+script = ExtResource("1_sbk7n")
+attack_name = "Mandible Gnash"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 3
+base_damage = 3
+damage_type = "Piercing"
+swing_sound = ExtResource("3_fp5kv")
+hit_sound = ExtResource("1_vggfo")
+inflict_challenge = 0

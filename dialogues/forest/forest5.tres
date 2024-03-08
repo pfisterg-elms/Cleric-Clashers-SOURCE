@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=15 format=3 uid="uid://bfin2bs2f4a1o"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_8cge7"]
+[ext_resource type="Texture2D" uid="uid://coa502opjef0s" path="res://sprites/heroes/cleric/cleric.png" id="1_iq8o0"]
+[ext_resource type="Texture2D" uid="uid://cj0adlejo51t8" path="res://sprites/heroes/doctor/doctor_dialog.png" id="2_yg5ml"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="3_6ggl0"]
+[ext_resource type="Texture2D" uid="uid://bbwmed2i25wa0" path="res://sprites/heroes/hero_trio_idle.png" id="4_t6hf1"]
+[ext_resource type="Texture2D" uid="uid://cq4k4bp3eqkwr" path="res://sprites/enemies/celestial_squid/squid_idle_dialog.png" id="5_74rei"]
+[ext_resource type="Texture2D" uid="uid://bn1xfq1w78d5h" path="res://sprites/heroes/hero_trio.png" id="6_ruxqv"]
+[ext_resource type="Texture2D" uid="uid://bcbnu8fmil0fl" path="res://sprites/enemies/celestial_squid/squid_attack_dialog.png" id="7_x22ig"]
+[ext_resource type="AudioStream" uid="uid://bvtqmt0vxd0s3" path="res://sounds/music/Sluice2_Light.mp3" id="8_e37s4"]
+
+[sub_resource type="Resource" id="Resource_j3am0"]
+script = ExtResource("3_6ggl0")
+narrator_title = "Claira"
+dialogue_contents = "There you are! Good doctor, come back here at once! You are not safe out here alone! Accursed spirits haunt us yet!"
+left_sprite = ExtResource("1_iq8o0")
+right_sprite = ExtResource("2_yg5ml")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_kaeh1"]
+script = ExtResource("3_6ggl0")
+narrator_title = ""
+dialogue_contents = "The wind howls fiercely as the doctor turns back toward Claira and Henrick with but an eager nod, confirming their knowledge of the dangers ahead."
+left_sprite = ExtResource("1_iq8o0")
+right_sprite = ExtResource("2_yg5ml")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_rm3ri"]
+script = ExtResource("3_6ggl0")
+narrator_title = "Doctor"
+dialogue_contents = "You do not understand, that is why I am out here! Communion with the Celestials has been but a pipe dream for my entire life! I must know their secrets, their wisdom!
+
+..Hush now! Feel the wind upon you! Do you sense it? They have arrived!"
+left_sprite = ExtResource("1_iq8o0")
+right_sprite = ExtResource("2_yg5ml")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_dg62k"]
+script = ExtResource("3_6ggl0")
+narrator_title = ""
+dialogue_contents = "Indomitable winds soon decorate the forest with flecks of forest and fog, tearing through the wilderness as a horde of Celestials emerge. The doctor draws their blade, as do Claira and Henrick."
+left_sprite = ExtResource("4_t6hf1")
+right_sprite = ExtResource("5_74rei")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_rb2yr"]
+script = ExtResource("3_6ggl0")
+narrator_title = "Doctor"
+dialogue_contents = "The time has come for a spiritual communion! Pray with me, friends, let the art of battle perform this ritual for us!"
+left_sprite = ExtResource("6_ruxqv")
+right_sprite = ExtResource("7_x22ig")
+sprite_focus = "Left"
+
+[resource]
+script = ExtResource("1_8cge7")
+dialogue_statements = Array[ExtResource("3_6ggl0")]([SubResource("Resource_j3am0"), SubResource("Resource_kaeh1"), SubResource("Resource_rm3ri"), SubResource("Resource_dg62k"), SubResource("Resource_rb2yr")])
+scene_background = "Dialog_Forest"
+scene_music = ExtResource("8_e37s4")
+smooth_fade = false

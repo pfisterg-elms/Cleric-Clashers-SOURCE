@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0x1100d0jt1u"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_bskeh"]
+[ext_resource type="Resource" uid="uid://bgan4rwwk4pne" path="res://spritegroups/musketeer_spritegroup.tres" id="2_cysqb"]
+[ext_resource type="Resource" uid="uid://d13vg7xjilbr" path="res://attacks/brigands/musketeer/musket_blast.tres" id="3_p7g1v"]
+[ext_resource type="Resource" uid="uid://br3gwykrk4i0p" path="res://attacks/brigands/musketeer/rifle_bash.tres" id="4_ouq0j"]
+
+[node name="Musketeer" type="Node"]
+script = ExtResource("1_bskeh")
+actor_name = "Brigand Musketeer"
+sprite_group = ExtResource("2_cysqb")
+max_health = 12
+initiative_bonus = 2
+armor_class = 8
+infliction_save = 2
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("3_p7g1v"), ExtResource("4_ouq0j")])

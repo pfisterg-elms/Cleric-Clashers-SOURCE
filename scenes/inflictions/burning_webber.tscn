@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddwifx0gb3oui"]
+
+[ext_resource type="Script" path="res://scripts/inflictions/burning.gd" id="1_vtvxk"]
+
+[node name="Burning" type="Node"]
+script = ExtResource("1_vtvxk")
+bleed_amount = 3
+effect_name = "BURNING"
+turn_count = 2

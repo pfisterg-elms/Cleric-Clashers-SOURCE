@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtd0y7uid0bcp"]
+
+[ext_resource type="Script" path="res://scripts/dungeon_room.gd" id="1_yea8e"]
+[ext_resource type="Script" path="res://scripts/dungeon_object.gd" id="2_p1m7d"]
+
+[node name="dungeon_test" type="Node"]
+script = ExtResource("1_yea8e")
+room_name = "test room"
+room_descriptor = "This is a test of the Dungeon System. This is a test.
+
+DO NOT PANIC THIS IS A TEST. STOP SCREAMING. WHY ARE YOU SCREAMING'
+AAAAAAAAAAAAAAAAAAAAAAA2Q83U723UDOIOUW3IW3UW38U900
+bottom text"
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_p1m7d")
+obj_name = "obj"
+obj_descriptor = "you have found the object!
+you win.
+dipshit."
+on_use_describe = "you use the obj.
+
+the obj. objobjobjobjobjobjbojbojbjgbgikfbfiobibrsioios;f
+
+good job!"
+usable_once = true
+used_descriptor = "you already obj'd this obj. go away
+
+lol. lmao, even"
+
+[node name="Node2" type="Node" parent="."]
+script = ExtResource("2_p1m7d")
+obj_name = "obj2"
+obj_descriptor = "object 2 electric boogaloo"
+on_use_describe = "on_use_describe 2 electric boogaloo"

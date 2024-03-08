@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://cu8nkrchmw32x"]
+
+[ext_resource type="AudioStream" uid="uid://86as5fd38qm5" path="res://sounds/weapons/blade/blade_hit.ogg" id="1_7to2y"]
+[ext_resource type="PackedScene" uid="uid://bimu0tjfjast6" path="res://scenes/inflictions/stunned.tscn" id="1_835t7"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_rwjlp"]
+[ext_resource type="AudioStream" uid="uid://c4ijr0ryqaxk2" path="res://sounds/weapons/blade/blade_swing.ogg" id="4_hljqq"]
+
+[resource]
+script = ExtResource("1_rwjlp")
+attack_name = "Mace Bash"
+attack_descriptor = "Strike an enemy with the mace in a fashion that dazes, rather than damages. 1 Bludgeoning damage.
+
+On hit, has a chance of inflicting STUNNED:
+- Enemy is forced to skip their turn without an attack."
+attack_type = "Damage"
+hit_modifier = 8
+base_damage = 1
+damage_type = "Bludgeoning"
+swing_sound = ExtResource("4_hljqq")
+hit_sound = ExtResource("1_7to2y")
+infliction = ExtResource("1_835t7")
+inflict_challenge = 12

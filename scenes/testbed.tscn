@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm8e1q1fnqu6s"]
+
+[ext_resource type="Texture2D" uid="uid://bgyby1c0qkfsm" path="res://icon.svg" id="1_o0xvd"]
+[ext_resource type="PackedScene" uid="uid://c8d5imi11m84n" path="res://scenes/map_site.tscn" id="2_0e1kh"]
+
+[node name="World" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 650.0
+color = Color(0.521569, 0.521569, 0.521569, 1)
+
+[node name="MapSites" type="Node2D" parent="."]
+
+[node name="MapSite" parent="MapSites" node_paths=PackedStringArray("linked_areas") instance=ExtResource("2_0e1kh")]
+offset_left = 132.0
+offset_top = 68.0
+offset_right = 195.0
+offset_bottom = 131.0
+starting_site = true
+unlocked = true
+site_name = "test1"
+description = "this is a test site map. blah blah, text here. FUCK!!!!"
+linked_areas = [NodePath("../MapSite2")]
+
+[node name="MapSite2" parent="MapSites" node_paths=PackedStringArray("linked_areas") instance=ExtResource("2_0e1kh")]
+offset_left = 491.0
+offset_top = 33.0
+offset_right = 554.0
+offset_bottom = 96.0
+unlocked = true
+site_name = "The Testing Site of DOOM"
+site_type = "Rest"
+description = "This is a longer description to test standard tween speeds for the UI.
+
+Blah blah. BLAH BLAH!!! 123"
+linked_areas = [NodePath("../MapSite"), NodePath("../MapSite3")]
+
+[node name="MapSite3" parent="MapSites" node_paths=PackedStringArray("linked_areas") instance=ExtResource("2_0e1kh")]
+offset_left = 819.0
+offset_top = 171.0
+offset_right = 882.0
+offset_bottom = 234.0
+unlocked = true
+site_name = "test3"
+site_type = "Camp"
+description = "test3"
+linked_areas = [NodePath("../MapSite2"), NodePath("../MapSite4")]
+
+[node name="MapSite4" parent="MapSites" node_paths=PackedStringArray("linked_areas") instance=ExtResource("2_0e1kh")]
+offset_left = 751.0
+offset_top = 434.0
+offset_right = 814.0
+offset_bottom = 497.0
+unlocked = true
+site_name = "test3"
+site_type = "Boss"
+description = "test3"
+linked_areas = [NodePath("../MapSite3"), NodePath("../MapSite5")]
+
+[node name="MapSite5" parent="MapSites" node_paths=PackedStringArray("linked_areas") instance=ExtResource("2_0e1kh")]
+offset_left = 468.0
+offset_top = 452.0
+offset_right = 531.0
+offset_bottom = 515.0
+unlocked = true
+site_name = "test3"
+site_type = "LevelSwap"
+description = "test3"
+linked_areas = [NodePath("../MapSite4")]
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(164, 100)
+scale = Vector2(0.29248, 0.29248)
+texture = ExtResource("1_o0xvd")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0

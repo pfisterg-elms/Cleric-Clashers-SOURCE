@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxedkehveb83i"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_2s5gb"]
+[ext_resource type="Resource" uid="uid://bu52yucb2b0t4" path="res://spritegroups/squid_spritegroup.tres" id="2_174in"]
+[ext_resource type="Resource" uid="uid://c4dn20x0m45hn" path="res://attacks/celestial_squid/tentacle_whip.tres" id="2_h2rx3"]
+[ext_resource type="Resource" uid="uid://bf74ikyadkxt6" path="res://attacks/celestial_squid/hypnotizing_glare.tres" id="3_k74f2"]
+[ext_resource type="Resource" uid="uid://cppr4rgq10fwb" path="res://attacks/celestial_squid/mystical_call.tres" id="4_pstej"]
+
+[node name="Celestial_Squid" type="Node"]
+script = ExtResource("1_2s5gb")
+actor_name = "Celestial Squid"
+sprite_group = ExtResource("2_174in")
+max_health = 24
+initiative_bonus = 4
+armor_class = 11
+infliction_save = 3
+resistances = Array[String](["Psychic"])
+weaknesses = Array[String](["Fire"])
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("2_h2rx3"), ExtResource("3_k74f2"), ExtResource("4_pstej")])

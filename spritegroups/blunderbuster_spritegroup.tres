@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Actor_SpriteGroup" load_steps=4 format=3 uid="uid://d0r3db6vukovq"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_sprite_group.gd" id="1_3hgio"]
+[ext_resource type="Texture2D" uid="uid://dlyn33r17qidi" path="res://sprites/enemies/blunderbuster/blunderbuster_attack.png" id="1_n56j5"]
+[ext_resource type="Texture2D" uid="uid://cbholva0lj0p0" path="res://sprites/enemies/blunderbuster/blunderbuster_idle.png" id="2_yinkv"]
+
+[resource]
+script = ExtResource("1_3hgio")
+idle_sprite = ExtResource("2_yinkv")
+attack_sprite = ExtResource("1_n56j5")
+bolster_sprite = ExtResource("1_n56j5")
+hurt_sprite = ExtResource("1_n56j5")

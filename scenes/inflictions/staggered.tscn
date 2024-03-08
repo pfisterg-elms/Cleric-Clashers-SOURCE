@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj53xlo0sverx"]
+
+[ext_resource type="Script" path="res://scripts/inflictions/staggered.gd" id="1_k60rr"]
+
+[node name="Staggered" type="Node"]
+script = ExtResource("1_k60rr")
+effect_name = "STAGGERED"
+turn_count = 2

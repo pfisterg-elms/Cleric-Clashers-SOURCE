@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddtbm5c1bh6i6"]
+
+[ext_resource type="Script" path="res://scripts/inflictions/poisoned.gd" id="1_5y3s6"]
+
+[node name="Poisoned" type="Node"]
+script = ExtResource("1_5y3s6")
+bleed_amount = 3
+effect_name = "POISONED"
+turn_count = 2

@@ -1,0 +1,18 @@
+[gd_scene load_steps=7 format=3 uid="uid://j1v233ceyx42"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_8xa0f"]
+[ext_resource type="Resource" uid="uid://bqqcicmpqmcnh" path="res://spritegroups/gutterman_spritegroup.tres" id="2_0hcqd"]
+[ext_resource type="Resource" uid="uid://7duvxsa0g08q" path="res://attacks/brigands/gutterman/piercing_strike.tres" id="3_ew0vm"]
+[ext_resource type="Resource" uid="uid://cepf14c1tlben" path="res://attacks/brigands/gutterman/sweep.tres" id="4_3re5s"]
+[ext_resource type="Resource" uid="uid://pmdebdo4r1sh" path="res://attacks/brigands/gutterman/cleave.tres" id="5_uhob7"]
+[ext_resource type="Resource" uid="uid://dfeh47m3d5igw" path="res://attacks/brigands/gutterman/brunt_thrash.tres" id="6_riucn"]
+
+[node name="GuttermanBoss" type="Node"]
+script = ExtResource("1_8xa0f")
+actor_name = "Brigand Gutterman"
+sprite_group = ExtResource("2_0hcqd")
+max_health = 72
+initiative_bonus = 6
+armor_class = 12
+infliction_save = 3
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("3_ew0vm"), ExtResource("4_3re5s"), ExtResource("5_uhob7"), ExtResource("6_riucn")])

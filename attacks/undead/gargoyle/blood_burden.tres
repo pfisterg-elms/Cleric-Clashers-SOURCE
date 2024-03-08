@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://db2c6ntgudsyc"]
+
+[ext_resource type="AudioStream" uid="uid://86as5fd38qm5" path="res://sounds/weapons/blade/blade_hit.ogg" id="1_dfhuh"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_jyps6"]
+[ext_resource type="PackedScene" uid="uid://d3srbm574avct" path="res://scenes/inflictions/bleeding_gargoyle.tscn" id="2_7gcrp"]
+[ext_resource type="AudioStream" uid="uid://c4ijr0ryqaxk2" path="res://sounds/weapons/blade/blade_swing.ogg" id="4_wmcwl"]
+
+[resource]
+script = ExtResource("1_jyps6")
+attack_name = "Blood Burden"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 1
+base_damage = 4
+damage_type = "Piercing"
+swing_sound = ExtResource("4_wmcwl")
+hit_sound = ExtResource("1_dfhuh")
+infliction = ExtResource("2_7gcrp")
+inflict_challenge = 12

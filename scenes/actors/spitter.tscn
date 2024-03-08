@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://exspncrq85om"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_base.gd" id="1_mw3nh"]
+[ext_resource type="Resource" uid="uid://dq10pkd3sgt8m" path="res://attacks/spiders/spitter/sizzling_spew.tres" id="2_dq8h7"]
+[ext_resource type="Resource" uid="uid://2vq5hrdw4gsv" path="res://spritegroups/spitter_spritegroup.tres" id="2_mxcra"]
+[ext_resource type="Resource" uid="uid://byds77wn2pntb" path="res://attacks/spiders/leg_lash.tres" id="3_rnw3l"]
+[ext_resource type="Resource" uid="uid://dfwvub3qseo8g" path="res://attacks/spiders/mandible_gnash.tres" id="4_rbrlv"]
+
+[node name="Spitter" type="Node"]
+script = ExtResource("1_mw3nh")
+actor_name = "Venom Spitter"
+sprite_group = ExtResource("2_mxcra")
+max_health = 14
+initiative_bonus = 1
+armor_class = 9
+infliction_save = 2
+resistances = Array[String](["Poison"])
+attacks = Array[Resource("res://scripts/battle_system/attack_base.gd")]([ExtResource("2_dq8h7"), ExtResource("3_rnw3l"), ExtResource("4_rbrlv")])

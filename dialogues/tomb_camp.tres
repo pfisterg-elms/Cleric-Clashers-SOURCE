@@ -1,0 +1,100 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=18 format=3 uid="uid://bhxhcj4j3avj1"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_6oduc"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_tgwrk"]
+[ext_resource type="AudioStream" uid="uid://1ld17simphwa" path="res://sounds/music/CampTheme.mp3" id="2_cofg4"]
+
+[sub_resource type="Resource" id="Resource_kg3td"]
+script = ExtResource("1_6oduc")
+narrator_title = ""
+dialogue_contents = "Another fire crackles as the three settle in for another night in the confines of the tomb. Bruised and battered from battle, the three are silent for a while as they rest. Until suddenly, the doctor speaks up."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_i52s3"]
+script = ExtResource("1_6oduc")
+narrator_title = "Vikki"
+dialogue_contents = "I admit, my manners befell me for the duration of our companionship thus far. You may call me Vikki. I will try to be more forward with you both from now on."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_hvsfo"]
+script = ExtResource("1_6oduc")
+narrator_title = "Claira"
+dialogue_contents = "Frankly, I am just glad that you did not abandon us in the graveyard. It may have been a far more grueling battle without your aid."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_5ph8d"]
+script = ExtResource("1_6oduc")
+narrator_title = "Vikki"
+dialogue_contents = "Bah! I would never abandon a battle. A practitioner like myself always finds it far more valuable to seek out field studies, rather than trudging through academic papers. You get far better experience that way!"
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_owsj3"]
+script = ExtResource("1_6oduc")
+narrator_title = "Claira"
+dialogue_contents = "...I see. Then tell me, what even is this craft of yours? Medicine, perhaps? You seem more the alchemist type to my perception."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_fsoqc"]
+script = ExtResource("1_6oduc")
+narrator_title = "Vikki"
+dialogue_contents = "Indeed, yes, I dabble in alchemy from time to time. Though I am not headed toward Creitus for such a practice. I came to warn their leadership of brigands marching across the region. Consider me an inquisitor of sorts, on behalf of the Vallus kingdom."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_6xmi2"]
+script = ExtResource("1_6oduc")
+narrator_title = "Henrick"
+dialogue_contents = "Brigands, you say. So we fight the same battle after all. What of the Vallus territory, then? Have the brigands razed it like our temple had been?"
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_pufqf"]
+script = ExtResource("1_6oduc")
+narrator_title = "Vikki"
+dialogue_contents = "Ahhh, so that explains the distant smoke and rubble on the horizon as our carriage passed by. Fortunately, no, Vallus still stands. But the brigands seem to seek out easier pickings. Many settlements have fallen to their bloodstained hands. Creitus is most recent upon their to-do list."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_j2dov"]
+script = ExtResource("1_6oduc")
+narrator_title = "Claira"
+dialogue_contents = "Savages, the lot of them... How far are we from Creitus, then? We have been pursuing the raiders for the past day. With Vandora on our side, we were hoping that we would beat them to the punch."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_gdtjy"]
+script = ExtResource("1_6oduc")
+narrator_title = "Vikki"
+dialogue_contents = "I cannot say for certain if we will make it before they do. They march with great haste and fury. But we are close to the city's outskirts, I am certain of that much. If we are quick through the path beyond this tomb then we may yet be quick enough to mount a defense against them."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_qknrb"]
+script = ExtResource("1_6oduc")
+narrator_title = "Henrick"
+dialogue_contents = "We will not allow them to prevail in their conquest of terror. Join us, will you doctor? You have lended us great aid thus far. Another valiant warrior against the brigand army ahead will be a most necessary boon to ward them off."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_l13lj"]
+script = ExtResource("1_6oduc")
+narrator_title = "Vikki"
+dialogue_contents = "Ahhh, but of course! We share the same hard-fought battlegrounds as one another. They have haunted this region for far too long. We shall put them to rest in an early grave where they belong. That I am most positive of."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_1h2vt"]
+script = ExtResource("1_6oduc")
+narrator_title = ""
+dialogue_contents = "A wave of exhaustion befalls the trio as they fall silent, the air heavy with a new surge of confidence between the three.
+
+Creitus is to be soon upon them. But even if they do not arrive in time to halt the brigands, they shall be slain all the same, whatever it takes."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_7d4ao"]
+script = ExtResource("1_6oduc")
+narrator_title = ""
+dialogue_contents = "The fire dwindles as darkness and silence consumes the tomb. With this rest, another day's break approaches yet again.
+
+The final march to Creitus is upon the trio. The final push to fend off the brigands once and for all."
+sprite_focus = "Left"
+
+[resource]
+script = ExtResource("1_tgwrk")
+dialogue_statements = Array[ExtResource("1_6oduc")]([SubResource("Resource_kg3td"), SubResource("Resource_i52s3"), SubResource("Resource_hvsfo"), SubResource("Resource_5ph8d"), SubResource("Resource_owsj3"), SubResource("Resource_fsoqc"), SubResource("Resource_6xmi2"), SubResource("Resource_pufqf"), SubResource("Resource_j2dov"), SubResource("Resource_gdtjy"), SubResource("Resource_qknrb"), SubResource("Resource_l13lj"), SubResource("Resource_1h2vt"), SubResource("Resource_7d4ao")])
+scene_background = "Dialog_TombCamp"
+scene_music = ExtResource("2_cofg4")
+smooth_fade = false

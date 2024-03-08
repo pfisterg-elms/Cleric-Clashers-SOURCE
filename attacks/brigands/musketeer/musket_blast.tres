@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://d13vg7xjilbr"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_1wtd5"]
+[ext_resource type="AudioStream" uid="uid://5y78noc6ps4x" path="res://sounds/weapons/rifle/rifle_hit.mp3" id="1_g4fdx"]
+[ext_resource type="AudioStream" uid="uid://k24slod8qusi" path="res://sounds/weapons/rifle/rifle_fire.mp3" id="3_rrili"]
+
+[resource]
+script = ExtResource("1_1wtd5")
+attack_name = "Musket Blast"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 5
+base_damage = 6
+damage_type = "Piercing"
+swing_sound = ExtResource("3_rrili")
+hit_sound = ExtResource("1_g4fdx")
+inflict_challenge = 0

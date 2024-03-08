@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://dwwdssrm24w36"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_hg7dy"]
+[ext_resource type="AudioStream" uid="uid://dspjb71o65ia3" path="res://sounds/weapons/psychic_damage.mp3" id="1_p56bu"]
+[ext_resource type="AudioStream" uid="uid://cvdngsbx4v8ac" path="res://sounds/weapons/beast/roar.mp3" id="3_hxh4x"]
+
+[resource]
+script = ExtResource("1_hg7dy")
+attack_name = "Frightening Howl"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 2
+base_damage = 6
+damage_type = "Psychic"
+swing_sound = ExtResource("3_hxh4x")
+hit_sound = ExtResource("1_p56bu")
+inflict_challenge = 0

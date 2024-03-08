@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=17 format=3 uid="uid://d2ujw6ymwpkai"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="1_hid5q"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_pk75g"]
+[ext_resource type="Texture2D" uid="uid://coa502opjef0s" path="res://sprites/heroes/cleric/cleric.png" id="2_rhist"]
+[ext_resource type="Texture2D" uid="uid://ure11o8rq5kq" path="res://sprites/heroes/knight/knight_dialog.png" id="3_1l5o2"]
+[ext_resource type="Texture2D" uid="uid://dxl8dpa8r6woi" path="res://sprites/heroes/cleric_knight_duo.png" id="4_divbh"]
+[ext_resource type="Texture2D" uid="uid://du6fvqmsx41nv" path="res://sprites/heroes/duo_prep.png" id="5_bdrvj"]
+[ext_resource type="Texture2D" uid="uid://csjsexne48rd3" path="res://sprites/enemies/webber/webber_idle_Dialog.png" id="5_whv0u"]
+[ext_resource type="AudioStream" uid="uid://bart76p4yu7xc" path="res://sounds/music/WorldMap.mp3" id="6_4h4kv"]
+[ext_resource type="Texture2D" uid="uid://bvww1kc01snb8" path="res://sprites/enemies/webber/webber_attack_dialog.png" id="7_jkk8b"]
+
+[sub_resource type="Resource" id="Resource_y4rqv"]
+script = ExtResource("1_pk75g")
+narrator_title = ""
+dialogue_contents = "The trek had only begun an hour ago, but it felt like they had been travelling for far longer. The forest trail twists and turns, curving viciously along hillsides and grasslands. An imposing labyrinth of woodland, but Henrick's confidence never falters. He's certain of where he walks."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_7c5sr"]
+script = ExtResource("1_pk75g")
+narrator_title = ""
+dialogue_contents = "He suddenly stops, holding an arm out beside him to halt Claira as well. Through the fog he points to a mound of dirt, rock, and fallen trees, suffocating the path through the narrow passage ahead."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_xoptj"]
+script = ExtResource("1_pk75g")
+narrator_title = "Henrick"
+dialogue_contents = "...The usual path forward is blocked. I know of a detour, although it will yield a longer hike for us. Come along, it is just beside us."
+left_sprite = ExtResource("2_rhist")
+right_sprite = ExtResource("3_1l5o2")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_fpnnh"]
+script = ExtResource("1_pk75g")
+narrator_title = "Claira"
+dialogue_contents = "Are you certain this is the way forward? It seems as though we've hiked in a circle this entire time. Perhaps we can wait for the fog to clear, so that we can better orient ourselves."
+left_sprite = ExtResource("2_rhist")
+right_sprite = ExtResource("3_1l5o2")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_av5kl"]
+script = ExtResource("1_pk75g")
+narrator_title = "Henrick"
+dialogue_contents = "There is no time for that. By nightfall those brigands will have razed Creitus to the ground. I know the way forward, you must invest more trust into myself."
+left_sprite = ExtResource("2_rhist")
+right_sprite = ExtResource("3_1l5o2")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_o86b2"]
+script = ExtResource("1_pk75g")
+narrator_title = ""
+dialogue_contents = "Claira spoke to protest once more, but skittering and rustling in the foliage silences them both. Red and green beady eyes appear from beyond the brush, towering legs shambling around."
+left_sprite = ExtResource("4_divbh")
+right_sprite = ExtResource("5_whv0u")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_g1n0t"]
+script = ExtResource("1_pk75g")
+narrator_title = ""
+dialogue_contents = "Arachnids emerge suddenly, towering octopodal beasts natural to this rural region. Their prey within their sights, they leap forward from their hiding spots, prepared to strike with predatory vigor."
+left_sprite = ExtResource("5_bdrvj")
+right_sprite = ExtResource("7_jkk8b")
+sprite_focus = "Right"
+
+[resource]
+script = ExtResource("1_hid5q")
+dialogue_statements = Array[ExtResource("1_pk75g")]([SubResource("Resource_y4rqv"), SubResource("Resource_7c5sr"), SubResource("Resource_xoptj"), SubResource("Resource_fpnnh"), SubResource("Resource_av5kl"), SubResource("Resource_o86b2"), SubResource("Resource_g1n0t")])
+scene_background = "Dialog_Forest"
+scene_music = ExtResource("6_4h4kv")
+smooth_fade = false

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://5r0lij4aga3m"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_0e8cy"]
+[ext_resource type="PackedScene" uid="uid://vhxtis3vvddh" path="res://scenes/inflictions/empowered.tscn" id="1_nqdwq"]
+[ext_resource type="AudioStream" uid="uid://dabsbf0bpl5eu" path="res://sounds/weapons/shield.mp3" id="3_0kvbr"]
+
+[resource]
+script = ExtResource("1_0e8cy")
+attack_name = "Radiant Resolve"
+attack_descriptor = "A holy warmth encompasses the target's soul. They become EMPOWERED for 1 turn.
+
++4 to their attack roll."
+attack_type = "Bolster"
+hit_modifier = 0
+base_damage = 0
+damage_type = ""
+swing_sound = ExtResource("3_0kvbr")
+infliction = ExtResource("1_nqdwq")
+inflict_challenge = 0

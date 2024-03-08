@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://b5n6c4ejri7y5"]
+
+[ext_resource type="AudioStream" uid="uid://86as5fd38qm5" path="res://sounds/weapons/blade/blade_hit.ogg" id="1_o6jiy"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_xuowy"]
+[ext_resource type="AudioStream" uid="uid://c4ijr0ryqaxk2" path="res://sounds/weapons/blade/blade_swing.ogg" id="3_tur28"]
+
+[resource]
+script = ExtResource("1_xuowy")
+attack_name = "Riposte"
+attack_descriptor = "A quick, efficient slice at an enemy. A tried and true technique in many a battle.
+
+6 Piercing damage."
+attack_type = "Damage"
+hit_modifier = 5
+base_damage = 6
+damage_type = "Piercing"
+swing_sound = ExtResource("3_tur28")
+hit_sound = ExtResource("1_o6jiy")
+inflict_challenge = 0

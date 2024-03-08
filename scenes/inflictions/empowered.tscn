@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://vhxtis3vvddh"]
+
+[ext_resource type="Script" path="res://scripts/inflictions/empowered.gd" id="1_lkble"]
+
+[node name="Empowered" type="Node"]
+script = ExtResource("1_lkble")
+effect_name = "EMPOWERED"
+turn_count = 2

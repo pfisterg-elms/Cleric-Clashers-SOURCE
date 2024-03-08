@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Actor_SpriteGroup" load_steps=5 format=3 uid="uid://l8045ks0sjcr"]
+
+[ext_resource type="Texture2D" uid="uid://861n35fy0505" path="res://sprites/heroes/knight/knight.png" id="1_2m4xk"]
+[ext_resource type="Script" path="res://scripts/battle_system/actors/actor_sprite_group.gd" id="1_2wkv7"]
+[ext_resource type="Texture2D" uid="uid://ps3eaiql1c6e" path="res://sprites/heroes/knight/knight_attack.png" id="1_3t7bt"]
+[ext_resource type="Texture2D" uid="uid://dd6upkxbwxoo7" path="res://sprites/heroes/knight/knight_hit.png" id="2_1oaf1"]
+
+[resource]
+script = ExtResource("1_2wkv7")
+idle_sprite = ExtResource("1_2m4xk")
+attack_sprite = ExtResource("1_3t7bt")
+bolster_sprite = ExtResource("2_1oaf1")
+hurt_sprite = ExtResource("2_1oaf1")

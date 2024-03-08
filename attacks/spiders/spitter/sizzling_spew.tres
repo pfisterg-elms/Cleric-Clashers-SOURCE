@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://dq10pkd3sgt8m"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_1eymg"]
+[ext_resource type="AudioStream" uid="uid://bvy5sd7lgboe2" path="res://sounds/weapons/poison_burn.mp3" id="1_x2wyx"]
+[ext_resource type="PackedScene" uid="uid://ddtbm5c1bh6i6" path="res://scenes/inflictions/poisoned_arbalest.tscn" id="1_yx2yd"]
+
+[resource]
+script = ExtResource("1_1eymg")
+attack_name = "Sizzling Spew"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 2
+base_damage = 3
+damage_type = "Poison"
+swing_sound = ExtResource("1_x2wyx")
+hit_sound = ExtResource("1_x2wyx")
+infliction = ExtResource("1_yx2yd")
+inflict_challenge = 9

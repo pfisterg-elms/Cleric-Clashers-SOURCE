@@ -1,0 +1,77 @@
+[gd_resource type="Resource" script_class="Dialogue_Sequence" load_steps=14 format=3 uid="uid://bca8ylcln8m1o"]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_statement.gd" id="1_rc7ew"]
+[ext_resource type="Texture2D" uid="uid://dus5rcbwtqbb0" path="res://sprites/heroes/cleric/cleric_shadow.png" id="2_shkl7"]
+[ext_resource type="Texture2D" uid="uid://uika8s8ors2n" path="res://sprites/enemies/blademaster/blademaster_duo.png" id="3_5bidp"]
+[ext_resource type="Texture2D" uid="uid://4thfr30gia4d" path="res://sprites/heroes/cleric/cleric_bolster.png" id="4_1db6t"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_sequence.gd" id="5_nnvg4"]
+[ext_resource type="AudioStream" uid="uid://bart76p4yu7xc" path="res://sounds/music/WorldMap.mp3" id="5_sjgpj"]
+
+[sub_resource type="Resource" id="Resource_ybxqb"]
+script = ExtResource("1_rc7ew")
+narrator_title = ""
+dialogue_contents = "Darkness entombs the once-sacred temple of VANDORA, a sanctuary once celebrating the goddess of light and her ever-loving radiance.
+
+But the temple has fallen. Its clergy, all slain in but a day's errand."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_e3uxy"]
+script = ExtResource("1_rc7ew")
+narrator_title = ""
+dialogue_contents = "Those foolish enough to defend the sanctum of the goddess would pay a high price with their lives. Nothing but hooligans, they believed. A simple defense against common thieves.
+
+But these would be no ordinary raiders. Their hubris would be their downfall."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_35sys"]
+script = ExtResource("1_rc7ew")
+narrator_title = ""
+dialogue_contents = "Now, the temple lies in ruin before the day's dusk. Its crumbling remnants serving as new territory for the champions of this cruel crusade."
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_dwny2"]
+script = ExtResource("1_rc7ew")
+narrator_title = ""
+dialogue_contents = "...Yet within the altar room in the deepest chambers of the temple, a sole survivor remains, huddled in prayer. The last cleric to Vandora in this region.
+
+Tonight, her prayers shall be answered; but in the form of a new mission bestowed by the goddess."
+left_sprite = ExtResource("2_shkl7")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_fwbmj"]
+script = ExtResource("1_rc7ew")
+narrator_title = ""
+dialogue_contents = "The cleric stands, a firm, court bow on display toward the altar; affirming allegiance to the audience of the goddess.
+
+She will see this mission to fruition, lest she fall like all the others. In the name of Vandora's radiance, the brigands will pay."
+left_sprite = ExtResource("2_shkl7")
+sprite_focus = "Left"
+
+[sub_resource type="Resource" id="Resource_dedrk"]
+script = ExtResource("1_rc7ew")
+narrator_title = ""
+dialogue_contents = "The doors swing open at the opposite end of the altar chamber. Cold winds streak through the air. Their silhouettes are faint against the darkness of the chamber, but their figures are as clear as day.
+
+The war-faring brigands have arrived, and foolishly witness this lonesome cleric as easy pickings."
+left_sprite = ExtResource("2_shkl7")
+right_sprite = ExtResource("3_5bidp")
+sprite_focus = "Right"
+
+[sub_resource type="Resource" id="Resource_qj4q3"]
+script = ExtResource("1_rc7ew")
+narrator_title = ""
+dialogue_contents = "This will be their first and last mistake.
+
+The cleric turns, facing the warriors with newfound courage and strength. A sense of renewed vigor and warmth consuming her soul.
+
+In the name of Vandora, they will repent."
+left_sprite = ExtResource("4_1db6t")
+right_sprite = ExtResource("3_5bidp")
+sprite_focus = "Left"
+
+[resource]
+script = ExtResource("5_nnvg4")
+dialogue_statements = Array[ExtResource("1_rc7ew")]([SubResource("Resource_ybxqb"), SubResource("Resource_e3uxy"), SubResource("Resource_35sys"), SubResource("Resource_dwny2"), SubResource("Resource_fwbmj"), SubResource("Resource_dedrk"), SubResource("Resource_qj4q3")])
+scene_background = "Dialog_AltarRoom"
+scene_music = ExtResource("5_sjgpj")
+smooth_fade = false

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://dfeh47m3d5igw"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_fq2vm"]
+[ext_resource type="AudioStream" uid="uid://ddhtdned2gcgk" path="res://sounds/weapons/blade/hilt_bash.mp3" id="1_pyymi"]
+[ext_resource type="PackedScene" uid="uid://bimu0tjfjast6" path="res://scenes/inflictions/stunned.tscn" id="1_qlcay"]
+[ext_resource type="AudioStream" uid="uid://w52sx28fp1be" path="res://sounds/weapons/blunt_swing.mp3" id="4_yt5ab"]
+
+[resource]
+script = ExtResource("1_fq2vm")
+attack_name = "Brunt Slam"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 4
+base_damage = 3
+damage_type = "Bludgeoning"
+swing_sound = ExtResource("4_yt5ab")
+hit_sound = ExtResource("1_pyymi")
+infliction = ExtResource("1_qlcay")
+inflict_challenge = 13

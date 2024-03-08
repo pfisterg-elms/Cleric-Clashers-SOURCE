@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://suol4edfon55"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_ak28p"]
+[ext_resource type="AudioStream" uid="uid://5y78noc6ps4x" path="res://sounds/weapons/rifle/rifle_hit.mp3" id="1_t66lj"]
+[ext_resource type="AudioStream" uid="uid://v1vsdpltep5" path="res://sounds/weapons/crossbow_fire.mp3" id="3_mtlla"]
+
+[resource]
+script = ExtResource("1_ak28p")
+attack_name = "Quick Draw"
+attack_descriptor = ""
+attack_type = "Damage"
+hit_modifier = 6
+base_damage = 5
+damage_type = "Piercing"
+swing_sound = ExtResource("3_mtlla")
+hit_sound = ExtResource("1_t66lj")
+inflict_challenge = 0

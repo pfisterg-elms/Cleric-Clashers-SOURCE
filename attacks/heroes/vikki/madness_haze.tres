@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=5 format=3 uid="uid://wsbo4hca4bu2"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_8ui8t"]
+[ext_resource type="PackedScene" uid="uid://k31m7uohculc" path="res://scenes/inflictions/blinded.tscn" id="1_el4ui"]
+[ext_resource type="AudioStream" uid="uid://dspjb71o65ia3" path="res://sounds/weapons/psychic_damage.mp3" id="1_v8jdk"]
+[ext_resource type="AudioStream" uid="uid://w52sx28fp1be" path="res://sounds/weapons/blunt_swing.mp3" id="4_jjqlr"]
+
+[resource]
+script = ExtResource("1_8ui8t")
+attack_name = "Madness Haze"
+attack_descriptor = "An invisible odor that cuts deep into one's focus and psyche. Has a chance of blinding an enemy for 1 turn, forcing disadvantage on their attack roll.
+
+4 Psychic damage."
+attack_type = "Damage"
+hit_modifier = 4
+base_damage = 4
+damage_type = "Psychic"
+swing_sound = ExtResource("4_jjqlr")
+hit_sound = ExtResource("1_v8jdk")
+infliction = ExtResource("1_el4ui")
+inflict_challenge = 13

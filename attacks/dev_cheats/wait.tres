@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=2 format=3 uid="uid://bpa136ynto7sf"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_ihxna"]
+
+[resource]
+script = ExtResource("1_ihxna")
+attack_name = "wait"
+attack_descriptor = "wait for it...."
+attack_type = "Damage"
+hit_modifier = 0
+base_damage = 0
+damage_type = "Bludgeoning"
+inflict_challenge = 0

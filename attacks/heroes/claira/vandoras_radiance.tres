@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Attack_Base" load_steps=4 format=3 uid="uid://y3kmm656bf4r"]
+
+[ext_resource type="PackedScene" uid="uid://dqe0c3pb376gr" path="res://scenes/inflictions/shielded.tscn" id="1_5lr7t"]
+[ext_resource type="Script" path="res://scripts/battle_system/attack_base.gd" id="1_qb7da"]
+[ext_resource type="AudioStream" uid="uid://dabsbf0bpl5eu" path="res://sounds/weapons/shield.mp3" id="3_0p0u0"]
+
+[resource]
+script = ExtResource("1_qb7da")
+attack_name = "Vandora's Radiance"
+attack_descriptor = "Summon an empowering ray of light from Vandora herself onto an ally to give them protection in dire times.
+
+Inflicts SHIELD for two turns:
+- Armor Class +4."
+attack_type = "Bolster"
+hit_modifier = 0
+base_damage = 0
+damage_type = ""
+swing_sound = ExtResource("3_0p0u0")
+infliction = ExtResource("1_5lr7t")
+inflict_challenge = 0
